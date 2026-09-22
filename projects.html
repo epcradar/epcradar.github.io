@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Big Five — the projects hiring hardest right now | EPC Radar</title>
+<meta name="description" content="Five oil and gas megaprojects that are hiring now, who is building them, and the official careers pages to apply on. No agencies, no fees. Sources listed for every line.">
+<meta property="og:title" content="The Big Five — the projects hiring hardest right now">
+<meta property="og:description" content="Who is building them, and where to apply. Official careers pages only. We never ask for money for jobs.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://epcradar.com/projects.html">
+<meta property="og:image" content="https://epcradar.com/big5-post.png">
+<meta name="theme-color" content="#0A1E2C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A1E2C; --ink-2:#0E2738; --grid:#2C5168;
+    --paper:#EDF2F5; --mute:#8DA6B6; --amber:#F5A524; --danger:#E5484D;
+    --display:"Oswald",Impact,"Haettenschweiler","Arial Narrow",sans-serif;
+    --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--ink);color:var(--paper);
+    font-family:var(--body);font-size:17px;line-height:1.65;overflow-x:hidden}
+  .sweep{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5}
+  .wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 16px}
+  a{color:var(--amber)}
+  h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:.01em;margin:0}
+  .eyebrow{font-family:var(--display);font-weight:500;font-size:14px;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin:0 0 14px}
+
+  .topbar{padding:26px 0 0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .mark{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .mark span{font-family:var(--display);font-weight:600;font-size:21px;
+    letter-spacing:.07em;color:var(--paper)}
+  .back{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--mute);text-decoration:none;white-space:nowrap}
+
+  .hero{padding:30px 0 46px;border-bottom:1px solid var(--grid)}
+  .hero .kicker{display:inline-block;background:var(--amber);color:var(--ink);
+    font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.18em;
+    padding:7px 14px;border-radius:6px;margin-bottom:20px}
+  .hero h1{font-size:clamp(32px,6.8vw,56px);line-height:1.08;margin-bottom:18px}
+  .hero p{font-size:clamp(16.5px,2.3vw,19px);color:var(--mute);max-width:38em;margin:0 0 8px}
+  .stamp{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--mute);margin-top:22px}
+
+  .alert{border:2px solid var(--danger);border-radius:12px;padding:24px;margin:40px 0 8px;
+    background:rgba(229,72,77,.07)}
+  .alert h2{color:var(--danger);font-size:clamp(21px,3.4vw,27px);margin-bottom:12px}
+  .alert p{color:var(--paper);margin:0 0 12px;max-width:44em}
+  .alert ul{margin:0 0 12px;padding-left:22px;color:var(--paper)}
+  .alert li{margin-bottom:7px}
+  .alert .last{color:var(--mute);font-size:15.5px;margin-bottom:0}
+
+  section{padding:46px 0;border-bottom:1px solid var(--grid)}
+  section h2{font-size:clamp(23px,3.8vw,31px);margin-bottom:16px}
+  section > p{max-width:42em;color:var(--mute)}
+  section > p strong{color:var(--paper);font-weight:600}
+
+  .proj{border:1px solid var(--grid);border-radius:12px;background:var(--ink-2);
+    padding:24px;margin-bottom:18px}
+  .proj .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin-bottom:6px}
+  .proj h3{font-size:clamp(23px,4vw,30px);line-height:1.15}
+  .tag{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.14em;
+    padding:4px 10px;border-radius:5px;white-space:nowrap}
+  .t-conf{background:var(--amber);color:var(--ink)}
+  .t-rep{background:transparent;color:var(--amber);border:1px solid var(--amber)}
+  .who{font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+  .proj > p{color:var(--mute);margin:0 0 16px;max-width:44em}
+  .proj > p strong{color:var(--paper);font-weight:600}
+
+  .sub{font-family:var(--display);font-weight:500;font-size:12.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--mute);border-top:1px solid var(--grid);
+    padding-top:14px;margin-bottom:10px}
+  .firms{list-style:none;margin:0 0 4px;padding:0}
+  .firms li{padding:9px 0;border-bottom:1px solid rgba(44,81,104,.5);
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px}
+  .firms li:last-child{border-bottom:none}
+  .firms .name{font-family:var(--display);font-weight:600;font-size:19px;color:var(--paper)}
+  .firms .role{font-size:14.5px;color:var(--mute)}
+  .firms .apply{margin-left:auto;font-size:14.5px;white-space:nowrap}
+  .firms .none{margin-left:auto;font-size:14px;color:var(--mute);white-space:nowrap}
+  .src{font-size:13.5px;color:var(--mute);margin:10px 0 0}
+  .src a{color:var(--mute);text-decoration:underline}
+
+  .howto{border:1px solid var(--amber);border-radius:12px;padding:24px;margin-top:8px}
+  .howto h2{color:var(--amber)}
+  .howto ol{margin:0;padding-left:22px;color:var(--paper)}
+  .howto li{margin-bottom:10px}
+  .howto li:last-child{margin-bottom:0}
+  .howto span{color:var(--mute)}
+
+  .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .btn{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.06em;
+    text-decoration:none;padding:13px 22px;border-radius:8px;display:inline-block}
+  .btn-a{background:var(--amber);color:var(--ink)}
+  .btn-b{border:1px solid var(--grid);color:var(--paper)}
+
+  footer{padding:34px 0 56px;color:var(--mute);font-size:14.5px}
+</style>
+</head>
+<body>
+
+<svg class="sweep" viewBox="0 0 1200 900" preserveAspectRatio="xMaxYMin slice" aria-hidden="true">
+  <g fill="none" stroke="#2C5168" stroke-width="1.6">
+    <circle cx="1230" cy="-90" r="300"/><circle cx="1230" cy="-90" r="520"/>
+    <circle cx="1230" cy="-90" r="740"/><circle cx="1230" cy="-90" r="960"/>
+    <circle cx="1230" cy="-90" r="1180"/>
+  </g>
+</svg>
+
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="mark" href="/">
+      <svg width="34" height="34" viewBox="0 0 340 340" aria-hidden="true">
+        <circle cx="170" cy="170" r="52" fill="none" stroke="#2C5168" stroke-width="10"/>
+        <circle cx="170" cy="170" r="99" fill="none" stroke="#2C5168" stroke-width="10"/>
+        <circle cx="170" cy="170" r="145" fill="none" stroke="#2C5168" stroke-width="10"/>
+        <path d="M170 170 L271 65 A145 145 0 0 0 154 25 Z" fill="#F5A524"/>
+        <circle cx="170" cy="170" r="13" fill="#F5A524"/>
+      </svg>
+      <span>EPC RADAR</span>
+    </a>
+    <a class="back" href="/">&larr; Home</a>
+  </div>
+
+  <div class="hero">
+    <span class="kicker">PROJECT RADAR</span>
+    <h1>The five projects hiring hardest right now</h1>
+    <p>These five are past the drawings and into construction. Between them they are the
+    biggest concentration of oil and gas hiring on the planet this year.</p>
+    <p>For each one: who is building it, and the employer's own careers page.
+    Every contractor below is named in a company or joint-venture statement we link to.</p>
+    <div class="stamp">Updated 22 September 2026</div>
+  </div>
+
+  <div class="alert">
+    <h2>Before you apply — read this</h2>
+    <p>Every project on this page is real, and that is exactly what makes it useful to
+    someone trying to cheat you. Fake recruiters read the same news we do and use these
+    names as bait. The project is real. The award is real. The recruiter is not.</p>
+    <ul>
+      <li><strong>No legitimate employer charges you</strong> for a visa, a medical, a ticket,
+      training, or a "processing fee". Not before, not after, not ever.</li>
+      <li>An offer letter that arrives <strong>before any interview</strong> is not an offer letter.</li>
+      <li>A recruiter writing from Gmail, Outlook or WhatsApp instead of a company domain
+      is not that company.</li>
+      <li>"Pay today or you lose the slot" is the whole scam in one sentence.</li>
+    </ul>
+    <p>Apply on the pages linked below and nowhere else. Several of these employers publish
+    their own recruitment-fraud warnings on those same pages — McDermott states plainly that it
+    never uses agencies that charge candidates fees, and NMDC Energy that it never asks for
+    payment or bank details at any stage. Read them.</p>
+    <p class="last">If anyone uses the name EPC Radar to ask you for money, it is not us.
+    Tell us: <a href="mailto:epcradar@gmail.com">epcradar@gmail.com</a></p>
+  </div>
+
+  <section>
+    <p class="eyebrow">01 · Mozambique</p>
+    <div class="proj">
+      <div class="head"><h3>Mozambique LNG</h3><span class="tag t-conf">CONFIRMED</span></div>
+      <div class="who">TotalEnergies &middot; Afungi, Cabo Delgado</div>
+      <p>The project that hires the most people, and the one that says so out loud.
+      TotalEnergies reports <strong>more than 4,000 workers already mobilised</strong>, over 3,000
+      of them Mozambican, and expects the construction phase to create
+      <strong>up to 7,000 direct jobs for Mozambicans</strong>. First LNG is expected in 2029.</p>
+      <div class="sub">Who is building it</div>
+      <ul class="firms">
+        <li><span class="name">CCS JV</span><span class="role">the EPC joint venture itself — site vacancies, active and closed</span>
+          <span class="apply"><a href="https://www.ccsjv.com/opportunities/employment/">Vacancies</a></span></li>
+        <li><span class="name">Saipem</span><span class="role">JV partner</span>
+          <span class="apply"><a href="https://www.saipem.com/en/saipem-people/join-our-company/jobs">Careers</a></span></li>
+        <li><span class="name">McDermott</span><span class="role">JV partner</span>
+          <span class="apply"><a href="https://www.mcdermott.com/careers">Careers</a></span></li>
+        <li><span class="name">Chiyoda</span><span class="role">JV partner</span>
+          <span class="apply"><a href="https://www.chiyodacorp.com/en/recruit/">Careers</a></span></li>
+        <li><span class="name">TotalEnergies</span><span class="role">operator</span>
+          <span class="apply"><a href="https://careers.totalenergies.com/">Careers</a></span></li>
+      </ul>
+      <p class="src">Worth knowing: CCS JV states that employment priority goes to Mozambican
+      nationals under the project's national content policy. If you are applying from abroad,
+      the realistic route is a specialist role, not a general one. Saipem's own job board is
+      under maintenance at the time of writing and points candidates to its LinkedIn page, so
+      the link above is its corporate careers page.<br>
+      Source: <a href="https://www.ccsjv.com/about/jv-partners/">ccsjv.com — JV partners</a></p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">02 · Qatar</p>
+    <div class="proj">
+      <div class="head"><h3>North Field East &amp; South</h3><span class="tag t-conf">CONFIRMED</span></div>
+      <div class="who">QatarEnergy &middot; Ras Laffan</div>
+      <p>Two separate expansions, two separate joint ventures — a distinction worth getting
+      right, because they hire separately. <strong>North Field East</strong> is four mega trains
+      of 8 mtpa each plus carbon capture, built by the Chiyoda–Technip Energies joint venture.
+      <strong>North Field South</strong> is two more trains, 16 mtpa, built by Technip Energies
+      with Consolidated Contractors Company.</p>
+      <div class="sub">Who is building it</div>
+      <ul class="firms">
+        <li><span class="name">Technip Energies</span><span class="role">both NFE and NFS</span>
+          <span class="apply"><a href="https://www.ten.com/en/careers">Careers</a></span></li>
+        <li><span class="name">Chiyoda</span><span class="role">North Field East</span>
+          <span class="apply"><a href="https://www.chiyodacorp.com/en/recruit/">Careers</a></span></li>
+        <li><span class="name">Consolidated Contractors Company</span><span class="role">North Field South</span>
+          <span class="none">no verified careers link</span></li>
+        <li><span class="name">QatarEnergy</span><span class="role">operator</span>
+          <span class="apply"><a href="https://careerportal.qatarenergy.qa/">Careers</a></span></li>
+      </ul>
+      <p class="src">Sources:
+      <a href="https://www.ten.com/en/media/press-releases/technip-energies-and-chiyoda-awarded-major-lng-contract-north-field-east">Technip Energies — North Field East</a> ·
+      <a href="https://www.ten.com/en/media/press-releases/technip-energies-awarded-major-lng-contract-north-field-south-project">Technip Energies — North Field South</a></p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">03 · Saudi Arabia</p>
+    <div class="proj">
+      <div class="head"><h3>Jafurah</h3><span class="tag t-rep">REPORTED</span></div>
+      <div class="who">Saudi Aramco &middot; Eastern Province</div>
+      <p>The kingdom's largest unconventional gas development, and the one where you have to do
+      the most work yourself. <strong>Aramco does not name its EPC contractors</strong> — it
+      announces awards in aggregate, which is why this project is marked REPORTED and the others
+      are not. Every firm below named itself, in its own statement.</p>
+      <div class="sub">Who is building it</div>
+      <ul class="firms">
+        <li><span class="name">Larsen &amp; Toubro</span><span class="role">gas processing facilities, phase 2 package 1</span>
+          <span class="apply"><a href="https://www.larsentoubro.com/careers/">Careers</a></span></li>
+        <li><span class="name">Samsung E&amp;A</span><span class="role">gas treatment</span>
+          <span class="apply"><a href="https://www.samsungena.com/en/careers/talent-development">Careers</a></span></li>
+        <li><span class="name">Hyundai E&amp;C</span><span class="role">sulphur recovery, with Hyundai Engineering</span>
+          <span class="apply"><a href="https://en.hdec.kr/en/career/talent.aspx">Careers</a></span></li>
+        <li><span class="name">Saudi Aramco</span><span class="role">operator</span>
+          <span class="apply"><a href="https://careers.aramco.com/">Careers</a></span></li>
+      </ul>
+      <p class="src">Where the openings actually sit: Samsung E&amp;A routes applications to the
+      group portal at samsungcareers.com, and Hyundai E&amp;C's listings live on its Korean
+      recruitment site rather than the English page. Expect to change language, not to pay
+      anyone to do it for you.<br>
+      We have deliberately left off two names you will see elsewhere.
+      Técnicas Reunidas' Jafurah work rests on a <em>non-binding letter of intent</em>, not a
+      firm award — its separate confirmed Aramco contract is for Riyas NGL, a different site that
+      is easy to confuse with this one. We will add it the day it is signed.<br>
+      Sources:
+      <a href="https://newsnviews.larsentoubro.com/Lists/Posts/Post.aspx?ID=858">Larsen &amp; Toubro</a> ·
+      <a href="https://www.samsungena.com/en/newsroom/news/view?idx=15577">Samsung E&amp;A</a> ·
+      <a href="https://www.hdec.kr/en/newsroom/news_view.aspx?NewsSeq=611&amp;NewsType=FUTURE&amp;NewsListType=news_list">Hyundai E&amp;C</a></p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">04 · United Arab Emirates</p>
+    <div class="proj">
+      <div class="head"><h3>Hail &amp; Ghasha</h3><span class="tag t-conf">CONFIRMED</span></div>
+      <div class="who">ADNOC &middot; offshore and onshore Abu Dhabi</div>
+      <p>A USD 17 billion EPC programme split cleanly in two, which tells you exactly where to
+      apply. <strong>Offshore</strong> — drilling centres, a processing plant on artificial
+      islands and hundreds of kilometres of subsea pipeline — went to Saipem and NMDC Energy.
+      <strong>Onshore</strong> — carbon dioxide and sulphur recovery and handling — went to
+      Tecnimont alone, the largest award in its parent group's history.</p>
+      <div class="sub">Who is building it</div>
+      <ul class="firms">
+        <li><span class="name">Saipem</span><span class="role">offshore</span>
+          <span class="apply"><a href="https://www.saipem.com/en/saipem-people/join-our-company/jobs">Careers</a></span></li>
+        <li><span class="name">NMDC Energy</span><span class="role">offshore — formerly NPCC</span>
+          <span class="apply"><a href="https://www.nmdc-energy.com/en/careers/">Careers</a></span></li>
+        <li><span class="name">Tecnimont (MAIRE)</span><span class="role">onshore</span>
+          <span class="apply"><a href="https://www.tecnimont.com/en/careers/">Careers</a></span></li>
+        <li><span class="name">ADNOC</span><span class="role">operator</span>
+          <span class="apply"><a href="https://jobs.adnoc.ae/">Careers</a></span></li>
+      </ul>
+      <p class="src">Tecnimont accepts applications only through its own job portal — a CV sent
+      by email is not considered, so do not let anyone tell you they can "submit it for you".<br>
+      Sources:
+      <a href="https://www.saipem.com/en/media/press-releases/2023-10-05/saipem-awarded-new-contract-adnoc-united-arab-emirates-worth-around">Saipem</a> ·
+      <a href="https://www.nmdc-group.com/en/media/press-releases/npcc-awarded-contract-by-adnoc-for-the-hail-and-ghasha-development-project/">NMDC</a> ·
+      <a href="https://www.tecnimont.com/en/newsroom/news/maire-awarded-usd-87-billion-contract-by-adnoc-for-the-onshore-portion-of-the-hail-and-ghasha-development-project-in-abu-dhabi-the-largest-award-ever-for-the-group/">MAIRE</a></p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">05 · United Arab Emirates</p>
+    <div class="proj">
+      <div class="head"><h3>Ruwais LNG</h3><span class="tag t-conf">CONFIRMED</span></div>
+      <div class="who">ADNOC &middot; Al Ruwais Industrial City</div>
+      <p>Two trains, <strong>9.6 mtpa</strong>, designed to run on electric drives rather than
+      gas turbines. The EPC went to the TJN Ruwais joint venture — Technip Energies as leader,
+      with JGC and NMDC Energy. NMDC puts the contract at USD 5.5 billion; Technip Energies
+      discloses only its own share, above one billion euros. That gap is normal, and worth
+      knowing when you read contract values anywhere.</p>
+      <div class="sub">Who is building it</div>
+      <ul class="firms">
+        <li><span class="name">Technip Energies</span><span class="role">JV leader</span>
+          <span class="apply"><a href="https://www.ten.com/en/careers">Careers</a></span></li>
+        <li><span class="name">JGC</span><span class="role">JV partner</span>
+          <span class="apply"><a href="https://www.jgc.com/en/recruit/">Careers</a></span></li>
+        <li><span class="name">NMDC Energy</span><span class="role">JV partner</span>
+          <span class="apply"><a href="https://www.nmdc-energy.com/en/careers/">Careers</a></span></li>
+        <li><span class="name">ADNOC</span><span class="role">operator</span>
+          <span class="apply"><a href="https://jobs.adnoc.ae/">Careers</a></span></li>
+      </ul>
+      <p class="src">Search "TJN Ruwais JV" as well as the company names — site roles are often
+      advertised under the joint venture, not the parent.<br>
+      Source: <a href="https://www.ten.com/en/media/press-releases/technip-energies-jgc-and-nmdc-energy-awarded-major-contract-adnocs-ruwais-lng">Technip Energies</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="howto">
+      <h2>How to check a recruiter in four minutes</h2>
+      <ol>
+        <li><strong>Start from the company, not the message.</strong> Open the careers page above
+        yourself and look for the role there. <span>If it does not exist on the employer's own
+        site, it does not exist.</span></li>
+        <li><strong>Check the email domain, character by character.</strong>
+        <span>A single swapped letter is the oldest trick in this business.</span></li>
+        <li><strong>Ask any agency for its licence number</strong> and check it with your
+        country's labour authority. <span>A legitimate agency gives it to you without
+        hesitating. That reaction is the test.</span></li>
+        <li><strong>Never pay. For anything.</strong> <span>Once money has moved, there is
+        usually no getting it back and no one to complain to.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <p class="eyebrow">Follow</p>
+    <h2>We update this page as awards land</h2>
+    <p>Daily on Instagram. The same headlines, plus every link, on Telegram.</p>
+    <div class="links">
+      <a class="btn btn-a" href="https://t.me/epcradar">Telegram</a>
+      <a class="btn btn-b" href="https://www.instagram.com/epcradar/">Instagram</a>
+      <a class="btn btn-b" href="mailto:epcradar@gmail.com">Tell us about a scam</a>
+    </div>
+  </section>
+
+  <footer>
+    <p style="margin:0">EPC Radar is an independent publication. It is not affiliated with,
+    endorsed by, or speaking for any company named on this page. Company names and trademarks
+    belong to their owners. We link to employers' own careers pages and receive nothing for
+    doing so.<br>
+    <strong style="color:var(--paper)">We never ask for money for jobs.</strong><br>
+    <a href="mailto:epcradar@gmail.com">epcradar@gmail.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
