@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who gets hired on an EPC site, and what the tickets are worth | EPC Radar</title>
+<meta name="description" content="Ten roles on an oil and gas EPC construction site, ranked by published headcount, with the certifications employers actually require and the ones being sold to you for nothing.">
+<meta property="og:title" content="Who gets hired on an EPC site — and what the tickets are worth">
+<meta property="og:description" content="Ranked by published headcount. Every certification checked against the body that issues it. We never ask for money for jobs.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://epcradar.com/roles.html">
+<meta name="theme-color" content="#0A1E2C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A1E2C;--ink-2:#0E2738;--grid:#2C5168;--paper:#EDF2F5;
+  --mute:#8DA6B6;--amber:#F5A524;--danger:#E5484D;
+  --display:"Oswald",Impact,"Arial Narrow",sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);
+  font-size:17px;line-height:1.65;overflow-x:hidden}
+.sweep{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45}
+.wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 16px}
+a{color:var(--amber)}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:.01em;margin:0}
+.eyebrow{font-family:var(--display);font-weight:500;font-size:13px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin:0 0 8px}
+.topbar{padding:26px 0 0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.mark{display:flex;align-items:center;gap:11px;text-decoration:none}
+.mark span{font-family:var(--display);font-weight:600;font-size:21px;
+  letter-spacing:.07em;color:var(--paper)}
+.back{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mute);text-decoration:none;white-space:nowrap}
+.hero{padding:30px 0 42px;border-bottom:1px solid var(--grid)}
+.kicker{display:inline-block;background:var(--amber);color:var(--ink);
+  font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.18em;
+  padding:7px 14px;border-radius:6px;margin-bottom:20px}
+.hero h1{font-size:clamp(31px,6.4vw,54px);line-height:1.08;margin-bottom:18px}
+.hero p{font-size:clamp(16.5px,2.3vw,19px);color:var(--mute);max-width:39em;margin:0 0 10px}
+.hero p strong{color:var(--paper);font-weight:600}
+.stamp{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mute);margin-top:20px}
+.alert{border:2px solid var(--danger);border-radius:12px;padding:24px;margin:38px 0 0;
+  background:rgba(229,72,77,.07)}
+.alert h2{color:var(--danger);font-size:clamp(21px,3.4vw,27px);margin-bottom:12px}
+.alert p{color:var(--paper);margin:0 0 12px;max-width:44em}
+.alert p:last-child{margin-bottom:0}
+.alert .s a{color:var(--mute)}
+.idx{padding:40px 0;border-bottom:1px solid var(--grid)}
+.idx h2{font-size:clamp(22px,3.6vw,30px);margin-bottom:8px}
+.idx>p{color:var(--mute);max-width:42em}
+.idxlist{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--grid)}
+.idxlist li{border-bottom:1px solid var(--grid)}
+.idxlist a{display:flex;align-items:baseline;gap:14px;padding:13px 0;text-decoration:none}
+.idxlist .i{font-family:var(--display);font-weight:600;font-size:15px;color:var(--mute);
+  min-width:2.1em}
+.idxlist .t{font-family:var(--display);font-weight:600;font-size:20px;color:var(--paper)}
+.idxlist .v{margin-left:auto;font-family:var(--display);font-weight:600;font-size:17px;
+  color:var(--amber);white-space:nowrap}
+.idxlist .v.none{color:var(--grid)}
+.role{padding:44px 0;border-bottom:1px solid var(--grid)}
+.rhead{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+.rank{min-width:132px;border-left:4px solid var(--amber);padding-left:14px}
+.rank.none{border-left-color:var(--grid)}
+.rank .num{display:block;font-family:var(--display);font-weight:600;
+  font-size:clamp(28px,5vw,40px);color:var(--amber);line-height:1.05}
+.rank.none .num{color:var(--grid)}
+.rank .q{display:block;font-size:13px;color:var(--mute);margin-top:3px}
+.rtitle{flex:1 1 15em}
+.role h2{font-size:clamp(24px,4.2vw,33px);line-height:1.12}
+.claim{color:var(--paper);font-weight:600;margin:10px 0 0;max-width:34em}
+.body{color:var(--mute);max-width:44em;margin:18px 0 0}
+.sub{font-family:var(--display);font-weight:500;font-size:12.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--mute);border-top:1px solid var(--grid);
+  padding-top:14px;margin-top:26px}
+.certs{display:grid;gap:14px;margin-top:14px}
+.cert{border:1px solid var(--grid);border-radius:10px;padding:18px;background:var(--ink-2)}
+.cert h4{font-size:19px;color:var(--amber);margin-bottom:6px;line-height:1.25}
+.cert p{margin:0;color:var(--mute);font-size:16px}
+.s{font-size:13.5px;white-space:nowrap}
+.s a{color:var(--mute);text-decoration:underline}
+.gap{margin-top:18px;padding:14px 16px;border-left:3px solid var(--grid);
+  color:var(--mute);font-size:15.5px;max-width:44em}
+.gap strong{color:var(--paper)}
+.top{margin:22px 0 0;font-size:14px}
+.top a{color:var(--mute);text-decoration:none}
+.block{padding:44px 0;border-bottom:1px solid var(--grid)}
+.block h2{font-size:clamp(22px,3.6vw,30px);margin-bottom:14px}
+.block p{color:var(--mute);max-width:44em;margin:0 0 14px}
+.block p strong{color:var(--paper);font-weight:600}
+.block ul{color:var(--mute);max-width:44em;padding-left:22px}
+.block li{margin-bottom:9px}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.06em;
+  text-decoration:none;padding:13px 22px;border-radius:8px;display:inline-block}
+.btn-a{background:var(--amber);color:var(--ink)}
+.btn-b{border:1px solid var(--grid);color:var(--paper)}
+footer{padding:34px 0 56px;color:var(--mute);font-size:14.5px}
+</style>
+</head>
+<body>
+<svg class="sweep" viewBox="0 0 1200 900" preserveAspectRatio="xMaxYMin slice" aria-hidden="true"><g fill="none" stroke="#2C5168" stroke-width="1.6"><circle cx="1230" cy="-90" r="300"/><circle cx="1230" cy="-90" r="520"/><circle cx="1230" cy="-90" r="740"/><circle cx="1230" cy="-90" r="960"/><circle cx="1230" cy="-90" r="1180"/></g></svg>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="mark" href="/"><svg width="34" height="34" viewBox="0 0 340 340" aria-hidden="true"><circle cx="170" cy="170" r="52" fill="none" stroke="#2C5168" stroke-width="10"/><circle cx="170" cy="170" r="99" fill="none" stroke="#2C5168" stroke-width="10"/><circle cx="170" cy="170" r="145" fill="none" stroke="#2C5168" stroke-width="10"/><path d="M170 170 L271 65 A145 145 0 0 0 154 25 Z" fill="#F5A524"/><circle cx="170" cy="170" r="13" fill="#F5A524"/></svg><span>EPC RADAR</span></a>
+    <a class="back" href="/">&larr; Home</a>
+  </div>
+
+  <div class="hero">
+    <span class="kicker">SITE ROLES</span>
+    <h1>Who gets hired on an EPC site, and what the tickets are worth</h1>
+    <p>Ten roles, ordered by the only published headcount we could find that breaks a
+    project down trade by trade. For each one: what the job actually is, when it
+    mobilises, and — the part that costs people money — which certificate an employer
+    recognises and which one is being sold to you for nothing.</p>
+    <p><strong>Where the numbers come from.</strong> They are direct hires on
+    Alaska LNG, published by the Alaska Department of Labor: 11,850 in total across a
+    gas treatment plant, an 807-mile pipeline and a liquefaction plant.
+    <span class="s"><a href="https://jobs.alaska.gov/energy/documents/2018_gasline_workforce_plan.pdf">source</a></span></p>
+    <p><strong>Where they do not come from.</strong> No Gulf or African LNG project
+    publishes its workforce by trade. We checked the impact assessments for Mozambique
+    LNG, Papua New Guinea, Ichthys, Gorgon, Wheatstone and others: they publish a peak
+    total and stop. So read the order as the shape of a large construction project, not
+    as a headcount for Ruwais or Jafurah. A Gulf site carries far more scaffolding and
+    manual labour than a unionised American one.</p>
+    <div class="stamp">Updated 23 September 2026</div>
+  </div>
+
+  <div class="alert">
+    <h2>Before you pay for any certificate, read this</h2>
+    <p>Fake recruitment in this industry does not usually start with a fake job. It
+    starts with a real-sounding qualification. You are told the job is yours once you
+    hold a particular card, the card costs a few hundred dollars, and the training
+    centre happens to be a friend of the agent.</p>
+    <p><strong>The International Labour Organization is explicit that this is a
+    recruitment fee.</strong> Its fair recruitment guidance says workers shall not be
+    charged, directly or indirectly, any fees or related costs for their recruitment —
+    and it names training and skills testing among those related costs when they are
+    required to get the job. <span class="s"><a href="https://www.ilo.org/publications/general-principles-and-operational-guidelines-fair-recruitment-and">ILO</a></span></p>
+    <p>On the pages below, three certificates that are sold constantly and are not what
+    the seller says: the <a href="#hse">OSHA card</a>, which OSHA itself says is neither
+    a certification nor a requirement; <a href="#operators">a "Gulf rigger licence"</a>,
+    which does not exist in any form; and <a href="#pipefitters">a pipefitter
+    certification</a>, for which no issuing body anywhere has a standard.</p>
+    <p>If someone used the name EPC Radar to ask you for money, it was not us.
+    Tell us: <a href="mailto:epcradar@gmail.com">epcradar@gmail.com</a></p>
+  </div>
+
+  <div class="idx" id="index">
+    <h2>The ten roles</h2>
+    <p>Numbers are direct hires on Alaska LNG. A dash means no source publishes a
+    headcount for that trade — we are not going to invent one.</p>
+    <ul class="idxlist"><li><a href="#drivers"><span class="i">01</span><span class="t">Truck and bus drivers</span><span class="v">3,519</span></a></li><li><a href="#labourers"><span class="i">02</span><span class="t">Construction labourers and helpers</span><span class="v">2,311</span></a></li><li><a href="#pipefitters"><span class="i">03</span><span class="t">Pipefitters</span><span class="v">1,566</span></a></li><li><a href="#welders"><span class="i">04</span><span class="t">Welders</span><span class="v">1,566</span></a></li><li><a href="#operators"><span class="i">05</span><span class="t">Heavy equipment and crane operators</span><span class="v">about 1,300</span></a></li><li><a href="#electrical"><span class="i">06</span><span class="t">Electricians and instrument technicians</span><span class="v">397</span></a></li><li><a href="#scaffolders"><span class="i">07</span><span class="t">Scaffolders</span><span class="v none">—</span></a></li><li><a href="#qaqc"><span class="i">08</span><span class="t">QA/QC inspectors</span><span class="v none">—</span></a></li><li><a href="#hse"><span class="i">09</span><span class="t">HSE officers</span><span class="v none">—</span></a></li><li><a href="#warehouse"><span class="i">10</span><span class="t">Warehouse and materials controllers</span><span class="v none">—</span></a></li></ul>
+  </div>
+
+<section id="drivers" class="role"><div class="rhead"><div class="rank"><span class="num">3,519</span><span class="q">of 11,850</span></div><div class="rtitle"><p class="eyebrow">01 · Site logistics</p><h2>Truck and bus drivers</h2><p class="claim">The largest single occupation on the project — more than pipefitters, welders and insulators combined.</p></div></div><p class="body">Trucks move almost everything: bulk materials, smaller prefabricated modules, equipment, and people. The Alaska LNG plan estimates 250 to 270 trucks running during the peak construction years, across an 807-mile pipeline, eight compressor stations and two plants.</p><div class="sub">When it mobilises</div><p class="body">Phase 2 (preconstruction and construction), and logistics runs longer than most trades: road and bridge work spans the entire life of the project. <span class="s"><a href="https://labor.alaska.gov/agia_teams/docs-combined/01-07-2008RptAGIAoccs.pdf">Alaska Dept. of Labor, AGIA occupations study</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>Defensive Driving is a contractual training requirement</h4><p>QatarEnergy's HSE Regulations for Contractors list it among the required courses for contractor personnel. No certifying body is named — the contractor arranges it. <span class="s"><a href="https://www.qatarenergy.qa/en/SupplyManagement/Tenders/SupplyManagmentFiles/QP_HSE_Regulations_for_Contractors_Approved.pdf.pdf">source</a></span></p></div><div class="cert"><h4>A valid licence issued in the host country comes first</h4><p>TÜV SÜD's Qatar forklift scheme will not certify anyone who does not already hold a current, valid Qatari driving licence. Expect the same logic for heavy vehicles: the local licence is the gate, not the extra. <span class="s"><a href="https://www.tuvsud.com/en-ae/-/media/regions/ae/pdf/qatar-certification-of-person-2021/qr_21_forklift-certification-scheme-rev-03.pdf">source</a></span></p></div></div><p class="gap"><strong>What we could not confirm.</strong> We could not find a government source setting out heavy-vehicle licence categories or conversion rules for Saudi Arabia, the UAE or Qatar. Anyone who quotes you those rules with confidence should be asked where they read them.</p><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="labourers" class="role"><div class="rhead"><div class="rank"><span class="num">2,311</span><span class="q">of 11,850</span></div><div class="rtitle"><p class="eyebrow">02 · Including riggers' mates</p><h2>Construction labourers and helpers</h2><p class="claim">Second largest group, and the one most often filled locally.</p></div></div><p class="body">The work that every other trade depends on: moving material, preparing access, assisting riggers and fitters, housekeeping the work front. PNG LNG's national content plan lists labourers first among its construction positions.</p><p class="body">This is the role most likely to go to local hires. On Mozambique LNG, CCS JV states that employment priority goes to Mozambican nationals who meet project requirements, and its own subcontractor figures show it: catering, 1,300 of 1,340 workers Mozambican; camp construction, 350 of 600. <span class="s"><a href="https://www.ccsjv.com/wp-content/uploads/2020/07/CCS-JV-Forward-Work-Plan-updated-June-2020.pdf">source</a></span></p><div class="sub">When it mobilises</div><p class="body">Phase 2, from early civil works onward. <span class="s"><a href="https://labor.alaska.gov/agia_teams/docs-combined/01-07-2008RptAGIAoccs.pdf">Alaska Dept. of Labor, AGIA occupations study</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>For general labouring, none</h4><p>We could not find a certification requirement from any issuing body. If someone offers to sell you a labourer's certificate, there is nothing behind it.</p></div><div class="cert"><h4>If you will assist lifting operations, OPITO has two real entry standards</h4><p>Banksman &amp; Slinger Initial Training and Rigger Initial Training. Both are 24 guided learning hours, roughly 70% practical, and valid two years and eight months. Read OPITO's own warning carefully: the certificate "does not imply competence" — it is stage one of three, followed by supervised logged experience and only then a competence assessment. <span class="s"><a href="https://opito.com/standards-and-qualifications/industry-standards-library/rigger-initial-training-previously-stage-1">source</a></span></p></div></div><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="pipefitters" class="role"><div class="rhead"><div class="rank"><span class="num">1,566</span><span class="q">combined with welders and insulators</span></div><div class="rtitle"><p class="eyebrow">03 · Process piping</p><h2>Pipefitters</h2><p class="claim">Counted on one line with welders and insulators — the published number does not separate them.</p></div></div><p class="body">Cutting, fitting and erecting process piping to drawing and to code. On an LNG or refinery site the governing code is usually ASME B31.3, which covers materials, design, fabrication, assembly, erection, examination and testing of piping in refineries and cryogenic plants. <span class="s"><a href="https://www.asme.org/codes-standards/find-codes-standards/b31-3-process-piping">ASME B31.3 Process Piping</a></span></p><div class="sub">When it mobilises</div><p class="body">Phase 2. On Alaska LNG the first construction peak, around 4,200 workers, is described as heavy civil and welding-intensive pipeline trades. <span class="s"><a href="https://awib.alaska.gov/2026-mtg-aug/AKLNG-Workforce-Report.pdf">Alaska Workforce Investment Board, 2026</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>There is no pipefitter certification. Anywhere.</h4><p>We searched every issuing body we could find and there is no personnel certification standard for pipefitting. The tickets on a piping crew belong to the welder, not to the fitter. If a recruiter or a training centre offers to sell you a "certified pipefitter" qualification, they are selling a piece of paper that no employer recognises, because none exists.</p></div></div><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="welders" class="role"><div class="rhead"><div class="rank"><span class="num">1,566</span><span class="q">combined with pipefitters and insulators</span></div><div class="rtitle"><p class="eyebrow">04 · Pipe and structural</p><h2>Welders</h2><p class="claim">The trade with the most real, checkable qualifications — and therefore the most faked ones.</p></div></div><p class="body">Two different code worlds, and which one applies decides which ticket you need. Pressure and process piping falls under ASME; load-bearing steel structures fall under AWS D1.1.</p><div class="sub">When it mobilises</div><p class="body">Phase 2, with the pipeline and mechanical erection fronts. <span class="s"><a href="https://awib.alaska.gov/2026-mtg-aug/AKLNG-Workforce-Report.pdf">Alaska Workforce Investment Board, 2026</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>ASME BPVC Section IX — Welding, Brazing and Fusing Qualifications</h4><p>Covers qualification of welding procedures, and — per ASME's own course material for the section — performance qualification of welders and welding operators. <span class="s"><a href="https://www.asme.org/codes-standards/find-codes-standards/bpvc-ix-bpvc-section-ix-welding-brazing-fusing-qualifications">source</a></span></p></div><div class="cert"><h4>ISO 9606-1 — Qualification testing of welders</h4><p>This one qualifies the person, not the procedure. Its stated focus is the welder's ability to manipulate the electrode or torch by hand and produce an acceptable weld. Manual and partly mechanised fusion welding of steels; fully mechanised and automated welding are excluded. <span class="s"><a href="https://www.iso.org/standard/54936.html">source</a></span></p></div><div class="cert"><h4>AWS D1.1 — Structural Welding Code, Steel</h4><p>Procedure qualification, welder qualification, fabrication, workmanship, inspection and acceptance criteria for load-bearing steel structures. <span class="s"><a href="https://www.aws.org/standards-and-publications/codes-and-standards/d1-1/">source</a></span></p></div><div class="cert"><h4>6G is a position, not a certificate</h4><p>6G means the pipe is fixed at 45 degrees and the welder has to work all the way around it — the most demanding of the four test positions. You do not get "a 6G". You get a welder qualification taken in the 6G position, under one of the codes above. Anyone selling you "a 6G certificate" on its own does not know the subject, or is counting on you not knowing it. <span class="s"><a href="https://www.twi-global.com/technical-knowledge/faqs/what-is-pipe-welding">source</a></span></p></div></div><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="operators" class="role"><div class="rhead"><div class="rank"><span class="num">about 1,300</span><span class="q">of 11,850</span></div><div class="rtitle"><p class="eyebrow">05 · Lifting and earthmoving</p><h2>Heavy equipment and crane operators</h2><p class="claim">The role where the phrase "Gulf certification" is most often used to sell something worthless.</p></div></div><p class="body">Cranes, excavators, forklifts, telehandlers and the lifting crews around them. QatarEnergy groups the certified roles as rigging supervisors, riggers, crane operators and forklift operators.</p><div class="sub">When it mobilises</div><p class="body">Phase 2, from earthworks through mechanical erection. <span class="s"><a href="https://labor.alaska.gov/agia_teams/docs-combined/01-07-2008RptAGIAoccs.pdf">Alaska Dept. of Labor, AGIA occupations study</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>There is no single Gulf rigger or crane licence. It does not exist.</h4><p>Requirements are set by the client, project by project, and delivered through commercial third-party bodies. QatarEnergy requires lifting personnel to be certified against its own technical regulations — not against an international scheme. <span class="s"><a href="https://www.qatarenergy.qa/en/SupplyManagement/Tenders/SupplyManagmentFiles/QP_HSE_Regulations_for_Contractors_Approved.pdf.pdf">source</a></span></p></div><div class="cert"><h4>What does exist: third-party schemes operating inside the Gulf</h4><p>TÜV Rheinland's Qatar scheme LPC-005 certifies rigger, banksman, rigging supervisor and lifting supervisor. Minimum age 18, 15 to 20 hours of training, written and practical exams at 70%, certificate valid between one and three years. The scheme itself says that any additional client requirements still have to be met on top. <span class="s"><a href="https://www.tuv.com/content-media-files/qatar/videos/certification-schemes-application-form/lpc-005-rigger-banksman-rigging-and-lifting-supervisor.pdf">source</a></span></p></div><div class="cert"><h4>LEEA is commonly misquoted</h4><p>LEEA's own qualifications are for lifting equipment engineers and inspectors, not for crane drivers. Its Accredited Training Scheme is what covers slingers, riggers and operators, and it is delivered by member companies. QatarEnergy asks its lifting service providers whether their inspectors hold LEEA or equivalent — inspectors, not operators. <span class="s"><a href="https://leeaint.com/accredited-training">source</a></span></p></div></div><p class="gap"><strong>What we could not confirm.</strong> NCCCO in the United States certifies crane operators, signalpersons and riggers at Levels I and II on a five-year term. Its material says the programs are accredited without naming the accreditor, so we are not repeating the "ANSI-accredited" claim you will see elsewhere.</p><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="electrical" class="role"><div class="rhead"><div class="rank"><span class="num">397</span><span class="q">of 11,850</span></div><div class="rtitle"><p class="eyebrow">06 · E&amp;I, hazardous area</p><h2>Electricians and instrument technicians</h2><p class="claim">Mobilises late — which is exactly why people apply too early and give up.</p></div></div><p class="body">An LNG plant is an explosive atmosphere. That single fact governs the work and the qualifications: installation, inspection and maintenance of equipment rated for hazardous areas, plus the instrumentation that runs the plant.</p><div class="sub">When it mobilises</div><p class="body">Late. Alaska LNG's second construction peak, around 4,500 workers in 2029, is explicitly described as mechanical and electrical-intensive facility construction, against a first peak of heavy civil and welding. This is the clearest published evidence that E&amp;I follows civil and piping. <span class="s"><a href="https://awib.alaska.gov/2026-mtg-aug/AKLNG-Workforce-Report.pdf">Alaska Workforce Investment Board, 2026</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>CompEx Ex01–Ex04</h4><p>Installation, inspection and maintenance of Ex electrical equipment where gas and vapours are present. CompEx names its audience as practising electricians and instrumentation technicians. Typically five days, six for non-native English speakers. UKAS accredited. Core competence certificate valid five years. <span class="s"><a href="https://compexcertification.com/qualification/installation-inspection-and-maintenance-of-ex-electrical-equipment-where-gas-and-vapours-are-present-ex01-ex04/">source</a></span></p></div><div class="cert"><h4>IECEx Certificate of Personnel Competence</h4><p>Twelve units, Ex 000 to Ex 011, from basic awareness through installation, maintenance, inspection, testing, design and audit. Issued through independent IECEx-approved certification bodies. <span class="s"><a href="https://www.iecex.com/certification-of-personnel-competencies-scheme/overview/">source</a></span></p></div></div><p class="gap"><strong>What we could not confirm.</strong> Be careful how you read the two above. They are the recognised hazardous-area qualifications, but we could not find a single Gulf client document that names either one as contractually mandatory. Useful, widely respected, not provably compulsory.</p><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="scaffolders" class="role"><div class="rhead"><div class="rank none"><span class="num">—</span><span class="q">not published</span></div><div class="rtitle"><p class="eyebrow">07 · Access</p><h2>Scaffolders</h2><p class="claim">No published headcount — and the one trade where the wrong training centre makes your card worthless.</p></div></div><p class="body">Access for everyone else: erecting, altering, dismantling and inspecting scaffold so that fitters, welders, painters and insulators can reach the work. The CISRS card ladder shows the progression — labourer, base, trainee, scaffolder, advanced scaffolder, plus separate inspection and supervisor cards. <span class="s"><a href="https://cisrs.org.uk/training/cisrs-cards.html">CISRS card scheme</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>CISRS OSTS is the route built for workers outside the UK</h4><p>The Overseas Scaffolder Training Scheme runs on the same principles as the UK scheme, with accredited centres in Abu Dhabi, China, India, Ivory Coast, Kazakhstan, Nepal, Nigeria, Oman, Qatar and Trinidad. Levels 1 to 4, plus scaffold inspection and supervisor. <span class="s"><a href="https://cisrs.org.uk/osts.html">source</a></span></p></div><div class="cert"><h4>The sentence that costs people their money</h4><p>CISRS states plainly that it will only issue a card for training and assessment carried out at a CISRS accredited centre. Scaffolding training anywhere else does not convert, does not count and cannot be upgraded later. Check the centre against the CISRS list before you pay, not after. <span class="s"><a href="https://cisrs.org.uk/frequently-asked-questions/i-have-been-trained-as-a-scaffolder-in-another-country-do-i-qualify-for-a-cisrs-card/">source</a></span></p></div><div class="cert"><h4>What the client actually asks for</h4><p>QatarEnergy's contractor regulations require scaffold to be erected, altered or dismantled only by a qualified scaffolding contractor to its own requirements. They do not name CISRS. The card gets you hired by the contractor; it is not itself the client's rule. <span class="s"><a href="https://www.qatarenergy.qa/en/SupplyManagement/Tenders/SupplyManagmentFiles/QP_HSE_Regulations_for_Contractors_Approved.pdf.pdf">source</a></span></p></div></div><p class="gap"><strong>What we could not confirm.</strong> No published source maps scaffolders to a construction phase. Our own read, and we are labelling it as ours: scaffolders arrive with bulk mechanical and piping work and stay through commissioning, because insulation, painting and punchlisting all need access.</p><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="qaqc" class="role"><div class="rhead"><div class="rank none"><span class="num">—</span><span class="q">not published</span></div><div class="rtitle"><p class="eyebrow">08 · Welding inspection and NDT</p><h2>QA/QC inspectors</h2><p class="claim">No published headcount. The best-documented qualifications of any role here.</p></div></div><p class="body">Checking that what was built matches the code and the drawing, and recording it so it can be signed off. CSWIP defines the ladder precisely: 3.0 visual welding inspector works under supervision; 3.1 welding inspector supervises them, witnesses tests and verifies welder approvals; 3.2 senior welding inspector takes final acceptance and certification. <span class="s"><a href="https://www.cswip.com/pdfs/schemes/welding-inspection/CSWIP-WI-6-92-Welding-Inspectors-17th-Edition-June-2024.pdf">CSWIP welding inspector scheme document</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>CSWIP 3.1 — what it really takes</h4><p>Entry needs three years of welding inspection experience under qualified supervision, independently verified — or two years as a CSWIP visual welding inspector. The exam is two theory papers and a practical inspection of eight specimens, with 70% required on every part. Valid five years; past ten years you re-sit. <span class="s"><a href="https://www.cswip.com/pdfs/schemes/welding-inspection/CSWIP-WI-6-92-Welding-Inspectors-17th-Edition-June-2024.pdf">source</a></span></p></div><div class="cert"><h4>AWS CWI — the American equivalent</h4><p>Three parts: fundamentals, a hands-on practical, and an open-book code paper, with a minimum of 72% on each and a vision test. Valid nine years, with renewals at three and six. <span class="s"><a href="https://www.aws.org/certification-and-education/professional-certification/certified-welding-inspector/">source</a></span></p></div><div class="cert"><h4>NDT: ISO 9712 travels with you. ASNT SNT-TC-1A does not.</h4><p>This is the most consequential distinction on this page. ISO 9712 is a third-party certification: an independent body examines you and the certificate is yours, valid five years, across employers. ASNT's SNT-TC-1A is different in kind — ASNT states that certificates based on it are employer-based programmes for which ASNT does not hold responsibility, and that you are certified by your employer under your employer's written practice. Change employer and you generally start again. Know which one you are being offered before you pay for it. <span class="s"><a href="https://www.asnt.org/standards-publications/blog/employer-based-certification-programs">source</a></span></p></div><div class="cert"><h4>What the NDT levels mean</h4><p>Level 1 carries out tests under written instructions and under Level 2 or 3 supervision, and cannot select the method or assess the results. Level 2 chooses techniques, calibrates, interprets and evaluates. Level 3 takes responsibility for the facility, the procedures and the staff. <span class="s"><a href="https://www.cswip.com/pdfs/schemes/NDT-scheme-docs/CSWIP-ISO-NDT-11-93-R-NDT-Personnel-ISO-9712-9th-Edition-June-2018.pdf">source</a></span></p></div></div><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="hse" class="role"><div class="rhead"><div class="rank none"><span class="num">—</span><span class="q">not published</span></div><div class="rtitle"><p class="eyebrow">09 · Safety</p><h2>HSE officers</h2><p class="claim">No published headcount. The role with the most widely sold useless card.</p></div></div><p class="body">Permit to work, risk assessment, toolbox talks, incident investigation, and the authority to stop a job. QatarEnergy requires contractors to appoint HSE officers in proportion to workforce size and risk, and to put them through its own competence assessment on top of their qualifications. <span class="s"><a href="https://www.qatarenergy.qa/en/SupplyManagement/Tenders/SupplyManagmentFiles/QP_HSE_Regulations_for_Contractors_Approved.pdf.pdf">QatarEnergy HSE Regulations for Contractors</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>What a Gulf client actually demands, in its own words</h4><p>QatarEnergy's corporate HSE standard requires HSE advisers to hold at least one of: a NEBOSH Certificate or Diploma; Chartered Membership of IOSH (CMIOSH); a Diploma in Occupational Safety and Health Management or membership of IIRSM; or Registered Safety Professional status. <span class="s"><a href="https://www.qatarenergy.qa/en/SupplyManagement/Tenders/SupplyManagmentFiles/CORP-HSE-STD-080%20CORPORATE%20STANDARD%20FOR%20MANAGING%20HSE%20IN%20CONTRACTS.pdf">source</a></span></p></div><div class="cert"><h4>NEBOSH and IOSH are not the same kind of thing</h4><p>NEBOSH's International General Certificate is a qualification — two units, an open-book scenario examination with a closing interview and a practical risk assessment, a minimum of 63 taught hours. IOSH Managing Safely is a three-day course for supervisors. Note what the QatarEnergy list above actually names on the IOSH side: chartered membership, not the course. <span class="s"><a href="https://www.nebosh.org.uk/qualifications/international-general-certificate/">source</a></span></p></div><div class="cert"><h4>OSHA 10 and OSHA 30: read what OSHA itself says</h4><p>"The Outreach Training Program is voluntary and OSHA does not require Outreach training." And: "an OSHA card is not considered a certification or license." Those are OSHA's words on OSHA's website. People are sold these cards every day as a requirement for Gulf work. They are not. <span class="s"><a href="https://www.osha.gov/training/outreach/faq">source</a></span></p></div></div><p class="top"><a href="#index">&uarr; back to the list</a></p></section><section id="warehouse" class="role"><div class="rhead"><div class="rank none"><span class="num">—</span><span class="q">not published</span></div><div class="rtitle"><p class="eyebrow">10 · Materials</p><h2>Warehouse and materials controllers</h2><p class="claim">No published headcount, and — genuinely — no standard ticket.</p></div></div><p class="body">Receiving, preserving, storing and issuing everything the site installs, and knowing where it is. The Alaska Department of Labor treats material handling and logistics as two of the ten occupational groups significant to pipeline construction; PNG LNG lists store managers among its construction positions. <span class="s"><a href="https://labor.alaska.gov/agia_teams/docs-combined/01-07-2008RptAGIAoccs.pdf">Alaska Dept. of Labor, AGIA occupations study</a></span></p><div class="sub">What the ticket is actually worth</div><div class="certs"><div class="cert"><h4>We looked, and there is nothing to require</h4><p>No issuing body and no employer document we could find sets a certification requirement for a site materials controller. General supply-chain qualifications exist — CIPS, APICS CPIM — but we found no evidence that any EPC contractor asks for them for this job. What counts here is experience with a materials management system and with preservation requirements.</p></div></div><p class="gap"><strong>What we could not confirm.</strong> No published source places warehousing in a construction phase. Our own read: it has to start before bulk construction, because material must be received and preserved before it can be installed, and it carries on into commissioning for spares.</p><p class="top"><a href="#index">&uarr; back to the list</a></p></section>
+
+  <div class="block" id="offshore">
+    <h2>BOSIET: the certificate most often sold to the wrong people</h2>
+    <p>BOSIET is offshore survival training. OPITO, which sets the standard, describes
+    it as being for personnel new or returning to the offshore industry
+    <strong>who will be supplied with a compressed air emergency breathing system during
+    offshore helicopter travel</strong>. It covers helicopter ditching and escape, sea
+    survival, firefighting and first aid. Around 20 hours, valid a maximum of four years.
+    <span class="s"><a href="https://opito.com/standards-and-qualifications/industry-standards-library/basic-offshore-safety-induction-and-emergency-training-bosiet-with-compressed-air-emergency-breathing-system-ca-ebs">OPITO</a></span></p>
+    <p><strong>The trigger is the helicopter, not the industry.</strong> If you are
+    going to work on an LNG train on land, you do not need it. QatarEnergy's own
+    corporate standard confirms where the line sits: it requires tropical BOSIET for
+    <em>offshore</em> contractor personnel.
+    <span class="s"><a href="https://www.qatarenergy.qa/en/SupplyManagement/Tenders/SupplyManagmentFiles/CORP-HSE-STD-080%20CORPORATE%20STANDARD%20FOR%20MANAGING%20HSE%20IN%20CONTRACTS.pdf">QatarEnergy</a></span></p>
+    <p>If you are genuinely going offshore in a tropical region, T-BOSIET is the right
+    one and OPITO-approved centres run in Malaysia, Indonesia, Thailand, Nigeria,
+    Angola and the Philippines. If you are going onshore and someone insists you need
+    BOSIET first, that is the moment to stop and check the job offer itself.</p>
+  </div>
+
+  <div class="block" id="authorities">
+    <h2>Check the agent before you pay, not after</h2>
+    <p>Both of the countries most of our readers write from run a public register and a
+    complaints route. Use them — they are free, and they are the only opinion that counts.</p>
+    <ul>
+      <li><strong>Philippines.</strong> The DMW sets out how to avoid illegal
+      recruitment, and the rule worth memorising: do not pay more than the allowed
+      placement fee, equivalent to one month's salary excluding documentation and
+      processing; do not pay anything without a valid employment contract and an
+      official receipt; do not deal with training centres or travel agencies promising
+      overseas employment.
+      <span class="s"><a href="https://dmw.gov.ph/archives/poea/air/howtoavoid.html">DMW</a></span></li>
+      <li><strong>Philippines — the named tricks.</strong> The DMW publishes the modus
+      operandi of illegal recruiters, including the tie-up system, where unlicensed
+      recruiters borrow the name and offices of a licensed agency.
+      <span class="s"><a href="https://dmw.gov.ph/archives/poea/air/modus.html">DMW</a></span></li>
+      <li><strong>India.</strong> Ask your recruiting agent to show the original
+      registration certificate issued by the Protector General of Emigrants, and verify
+      it on the eMigrate portal. Sub-agents are not permitted under the Emigration Act.
+      Emigration clearance applies to ECR passport holders going to 17 countries,
+      including Saudi Arabia, the UAE, Qatar, Kuwait, Oman and Bahrain.
+      <span class="s"><a href="https://www.mea.gov.in/emigration-abroad-for-emp">MEA</a></span></li>
+      <li><strong>India — if you have been cheated.</strong> Complain to the Protector
+      General of Emigrants, the Indian Embassy or Consulate, or through the MADAD
+      portal. The overseas workers' helpline is 1800 11 3090.
+      <span class="s"><a href="https://www.mea.gov.in/complaints-against-recruiting-agents">MEA</a></span></li>
+    </ul>
+    <p>One caution about a number you will see quoted. Two Indian government pages give
+    different caps on what a recruiting agent may charge — one says ₹30,000, the other
+    says a maximum of 45 days' wages capped at ₹20,000. We could not establish which is
+    current, so we are giving you both and the links rather than a single figure that
+    might be wrong.</p>
+  </div>
+
+  <div class="block" id="employers">
+    <h2>What the contractors themselves say</h2>
+    <p>These are not our words. Each of these companies publishes a fraud warning on its
+    own careers or ethics page, and they all say the same thing.</p>
+    <ul>
+      <li><strong>McDermott</strong> does not use recruiting or placement agencies that
+      charge candidates fees of any kind, and will not ask for personal identification
+      before you have accepted an offer.
+      <span class="s"><a href="https://www.mcdermott.com/careers/search-apply">McDermott</a></span></li>
+      <li><strong>NMDC Energy</strong> publishes all legitimate vacancies only on its
+      own careers page, sends all communication from an official company domain, and
+      never requests payment or bank details at any stage.
+      <span class="s"><a href="https://www.nmdc-energy.com/en/careers/">NMDC Energy</a></span></li>
+      <li><strong>Saipem</strong> warns that people are offering false job opportunities
+      in its name and asking for money or financial details, and states it will never
+      ask for money.
+      <span class="s"><a href="https://www.saipem.com/en/about-us/business-ethics/cybersecurity-and-fraud-alert">Saipem</a></span></li>
+      <li><strong>CCS JV</strong>, the joint venture building Mozambique LNG, states
+      that no payment to apply for any of its roles will be requested or accepted.
+      <span class="s"><a href="https://www.ccsjv.com/contact/faqs/">CCS JV</a></span></li>
+    </ul>
+    <p>McDermott's careers search is the most useful of the set if you want to filter by
+    trade — it has categories for onshore and offshore construction, fabrication,
+    quality, QHSES, supply chain and marine. Most of the others route to a portal with
+    no trade filter, and two of them had no searchable vacancy list at all when we
+    checked.</p>
+    <div class="links">
+      <a class="btn btn-a" href="/projects.html">The five projects hiring now</a>
+      <a class="btn btn-b" href="https://t.me/epcradar">Telegram</a>
+      <a class="btn btn-b" href="mailto:epcradar@gmail.com">Tell us about a scam</a>
+    </div>
+  </div>
+
+  <footer>
+    <p style="margin:0">EPC Radar is an independent publication. It is not affiliated
+    with, endorsed by, or speaking for any company or authority named on this page. We
+    are not a recruitment agency, we do not collect CVs and we do not place anyone in a
+    job. Every link here goes to the organisation's own site.<br>
+    <strong style="color:var(--paper)">We never ask for money for jobs.</strong><br>
+    <a href="mailto:epcradar@gmail.com">epcradar@gmail.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
