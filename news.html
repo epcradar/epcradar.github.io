@@ -1,294 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EPC Radar Newsroom — oil &amp; gas news, checked against the source</title>
-<meta name="description" content="Oil and gas EPC awards and market news for people who work on site: who builds it, what it means for work, and the source for every number. We never ask for money for jobs.">
-<meta property="og:title" content="EPC Radar Newsroom">
-<meta property="og:description" content="Aramco hands NMDC Energy three offshore projects worth $763 million">
-<meta property="og:image" content="https://epcradar.com/news/2026-10-24-nmdc-aramco-offshore.jpg">
+<title>Oil and gas EPC news, checked against the source | EPC Radar</title>
+<meta name="description" content="Contract awards, plants and market moves in oil and gas, with who builds it and what it means for work. Every number links to its source.">
+<link rel="canonical" href="https://epcradar.com/news.html">
+<meta property="og:title" content="Oil and gas EPC news, checked against the source | EPC Radar">
+<meta property="og:description" content="Contract awards, plants and market moves in oil and gas, with who builds it and what it means for work. Every number links to its source.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://epcradar.com/news.html">
-<meta name="theme-color" content="#0A1E2C">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#0A1E2C; --ink-2:#0E2738; --grid:#2C5168;
-    --paper:#EDF2F5; --mute:#8DA6B6; --amber:#F5A524;
-    --display:"Oswald",Impact,"Haettenschweiler","Arial Narrow",sans-serif;
-    --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;background:var(--ink);color:var(--paper);
-    font-family:var(--body);font-size:17px;line-height:1.65;
-    overflow-x:hidden;
-  }
-  .sweep{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5}
-  .wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 16px}
-  a{color:var(--amber)}
-  h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:.01em;margin:0}
-  .eyebrow{font-family:var(--display);font-weight:500;font-size:14px;
-    letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin:0 0 14px}
-
-  header{padding:44px 0 12px}
-  header svg{width:min(390px,76vw);height:auto;display:block}
-
-  .hero{padding:26px 0 52px;border-bottom:1px solid var(--grid)}
-  .hero h1{font-size:clamp(34px,7.4vw,60px);line-height:1.08;margin-bottom:18px}
-  .hero p{font-size:clamp(17px,2.4vw,20px);color:var(--mute);max-width:36em;margin:0}
-  .hero .amber{color:var(--amber)}
-
-  section{padding:52px 0;border-bottom:1px solid var(--grid)}
-  section h2{font-size:clamp(24px,4vw,32px);margin-bottom:18px}
-  section p{max-width:40em;color:var(--mute)}
-  section p strong{color:var(--paper);font-weight:600}
-
-  .tiers{display:grid;gap:14px;margin-top:26px}
-  @media(min-width:700px){.tiers{grid-template-columns:repeat(3,1fr)}}
-  .tier{border:1px solid var(--grid);border-radius:10px;padding:20px;background:var(--ink-2)}
-  .tier .tag{display:inline-block;font-family:var(--display);font-weight:600;font-size:13px;
-    letter-spacing:.14em;padding:5px 11px;border-radius:5px;margin-bottom:12px}
-  .t-conf .tag{background:var(--amber);color:var(--ink)}
-  .t-rep .tag{background:transparent;color:var(--amber);border:1px solid var(--amber)}
-  .t-rad .tag{background:transparent;color:var(--mute);border:1px solid var(--grid)}
-  .tier p{font-size:15.5px;margin:0;color:var(--mute)}
-
-  .fields{display:grid;gap:0;margin-top:26px}
-  @media(min-width:700px){.fields{grid-template-columns:1fr 1fr;column-gap:34px}}
-  .field{border-top:1px solid var(--grid);padding:16px 0}
-  .field .k{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.18em;
-    text-transform:uppercase;color:var(--mute);margin-bottom:5px}
-  .field .v{font-family:var(--display);font-weight:600;font-size:21px;color:var(--paper);line-height:1.25}
-  .field .d{font-size:15px;color:var(--mute);margin-top:4px}
-
-  .pledge{border:2px solid var(--amber);border-radius:12px;padding:26px;margin-top:8px}
-  .pledge h2{color:var(--amber);margin-bottom:12px}
-  .pledge p{color:var(--paper);margin:0 0 10px}
-  .pledge p:last-child{margin-bottom:0;color:var(--mute);font-size:15.5px}
-
-  .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-  .btn{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.06em;
-    text-decoration:none;padding:13px 22px;border-radius:8px;display:inline-block}
-  .btn-a{background:var(--amber);color:var(--ink)}
-  .btn-b{border:1px solid var(--grid);color:var(--paper)}
-
-  footer{padding:36px 0 56px;color:var(--mute);font-size:14.5px}
-  footer .soon{font-family:var(--display);font-weight:500;letter-spacing:.16em;
-    text-transform:uppercase;font-size:13px;color:var(--amber);margin-bottom:10px}
-
-  .nav{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--display);font-size:15px;
-    letter-spacing:.08em;text-transform:uppercase;margin:6px 0 0}
-  .nav a{text-decoration:none;color:var(--mute)} .nav a:hover{color:var(--amber)}
-  .toc{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
-  .toc a{text-decoration:none;color:var(--paper);font-family:var(--display);font-size:19px}
-  .toc span{color:var(--mute);font-size:13px;letter-spacing:.14em;text-transform:uppercase;
-    display:block;font-family:var(--display)}
-  article{padding:52px 0;border-bottom:1px solid var(--grid);scroll-margin-top:12px}
-  article h2{font-size:clamp(26px,4.6vw,38px);line-height:1.12;margin-bottom:16px}
-  article h3{font-size:21px;margin:26px 0 8px}
-  article p{color:var(--mute);max-width:40em}
-  article p strong{color:var(--paper)}
-  .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
-  .meta .fmt{font-family:var(--display);font-weight:600;letter-spacing:.14em;font-size:13px;
-    text-transform:uppercase;color:var(--ink);background:var(--fam);padding:5px 11px;border-radius:5px}
-  .meta .tag{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.14em;
-    padding:4px 10px;border-radius:5px;border:1px solid var(--amber);color:var(--amber)}
-  .meta .tag.CONFIRMED{background:var(--amber);color:var(--ink)}
-  .meta .tag.EXPLAINER{border-color:var(--grid);color:var(--mute)}
-  .meta .where{font-family:var(--display);font-size:14px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--mute)}
-  .card{width:100%;max-width:420px;height:auto;border-radius:10px;display:block;margin:6px 0 22px;
-    border:1px solid var(--grid)}
-  .lead{font-size:clamp(17px,2.4vw,19.5px);color:var(--paper)!important}
-  .work{border-left:3px solid var(--amber);padding:4px 0 4px 18px;margin-top:24px}
-  .work .k{font-family:var(--display);font-size:13px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--amber);margin-bottom:6px}
-  .work p{margin:0 0 10px}
-  .jobs{border-left:3px solid #3DBF8B;padding:4px 0 4px 18px;margin-top:20px}
-  .jobs .k{font-family:var(--display);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#3DBF8B}
-  .jobs ul{list-style:none;padding:0;margin:8px 0}
-  .jobs li{margin:0 0 10px}
-  .jobs li a{font-weight:600}
-  .jobs li span{display:block;font-size:14px;opacity:.75}
-  .jobs .nota{font-size:13px;opacity:.7;margin:0}
-  .src{font-size:14.5px;color:var(--mute);margin-top:22px}
-  .src ul{margin:6px 0 0;padding-left:18px}
-  .top{font-size:14px;margin-top:18px;display:inline-block}
-</style>
-<script data-goatcounter="https://epcradar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-<style id="eh-css">
-.eb{position:relative;z-index:2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-body{flex-wrap:wrap;align-content:flex-start}body>.eb{flex:0 0 100%}
-.eb-l{display:flex;justify-content:center;align-items:center;gap:6px 10px;height:28px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;
-  background:#0E2738;border-bottom:1px solid #2C5168;color:#8DA6B6;font-size:13px;line-height:28px;padding:0 8px}
-.eb-l::-webkit-scrollbar{display:none}
-.eb-l a{color:#8DA6B6;text-decoration:underline;flex:none}
-.eb-l a[lang=en]{color:#EDF2F5}
-.eb-s{display:flex;justify-content:center;align-items:center;height:32px;overflow:hidden;white-space:nowrap;background:#F5A524;color:#0A1E2C;
-  font-size:14px;font-weight:600;text-decoration:none;padding:0 12px}
-.eb-s .lg{display:none}.eb-s .sm{display:inline}.eb-s .w{font-weight:400;margin-left:.4em}
-.eh{position:relative;z-index:1;max-width:848px;margin:0 auto;padding:10px 0 4px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 20px}
-.eh-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px;flex:none}
-.eh-n{font-family:var(--display,Oswald,Impact,"Arial Narrow",sans-serif);font-weight:700;font-size:23px;letter-spacing:.04em;color:#EDF2F5;line-height:1;white-space:nowrap}
-.eh-t{font-family:var(--display,Oswald,Impact,"Arial Narrow",sans-serif);font-weight:600;font-size:11px;letter-spacing:.14em;color:#0A1E2C;background:#F5A524;border-radius:3px;padding:3px 6px 2px;line-height:1;white-space:nowrap}
-.eh-nav{display:flex;flex-wrap:nowrap;gap:0 18px;font-family:var(--display,Oswald,Impact,"Arial Narrow",sans-serif);font-size:14px;letter-spacing:.09em;text-transform:uppercase;width:100%}
-.eh-nav a{display:inline-flex;align-items:center;min-height:44px;color:#8DA6B6;text-decoration:none;white-space:nowrap}
-.eh-nav a:hover,.eh-nav a.on{color:#F5A524}
-@media(min-width:700px){.eh{padding-top:14px}.eh-nav{width:auto}.eb-s .lg{display:inline}.eb-s .sm{display:none}.eb-s,.eb-l{font-size:14px}}
-</style>
+<meta property="og:image" content="https://epcradar.com/news/2026-10-24-nmdc-aramco-offshore.jpg">
+<meta name="theme-color" content="#07141F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EPC Radar", "url": "https://epcradar.com/", "email": "epcradar@gmail.com", "sameAs": ["https://www.instagram.com/epcradar/", "https://t.me/epcradar"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Aramco hands NMDC Energy three offshore projects worth $763 million", "image": "https://epcradar.com/img/2026-10-24-nmdc-aramco-offshore.webp", "publisher": {"@type": "Organization", "name": "EPC Radar"}, "url": "https://epcradar.com/news.html#nmdc-aramco"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Diesel at $6.28 a gallon: why refineries cannot keep up", "image": "https://epcradar.com/img/2026-10-21-diesel-refining.webp", "publisher": {"@type": "Organization", "name": "EPC Radar"}, "url": "https://epcradar.com/news.html#diesel"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "HPCL Mumbai refinery upgrade: large EPC contract to Technip Energies", "image": "https://epcradar.com/img/2026-10-21-hpcl-mumbai-technip.webp", "publisher": {"@type": "Organization", "name": "EPC Radar"}, "url": "https://epcradar.com/news.html#hpcl-mumbai"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "P-82 leaves Singapore for B\u00fazios: second Seatrium FPSO in under a month", "image": "https://epcradar.com/img/2026-10-22-p82-buzios-seatrium.webp", "publisher": {"@type": "Organization", "name": "EPC Radar"}, "url": "https://epcradar.com/news.html#p82"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Dung Quat refinery expansion: 148,000 to 171,000 b/d", "image": "https://epcradar.com/img/2026-10-23-dung-quat-expansion.webp", "publisher": {"@type": "Organization", "name": "EPC Radar"}, "url": "https://epcradar.com/news.html#dung-quat"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Ghazlan 1: sales gas delivery system to GAS Arabian Services", "image": "https://epcradar.com/img/2026-10-23-ghazlan-gas-arabian.webp", "publisher": {"@type": "Organization", "name": "EPC Radar"}, "url": "https://epcradar.com/news.html#ghazlan-1"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "One barrel, three fuels: why refiners cannot just make more diesel", "image": "https://epcradar.com/img/2026-10-24-barrel-explainer.webp", "publisher": {"@type": "Organization", "name": "EPC Radar"}, "url": "https://epcradar.com/news.html#barrel"}</script>
 </head>
-<body id="top">
-<!-- lingue --><div class="eb"><div class="eb-l" title="Machine translation (Google Translate)"><a href="https://epcradar.com/news.html" lang="en">English</a> <a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=zh-CN&amp;_x_tr_hl=zh-CN&amp;_x_tr_pto=wapp" lang="zh-CN" rel="nofollow">中文</a> <a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=tl&amp;_x_tr_hl=tl&amp;_x_tr_pto=wapp" lang="tl" rel="nofollow">Filipino</a> <a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=hi&amp;_x_tr_hl=hi&amp;_x_tr_pto=wapp" lang="hi" rel="nofollow">हिन्दी</a> <a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=id&amp;_x_tr_hl=id&amp;_x_tr_pto=wapp" lang="id" rel="nofollow">Indonesia</a> <a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=pt&amp;_x_tr_hl=pt&amp;_x_tr_pto=wapp" lang="pt" rel="nofollow">Português</a> <a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=ar&amp;_x_tr_hl=ar&amp;_x_tr_pto=wapp" lang="ar" rel="nofollow">العربية</a></div><a class="eb-s" href="/jobs.html" data-goatcounter-click="jobs-strip" data-goatcounter-title="strip on news.html"><span class="sm">244 openings · <u>see them by country</u> &rsaquo;</span><span class="lg">244 openings in 59 adverts · 238 in India, Gulf, Africa and Asia: <u>see them by country</u> &rsaquo;<span class="w">(checked 3 Nov)</span></span></a></div><!-- /lingue -->
-<svg class="sweep" viewBox="0 0 1200 900" preserveAspectRatio="xMaxYMin slice" aria-hidden="true">
-  <g fill="none" stroke="#2C5168" stroke-width="1.6">
-    <circle cx="1230" cy="-90" r="300"/><circle cx="1230" cy="-90" r="520"/>
-    <circle cx="1230" cy="-90" r="740"/><circle cx="1230" cy="-90" r="960"/>
-    <circle cx="1230" cy="-90" r="1180"/>
-  </g>
-</svg>
-<div class="wrap">
-  <!-- hdr --><div class="eh"><a class="eh-logo" href="/" aria-label="EPC Radar home"><svg class="eh-mark" width="34" height="34" viewBox="0 0 340 340" aria-hidden="true"><circle cx="170" cy="170" r="52" fill="none" stroke="#2C5168" stroke-width="10"/><circle cx="170" cy="170" r="99" fill="none" stroke="#2C5168" stroke-width="10"/><circle cx="170" cy="170" r="145" fill="none" stroke="#2C5168" stroke-width="10"/><path d="M170 170 L271 65 A145 145 0 0 0 154 25 Z" fill="#F5A524"/><circle cx="170" cy="170" r="13" fill="#F5A524"/></svg><span class="eh-n">EPC RADAR</span><span class="eh-t">OIL &amp; GAS</span></a><nav class="eh-nav" aria-label="Main"><a href="/news.html" class="on" aria-current="page">News</a><a href="/jobs.html">Jobs</a><a href="/projects.html">Big Ten</a><a href="/tracker.html">Tracker</a><a href="/roles.html">Roles</a></nav></div><!-- /hdr -->
-  <div class="hero">
-    <p class="eyebrow">Newsroom · checked 3 Nov · last new verified contract 23 Oct</p>
-    <h1>Oil &amp; gas news,<br>checked against the source.</h1>
-    <p>Awards, plants and market moves, with who builds it and what it means for work.
-    Every number links to where it comes from.</p>
-    <ul class="toc">
-<li><a href="#nmdc-aramco"><span>Signed &amp; Sealed · Saudi Aramco · Offshore</span>Aramco hands NMDC Energy three offshore projects worth $763 million</a></li>
-<li><a href="#diesel"><span>Market Watch · Global · Refining</span>Diesel at $6.28 a gallon: why refineries cannot keep up</a></li>
-<li><a href="#hpcl-mumbai"><span>Signed &amp; Sealed · India · Refinery</span>HPCL Mumbai refinery upgrade: large EPC contract to Technip Energies</a></li>
-<li><a href="#p82"><span>Project Radar · Brazil · FPSO</span>P-82 leaves Singapore for Búzios: second Seatrium FPSO in under a month</a></li>
-<li><a href="#dung-quat"><span>Project Radar · Vietnam · Refinery</span>Dung Quat refinery expansion: 148,000 to 171,000 b/d</a></li>
-<li><a href="#ghazlan-1"><span>Signed &amp; Sealed · Saudi Arabia · Gas</span>Ghazlan 1: sales gas delivery system to GAS Arabian Services</a></li>
-<li><a href="#barrel"><span>Plant Focus · Refining · How it works</span>One barrel, three fuels: why refiners cannot just make more diesel</a></li>
-    </ul>
-  </div>
-<article id="nmdc-aramco" style="--fam:#F5A524">
-<div class="meta">
-<span class="fmt">Signed &amp; Sealed</span>
-<span class="tag CONFIRMED">CONFIRMED</span>
-<span class="where">Saudi Aramco · Offshore · 23 Oct 2026</span></div>
-<h2>Aramco hands NMDC Energy three offshore projects worth $763 million</h2>
-<img class="card" src="/news/2026-10-24-nmdc-aramco-offshore.jpg" alt="Aramco hands NMDC Energy three offshore projects worth $763 million" loading="lazy" width="1080" height="1350">
-<p class="lead">NMDC Energy told the Abu Dhabi Securities Exchange on 23 October that it has received a <strong>letter of award from Saudi Aramco for three new offshore projects</strong>, worth AED 2.8 billion (about $763 million), to be completed in 18 to 23 months.</p>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="logo" href="index.html" aria-label="EPC Radar home"><svg viewBox="0 0 340 340" aria-hidden="true"><circle cx="170" cy="170" r="52" fill="none" stroke="#2C5168" stroke-width="14"/><circle cx="170" cy="170" r="99" fill="none" stroke="#2C5168" stroke-width="14"/><circle cx="170" cy="170" r="145" fill="none" stroke="#2C5168" stroke-width="14"/><path d="M170 170 L271 65 A145 145 0 0 0 154 25 Z" fill="#F5A524"/><circle cx="170" cy="170" r="16" fill="#F5A524"/></svg><b>EPC RADAR</b><small>OIL &amp; GAS</small></a>
+<nav class="nav" aria-label="Main"><a href="jobs.html">Jobs</a><a href="projects.html">Top 10 projects</a><a href="tracker.html">All projects</a><a href="roles.html">Trades</a><a href="news.html" aria-current=page>News</a></nav>
+<div class="top-actions"><button class="searchbtn" type="button" data-search aria-label="Search projects, companies, countries, trades and jobs"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path d="M18.2173 18.2178L21.9999 22.0004"/></g></svg><span class="lbl">Search</span><kbd>/</kbd></button><details class="lang"><summary aria-label="Language"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M22 12C22 13.3132 21.7413 14.6136 21.2388 15.8268C20.7362 17.0401 19.9997 18.1425 19.0711 19.0711C18.1425 19.9997 17.0401 20.7362 15.8268 21.2388C14.6136 21.7413 13.3132 22 12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C4.00035 18.1425 3.26375 17.0401 2.7612 15.8268C2.25866 14.6136 2 13.3132 2 12C2 10.6868 2.25866 9.38642 2.76121 8.17316C3.26375 6.95991 4.00035 5.85752 4.92893 4.92893C5.85752 4.00035 6.95991 3.26375 8.17317 2.7612C9.38642 2.25866 10.6868 2 12 2C13.3132 2 14.6136 2.25866 15.8268 2.76121C17.0401 3.26375 18.1425 4.00035 19.0711 4.92893C19.9997 5.85752 20.7362 6.95991 21.2388 8.17317C21.7413 9.38642 22 10.6868 22 12L22 12Z"/><path d="M16 12C16 13.3132 15.8965 14.6136 15.6955 15.8268C15.4945 17.0401 15.1999 18.1425 14.8284 19.0711C14.457 19.9997 14.016 20.7362 13.5307 21.2388C13.0454 21.7413 12.5253 22 12 22C11.4747 22 10.9546 21.7413 10.4693 21.2388C9.98396 20.7362 9.54301 19.9997 9.17157 19.0711C8.80014 18.1425 8.5055 17.0401 8.30448 15.8268C8.10346 14.6136 8 13.3132 8 12C8 10.6868 8.10346 9.38642 8.30448 8.17316C8.5055 6.95991 8.80014 5.85752 9.17157 4.92893C9.54301 4.00035 9.98396 3.26375 10.4693 2.7612C10.9546 2.25866 11.4747 2 12 2C12.5253 2 13.0454 2.25866 13.5307 2.76121C14.016 3.26375 14.457 4.00035 14.8284 4.92893C15.1999 5.85752 15.4945 6.95991 15.6955 8.17317C15.8965 9.38642 16 10.6868 16 12L16 12Z"/><path d="M2 12H22"/></g></svg></summary><div class="menu"><p>Other languages open a machine translation (Google). Native translations are on the way.</p><a href="https://epcradar.com/news.html" lang="en" hreflang="en" rel="nofollow"><span>English</span><small>current</small></a><a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=zh-CN&amp;_x_tr_hl=zh-CN&amp;_x_tr_pto=wapp" lang="zh-CN" hreflang="zh-CN" rel="nofollow"><span>中文</span></a><a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=tl&amp;_x_tr_hl=tl&amp;_x_tr_pto=wapp" lang="tl" hreflang="tl" rel="nofollow"><span>Filipino</span></a><a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=hi&amp;_x_tr_hl=hi&amp;_x_tr_pto=wapp" lang="hi" hreflang="hi" rel="nofollow"><span>हिन्दी</span></a><a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=id&amp;_x_tr_hl=id&amp;_x_tr_pto=wapp" lang="id" hreflang="id" rel="nofollow"><span>Indonesia</span></a><a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=pt&amp;_x_tr_hl=pt&amp;_x_tr_pto=wapp" lang="pt" hreflang="pt" rel="nofollow"><span>Português</span></a><a href="https://epcradar-com.translate.goog/news.html?_x_tr_sl=en&amp;_x_tr_tl=ar&amp;_x_tr_hl=ar&amp;_x_tr_pto=wapp" lang="ar" hreflang="ar" rel="nofollow"><span>العربية</span></a></div></details></div>
+</div></header>
+<div class="status" role="note"><div class="wrap"><span class="pulse" aria-hidden="true"></span>
+<span><b>244 openings</b><span class="lg"> in 59 adverts outside the US (238 in India, the Gulf, Africa and Asia), plus 26 in the US</span></span>
+<span>Checked 3 Nov 2026</span><a href="jobs.html" data-goatcounter-click="jobs-strip" data-goatcounter-title="strip on news.html">See them by country</a></div></div>
+<main id="main">
+<div class="phead plain"><div class="wrap">
+<p class="kick">News · checked 3 Nov · last new verified contract 23 Oct</p>
+<h1 data-split data-hero>Oil and gas news, checked against the source</h1>
+<p class="lede" data-rise>Awards, plants and market moves, with who builds it and what it means for work.
+ Every number links to where it comes from.</p>
+</div></div>
+<div class="toolbar"><div class="wrap"><div class="chips" aria-label="Story type"><button class="chip on" type="button" data-nf="" aria-pressed="true">All</button><button class="chip" type="button" data-nf="Signed &amp; Sealed" aria-pressed="false">Signed &amp; Sealed<span class="n">3</span></button><button class="chip" type="button" data-nf="Market Watch" aria-pressed="false">Market Watch<span class="n">1</span></button><button class="chip" type="button" data-nf="Project Radar" aria-pressed="false">Project Radar<span class="n">2</span></button><button class="chip" type="button" data-nf="Plant Focus" aria-pressed="false">Plant Focus<span class="n">1</span></button></div></div></div>
+<div class="wrap"><article class="art" id="nmdc-aramco" data-fmt="Signed &amp; Sealed"><div class="ah"><img src="img/2026-10-24-nmdc-aramco-offshore.webp" alt="Aramco hands NMDC Energy three offshore projects worth $763 million" loading="lazy" width="720" height="900">
+<div><div class="m"><span class="sig conf" title="Official company statement or stock exchange filing"><i><span></span></i>CONFIRMED</span><b>Signed &amp; Sealed</b><span>Saudi Aramco · Offshore · 23 Oct 2026</span></div><h2 data-split>Aramco hands NMDC Energy three offshore projects worth $763 million</h2><p class="lead">NMDC Energy told the Abu Dhabi Securities Exchange on 23 October that it has received a <strong>letter of award from Saudi Aramco for three new offshore projects</strong>, worth AED 2.8 billion (about $763 million), to be completed in 18 to 23 months.</p></div></div>
+<div class="ab cx">
+
+
+
 <div class="fields">
 <div class="field"><div class="k">Contractor</div><div class="v">NMDC Energy</div><div class="d">Abu Dhabi-listed EPC arm of NMDC Group. Offshore engineering, procurement and construction.</div></div>
 <div class="field"><div class="k">Client</div><div class="v">Saudi Aramco</div><div class="d">Letter of award for three new projects.</div></div>
 <div class="field"><div class="k">Value</div><div class="v">AED 2.8bn</div><div class="d">About $763 million, as disclosed by the company.</div></div>
 <div class="field"><div class="k">Duration</div><div class="v">18 to 23 months</div><div class="d">Project names and locations were not disclosed.</div></div>
 </div>
-<h3>What we know</h3><p>The disclosure covers offshore EPC works on three projects. NMDC Energy has worked on Aramco offshore projects under a long-term agreement; the company did not give the names or locations of the new projects.</p>
+<details class="story"><summary><span class="op">Read the full story</span><span class="cl">Hide the full story</span></summary><h3>What we know</h3><p>The disclosure covers offshore EPC works on three projects. NMDC Energy has worked on Aramco offshore projects under a long-term agreement; the company did not give the names or locations of the new projects.</p></details>
 <div class="work"><div class="k">What it means for work</div><p>Offshore EPC brings work for installation and hook-up crews, welders and welding supervisors, E&amp;I, commissioning and marine staff. NMDC Energy recruits on its own careers portal. The openings below were live on 24 October; none of them names these projects.</p>
-<p><a href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs" rel="noopener">NMDC Energy careers &rarr;</a></p>
-<div class="jobs"><div class="k">Open roles that may be linked</div><ul><li><a href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3023" rel="noopener" data-goatcounter-click="apply-nmdc-energy">Offshore Construction Engineer</a><span>NMDC Energy · United Arab Emirates · checked 24 Oct 2026</span></li><li><a href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3317" rel="noopener" data-goatcounter-click="apply-nmdc-energy">Welding Supervisor</a><span>NMDC Energy · United Arab Emirates · checked 24 Oct 2026</span></li><li><a href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3563" rel="noopener" data-goatcounter-click="apply-nmdc-energy">E&amp;I General Foreman</a><span>NMDC Energy · United Arab Emirates · checked 24 Oct 2026</span></li></ul><p class="nota">Posted on the employer's own site. We cannot confirm that a vacancy is for this project: read the advert before you apply.</p></div>
+<p><a href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs" rel="noopener" target="_blank">NMDC Energy careers →</a></p>
+<div class="jobs"><div class="k">Open roles that may be linked</div><ul><li><a data-goatcounter-click="apply-nmdc-energy" href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3023" rel="noopener" target="_blank">Offshore Construction Engineer</a><span>NMDC Energy · United Arab Emirates · checked 24 Oct 2026</span></li><li><a data-goatcounter-click="apply-nmdc-energy" href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3317" rel="noopener" target="_blank">Welding Supervisor</a><span>NMDC Energy · United Arab Emirates · checked 24 Oct 2026</span></li><li><a data-goatcounter-click="apply-nmdc-energy" href="https://fa-evft-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/3563" rel="noopener" target="_blank">E&amp;I General Foreman</a><span>NMDC Energy · United Arab Emirates · checked 24 Oct 2026</span></li></ul><p class="nota">Posted on the employer's own site. We cannot confirm that a vacancy is for this project: read the advert before you apply.</p></div>
 <p>We never ask for money for jobs.</p></div>
 <div class="src">Sources<ul>
-<li><a href="https://www.thenationalnews.com/business/energy/2026/10/23/abu-dhabis-nmdc-awarded-projects-worth-763m-by-saudi-aramco/" rel="noopener">The National, 23 Oct 2026</a></li>
-<li><a href="https://www.zawya.com/en/projects/nmdc-energy-secures-epc-contract-for-3-aramco-offshore-projects-1848770" rel="noopener">Zawya Projects</a></li>
-</ul></div><a class="top" href="#top">Back to the top &uarr;</a></article>
-<article id="diesel" style="--fam:#5AB0E8">
-<div class="meta">
-<span class="fmt">Market Watch</span>
-<span class="tag CONFIRMED">CONFIRMED</span>
-<span class="where">Global · Refining · 20 Oct 2026</span></div>
-<h2>Diesel at $6.28 a gallon: why refineries cannot keep up</h2>
-<img class="card" src="/news/2026-10-21-diesel-refining.png" alt="Diesel at $6.28 a gallon: why refineries cannot keep up" loading="lazy" width="1080" height="1350">
-<p class="lead">US retail diesel averaged <strong>$6.276 a gallon</strong> in the week of 19 October, $2.66 more than a year earlier. Gasoline rose far less, to $4.284 (+$1.27). The gap is the story: the world is short of diesel in particular, not of fuel in general.</p>
+<li><a href="https://www.thenationalnews.com/business/energy/2026/10/23/abu-dhabis-nmdc-awarded-projects-worth-763m-by-saudi-aramco/" rel="noopener" target="_blank">The National, 23 Oct 2026</a></li>
+<li><a href="https://www.zawya.com/en/projects/nmdc-energy-secures-epc-contract-for-3-aramco-offshore-projects-1848770" rel="noopener" target="_blank">Zawya Projects</a></li>
+</ul></div></div></article><article class="art" id="diesel" data-fmt="Market Watch"><div class="ah"><img src="img/2026-10-21-diesel-refining.webp" alt="Diesel at $6.28 a gallon: why refineries cannot keep up" loading="lazy" width="720" height="900">
+<div><div class="m"><span class="sig conf" title="Official company statement or stock exchange filing"><i><span></span></i>CONFIRMED</span><b>Market Watch</b><span>Global · Refining · 20 Oct 2026</span></div><h2 data-split>Diesel at $6.28 a gallon: why refineries cannot keep up</h2><p class="lead">US retail diesel averaged <strong>$6.276 a gallon</strong> in the week of 19 October, $2.66 more than a year earlier. Gasoline rose far less, to $4.284 (+$1.27). The gap is the story: the world is short of diesel in particular, not of fuel in general.</p></div></div>
+<div class="ab cx">
+
+
+
 <div class="fields">
 <div class="field"><div class="k">US retail diesel</div><div class="v">$6.276 / gal</div><div class="d">Week of 19 Oct 2026, +$2.656 on a year ago. EIA.</div></div>
 <div class="field"><div class="k">World diesel and gasoil output</div><div class="v">27.2 mb/d</div><div class="d">3Q26 estimate, 1.7 mb/d lower than a year earlier. IEA.</div></div>
 <div class="field"><div class="k">Wholesale diesel peak</div><div class="v">about $220 / bbl</div><div class="d">All-time highs in Europe and the US in September; above $200 in Singapore. IEA.</div></div>
 <div class="field"><div class="k">Global refinery runs</div><div class="v">81.3 mb/d</div><div class="d">Seasonal low in October, 84.6 mb/d expected by year-end. IEA.</div></div>
 </div>
-<h3>Why diesel, and why now</h3><p>The IEA's October report lists three causes. Lower refinery activity and product exports in the Middle East and Russia: combined net gasoil exports from the two fell to 820,000 b/d in September, down more than 60% on a year earlier. Refiners running crude grades their units were not configured for, because preferred feedstocks are restricted. And a tight jet fuel market, which pushed refiners to maximise kerosene and so make less diesel from the same barrel.</p><p>The agency expects gasoil supply to fall short of demand again in 4Q26, and lost inventories are unlikely to be rebuilt before the second half of 2027.</p>
-<h3>Does the world need more refineries?</h3><p>Before this year the forecast pointed the other way. The IEA's <em>Oil 2025</em> outlook expected 4.2 mb/d of new refining capacity by 2030, partly offset by 1.6 mb/d of closures, with growth in Asia, especially China and India, and closures in Europe and the United States.</p><p>2026 shows how little slack there is in diesel when a few large exporters produce less. The projects moving now are mostly expansions and upgrades of refineries that already run, rather than new sites. Two signed this year, both with named contractors: <a href="#dung-quat">Dung Quat in Vietnam</a> and <a href="#hpcl-mumbai">HPCL's Mumbai refinery in India</a>.</p>
+<details class="story"><summary><span class="op">Read the full story</span><span class="cl">Hide the full story</span></summary><h3>Why diesel, and why now</h3><p>The IEA's October report lists three causes. Lower refinery activity and product exports in the Middle East and Russia: combined net gasoil exports from the two fell to 820,000 b/d in September, down more than 60% on a year earlier. Refiners running crude grades their units were not configured for, because preferred feedstocks are restricted. And a tight jet fuel market, which pushed refiners to maximise kerosene and so make less diesel from the same barrel.</p><p>The agency expects gasoil supply to fall short of demand again in 4Q26, and lost inventories are unlikely to be rebuilt before the second half of 2027.</p><h3>Does the world need more refineries?</h3><p>Before this year the forecast pointed the other way. The IEA's <em>Oil 2025</em> outlook expected 4.2 mb/d of new refining capacity by 2030, partly offset by 1.6 mb/d of closures, with growth in Asia, especially China and India, and closures in Europe and the United States.</p><p>2026 shows how little slack there is in diesel when a few large exporters produce less. The projects moving now are mostly expansions and upgrades of refineries that already run, rather than new sites. Two signed this year, both with named contractors: <a href="#dung-quat">Dung Quat in Vietnam</a> and <a href="#hpcl-mumbai">HPCL's Mumbai refinery in India</a>.</p></details>
+
 <div class="work"><div class="k">What it means for work</div><p>Expansion and upgrade work happens inside running refineries: BSR plans to keep Dung Quat operating during construction, and HPCL's new units go inside the operating Mumbai site. This is brownfield work, where contractors look for people with refinery experience and permit-to-work discipline: pipefitters, welders, riggers, E&amp;I technicians, HSE officers. Apply only on the contractors' own careers pages.</p>
 <p>We never ask for money for jobs.</p></div>
 <div class="src">Sources<ul>
-<li><a href="https://www.eia.gov/petroleum/gasdiesel/" rel="noopener">EIA, Gasoline and Diesel Fuel Update (week of 19 Oct 2026)</a></li>
-<li><a href="https://www.iea.org/reports/oil-market-report-october-2026" rel="noopener">IEA, Oil Market Report, October 2026 (14 Oct)</a></li>
-<li><a href="https://www.iea.org/reports/oil-2025/executive-summary" rel="noopener">IEA, Oil 2025, executive summary</a></li>
-</ul></div><a class="top" href="#top">Back to the top &uarr;</a></article>
-<article id="hpcl-mumbai" style="--fam:#F5A524">
-<div class="meta">
-<span class="fmt">Signed &amp; Sealed</span>
-<span class="tag CONFIRMED">CONFIRMED</span>
-<span class="where">India · Refinery · 12 Oct 2026</span></div>
-<h2>HPCL Mumbai refinery upgrade: large EPC contract to Technip Energies</h2>
-<img class="card" src="/news/2026-10-21-hpcl-mumbai-technip.png" alt="HPCL Mumbai refinery upgrade: large EPC contract to Technip Energies" loading="lazy" width="1080" height="1350">
-<p class="lead">Hindustan Petroleum (HPCL) has awarded Technip Energies an engineering, procurement and construction contract for the Lube Modernization and Bottom Upgradation (LMBU) project at its Mumbai refinery in Maharashtra.</p>
+<li><a href="https://www.eia.gov/petroleum/gasdiesel/" rel="noopener" target="_blank">EIA, Gasoline and Diesel Fuel Update (week of 19 Oct 2026)</a></li>
+<li><a href="https://www.iea.org/reports/oil-market-report-october-2026" rel="noopener" target="_blank">IEA, Oil Market Report, October 2026 (14 Oct)</a></li>
+<li><a href="https://www.iea.org/reports/oil-2025/executive-summary" rel="noopener" target="_blank">IEA, Oil 2025, executive summary</a></li>
+</ul></div></div></article><article class="art" id="hpcl-mumbai" data-fmt="Signed &amp; Sealed"><div class="ah"><img src="img/2026-10-21-hpcl-mumbai-technip.webp" alt="HPCL Mumbai refinery upgrade: large EPC contract to Technip Energies" loading="lazy" width="720" height="900">
+<div><div class="m"><span class="sig conf" title="Official company statement or stock exchange filing"><i><span></span></i>CONFIRMED</span><b>Signed &amp; Sealed</b><span>India · Refinery · 12 Oct 2026</span></div><h2 data-split>HPCL Mumbai refinery upgrade: large EPC contract to Technip Energies</h2><p class="lead">Hindustan Petroleum (HPCL) has awarded Technip Energies an engineering, procurement and construction contract for the Lube Modernization and Bottom Upgradation (LMBU) project at its Mumbai refinery in Maharashtra.</p></div></div>
+<div class="ab cx">
+
+
+
 <div class="fields">
 <div class="field"><div class="k">EPC contractor</div><div class="v">Technip Energies</div><div class="d">Sole contractor named in the announcement.</div></div>
 <div class="field"><div class="k">Value</div><div class="v">€250-500 million</div><div class="d">Technip Energies' own definition of a "large" award, in revenue.</div></div>
 <div class="field"><div class="k">Units</div><div class="v">550 KTA IHCD + 850 KTA SDA</div><div class="d">Integrated hydrocracker and catalytic dewaxing; solvent deasphalting.</div></div>
 <div class="field"><div class="k">Site</div><div class="v">Inside the operating refinery</div><div class="d">Mumbai Refinery, Maharashtra.</div></div>
 </div>
-<h3>What it does</h3><p>The project modernises HPCL's production of lube oil base stocks and upgrades heavier refinery streams into higher-value products. Technip Energies will book the order in its Project Delivery backlog in 3Q26.</p>
+<details class="story"><summary><span class="op">Read the full story</span><span class="cl">Hide the full story</span></summary><h3>What it does</h3><p>The project modernises HPCL's production of lube oil base stocks and upgrades heavier refinery streams into higher-value products. Technip Energies will book the order in its Project Delivery backlog in 3Q26.</p></details>
 <div class="work"><div class="k">What it means for work</div><p>Construction inside a live refinery: hot work under permit, tie-ins during planned shutdowns, high-pressure piping. Look for openings only on Technip Energies' own careers site.</p>
-<p><a href="https://www.ten.com/en/careers" rel="noopener">Technip Energies careers &rarr;</a></p>
+<p><a href="https://www.ten.com/en/careers" rel="noopener" target="_blank">Technip Energies careers →</a></p>
 <p>We never ask for money for jobs.</p></div>
 <div class="src">Sources<ul>
-<li><a href="https://www.globenewswire.com/news-release/2026/10/12/3378555/0/en/technip-energies-awarded-large-epc-contract-by-hpcl-for-mumbai-refinery-modernization-project-in-india.html" rel="noopener">Technip Energies press release via GlobeNewswire, 12 Oct 2026</a></li>
-</ul></div><a class="top" href="#top">Back to the top &uarr;</a></article>
-<article id="p82" style="--fam:#F5A524">
-<div class="meta">
-<span class="fmt">Project Radar</span>
-<span class="tag REPORTED">REPORTED</span>
-<span class="where">Brazil · FPSO · 19 Oct 2026</span></div>
-<h2>P-82 leaves Singapore for Búzios: second Seatrium FPSO in under a month</h2>
-<img class="card" src="/news/2026-10-22-p82-buzios-seatrium.png" alt="P-82 leaves Singapore for Búzios: second Seatrium FPSO in under a month" loading="lazy" width="1080" height="1350">
-<p class="lead">Petrobras says the P-82 floating production unit has left Seatrium's Tuas Boulevard Yard in Singapore for the Búzios field in Brazil's pre-salt. It follows P-80, which sailed at the end of September.</p>
+<li><a href="https://www.globenewswire.com/news-release/2026/10/12/3378555/0/en/technip-energies-awarded-large-epc-contract-by-hpcl-for-mumbai-refinery-modernization-project-in-india.html" rel="noopener" target="_blank">Technip Energies press release via GlobeNewswire, 12 Oct 2026</a></li>
+</ul></div></div></article><article class="art" id="p82" data-fmt="Project Radar"><div class="ah"><img src="img/2026-10-22-p82-buzios-seatrium.webp" alt="P-82 leaves Singapore for Búzios: second Seatrium FPSO in under a month" loading="lazy" width="720" height="900">
+<div><div class="m"><span class="sig rep" title="Credible trade press, not yet confirmed by the parties"><i><span></span></i>REPORTED</span><b>Project Radar</b><span>Brazil · FPSO · 19 Oct 2026</span></div><h2 data-split>P-82 leaves Singapore for Búzios: second Seatrium FPSO in under a month</h2><p class="lead">Petrobras says the P-82 floating production unit has left Seatrium's Tuas Boulevard Yard in Singapore for the Búzios field in Brazil's pre-salt. It follows P-80, which sailed at the end of September.</p></div></div>
+<div class="ab cx">
+
+
+
 <div class="fields">
 <div class="field"><div class="k">Built by</div><div class="v">Seatrium</div><div class="d">EPC. Topside modules from its yards in Singapore, China and Brazil; integration at Tuas Boulevard.</div></div>
 <div class="field"><div class="k">Capacity</div><div class="v">225,000 b/d oil</div><div class="d">Plus 12 million m³/d of gas processing.</div></div>
 <div class="field"><div class="k">Size</div><div class="v">345 m × 60 m</div><div class="d">Over 100,000 tonnes.</div></div>
 <div class="field"><div class="k">First oil</div><div class="v">2027</div><div class="d">P-80 and P-82 together add about 450,000 b/d at Búzios.</div></div>
 </div>
-<h3>Why it matters</h3><p>The unit sails with its crew on board, straight to location, to cut the time before mooring and well hook-up. Petrobras expects Búzios to reach 11 operating platforms by the end of 2027.</p>
+<details class="story"><summary><span class="op">Read the full story</span><span class="cl">Hide the full story</span></summary><h3>Why it matters</h3><p>The unit sails with its crew on board, straight to location, to cut the time before mooring and well hook-up. Petrobras expects Búzios to reach 11 operating platforms by the end of 2027.</p></details>
 <div class="work"><div class="k">What it means for work</div><p>The fabrication peak is over; the next work is offshore Brazil: mooring, hook-up and commissioning, then operations. Seatrium's open positions are on its official job portal.</p>
-<p><a href="https://seatrium.wd3.myworkdayjobs.com/SeatriumCareers" rel="noopener">Seatrium careers &rarr;</a></p>
+<p><a href="https://seatrium.wd3.myworkdayjobs.com/SeatriumCareers" rel="noopener" target="_blank">Seatrium careers →</a></p>
 <p>We never ask for money for jobs.</p></div>
 <div class="src">Sources<ul>
-<li><a href="https://cenarioenergia.com.br/2026/10/19/p-82-deixa-estaleiro-em-singapura-e-inicia-navegacao-rumo-ao-campo-de-buzios/" rel="noopener">Cenário Energia, 19 Oct 2026, reporting Petrobras</a></li>
-<li><a href="https://worldoil.com/news/2026/8/27/seatrium-readies-p-80-p-82-fpsos-for-petrobras-buzios-field/" rel="noopener">World Oil on Seatrium's P-80 and P-82, 27 Aug 2026</a></li>
-</ul></div><a class="top" href="#top">Back to the top &uarr;</a></article>
-<article id="dung-quat" style="--fam:#F5A524">
-<div class="meta">
-<span class="fmt">Project Radar</span>
-<span class="tag CONFIRMED">CONFIRMED</span>
-<span class="where">Vietnam · Refinery · 15 Oct 2026</span></div>
-<h2>Dung Quat refinery expansion: 148,000 to 171,000 b/d</h2>
-<img class="card" src="/news/2026-10-23-dung-quat-expansion.png" alt="Dung Quat refinery expansion: 148,000 to 171,000 b/d" loading="lazy" width="1080" height="1350">
-<p class="lead">Vietnam's BSR is upgrading and expanding its Dung Quat refinery in Quang Ngai province. At an investor meeting on 15 October the company said it is accelerating its key investment projects.</p>
+<li><a href="https://cenarioenergia.com.br/2026/10/19/p-82-deixa-estaleiro-em-singapura-e-inicia-navegacao-rumo-ao-campo-de-buzios/" rel="noopener" target="_blank">Cenário Energia, 19 Oct 2026, reporting Petrobras</a></li>
+<li><a href="https://worldoil.com/news/2026/8/27/seatrium-readies-p-80-p-82-fpsos-for-petrobras-buzios-field/" rel="noopener" target="_blank">World Oil on Seatrium's P-80 and P-82, 27 Aug 2026</a></li>
+</ul></div></div></article><article class="art" id="dung-quat" data-fmt="Project Radar"><div class="ah"><img src="img/2026-10-23-dung-quat-expansion.webp" alt="Dung Quat refinery expansion: 148,000 to 171,000 b/d" loading="lazy" width="720" height="900">
+<div><div class="m"><span class="sig conf" title="Official company statement or stock exchange filing"><i><span></span></i>CONFIRMED</span><b>Project Radar</b><span>Vietnam · Refinery · 15 Oct 2026</span></div><h2 data-split>Dung Quat refinery expansion: 148,000 to 171,000 b/d</h2><p class="lead">Vietnam's BSR is upgrading and expanding its Dung Quat refinery in Quang Ngai province. At an investor meeting on 15 October the company said it is accelerating its key investment projects.</p></div></div>
+<div class="ab cx">
+
+
+
 <div class="fields">
 <div class="field"><div class="k">EPC consortium</div><div class="v">China Chengda + BPE</div><div class="d">China Chengda Engineering and Beijing Petrochemical Engineering. Signed 9 Jul 2026.</div></div>
 <div class="field"><div class="k">Project management</div><div class="v">Wood with PVE</div><div class="d">Wood and Petrovietnam Engineering Consultancy.</div></div>
 <div class="field"><div class="k">Investment</div><div class="v">$1.489 billion</div><div class="d">BSR is raising about $600m of debt; lenders to be chosen in 4Q26.</div></div>
 <div class="field"><div class="k">Schedule</div><div class="v">37 months, online 2028</div><div class="d">Kick-off held on 21 August.</div></div>
 </div>
-<h3>What changes</h3><p>Crude capacity rises from 148,000 to 171,000 b/d, the plant will take a wider range of crudes and produce Euro 5 fuels, and the refinery keeps running during construction.</p><p>Latest from BSR's 15 October investor meeting, as reported by Vietnam's Ministry of Industry and Trade magazine: site levelling was about 90% complete at the start of October, and BSR aims to hand the whole site over to the EPC contractor during 2026.</p>
+<details class="story"><summary><span class="op">Read the full story</span><span class="cl">Hide the full story</span></summary><h3>What changes</h3><p>Crude capacity rises from 148,000 to 171,000 b/d, the plant will take a wider range of crudes and produce Euro 5 fuels, and the refinery keeps running during construction.</p><p>Latest from BSR's 15 October investor meeting, as reported by Vietnam's Ministry of Industry and Trade magazine: site levelling was about 90% complete at the start of October, and BSR aims to hand the whole site over to the EPC contractor during 2026.</p></details>
 <div class="work"><div class="k">What it means for work</div><p>Engineering and procurement sit mostly with the Chinese consortium; site construction is in Quang Ngai. We have not verified a careers page for the consortium yet. Wood's vacancies are on its own careers site.</p>
-<p><a href="https://www.woodplc.com/careers" rel="noopener">Wood careers &rarr;</a></p>
+<p><a href="https://www.woodplc.com/careers" rel="noopener" target="_blank">Wood careers →</a></p>
 <p>We never ask for money for jobs.</p></div>
 <div class="src">Sources<ul>
-<li><a href="https://www.ogj.com/refining-processing/news/55401081/bsr-advances-dung-quat-refinery-expansion" rel="noopener">Oil &amp; Gas Journal, 26 Aug 2026</a></li>
-<li><a href="https://hydrocarbonprocessing.com/news/2026/08/vietnams-bsr-seeks-600-mm-in-financing-for-dung-quat-refinery-expansion/" rel="noopener">Hydrocarbon Processing, Aug 2026</a></li>
-<li><a href="https://tapchicongthuong.vn/bsr-tang-toc-nang-cap-nha-may-loc-dau-dung-quat--huong-toi-nang-luong-xanh-558441.htm" rel="noopener">Tạp chí Công Thương, 16 Oct 2026 (Vietnamese)</a></li>
-</ul></div><a class="top" href="#top">Back to the top &uarr;</a></article>
-<article id="ghazlan-1" style="--fam:#F5A524">
-<div class="meta">
-<span class="fmt">Signed &amp; Sealed</span>
-<span class="tag CONFIRMED">CONFIRMED</span>
-<span class="where">Saudi Arabia · Gas · 7 Oct 2026</span></div>
-<h2>Ghazlan 1: sales gas delivery system to GAS Arabian Services</h2>
-<img class="card" src="/news/2026-10-23-ghazlan-gas-arabian.png" alt="Ghazlan 1: sales gas delivery system to GAS Arabian Services" loading="lazy" width="1080" height="1350">
-<p class="lead">Saudi Power Procurement Company (SPPC), as principal buyer, has awarded GAS Arabian Services a contract to build the sales gas delivery system to Ghazlan 1.</p>
+<li><a href="https://www.ogj.com/refining-processing/news/55401081/bsr-advances-dung-quat-refinery-expansion" rel="noopener" target="_blank">Oil &amp; Gas Journal, 26 Aug 2026</a></li>
+<li><a href="https://hydrocarbonprocessing.com/news/2026/08/vietnams-bsr-seeks-600-mm-in-financing-for-dung-quat-refinery-expansion/" rel="noopener" target="_blank">Hydrocarbon Processing, Aug 2026</a></li>
+<li><a href="https://tapchicongthuong.vn/bsr-tang-toc-nang-cap-nha-may-loc-dau-dung-quat--huong-toi-nang-luong-xanh-558441.htm" rel="noopener" target="_blank">Tạp chí Công Thương, 16 Oct 2026 (Vietnamese)</a></li>
+</ul></div></div></article><article class="art" id="ghazlan-1" data-fmt="Signed &amp; Sealed"><div class="ah"><img src="img/2026-10-23-ghazlan-gas-arabian.webp" alt="Ghazlan 1: sales gas delivery system to GAS Arabian Services" loading="lazy" width="720" height="900">
+<div><div class="m"><span class="sig conf" title="Official company statement or stock exchange filing"><i><span></span></i>CONFIRMED</span><b>Signed &amp; Sealed</b><span>Saudi Arabia · Gas · 7 Oct 2026</span></div><h2 data-split>Ghazlan 1: sales gas delivery system to GAS Arabian Services</h2><p class="lead">Saudi Power Procurement Company (SPPC), as principal buyer, has awarded GAS Arabian Services a contract to build the sales gas delivery system to Ghazlan 1.</p></div></div>
+<div class="ab cx">
+
+
+
 <div class="fields">
 <div class="field"><div class="k">EPC contractor</div><div class="v">GAS Arabian Services</div><div class="d">Saudi-listed. Award date 7 Oct 2026.</div></div>
 <div class="field"><div class="k">Scope</div><div class="v">Full EPC</div><div class="d">Engineering, procurement, supply, construction, installation, testing and commissioning.</div></div>
@@ -297,39 +149,53 @@ body{flex-wrap:wrap;align-content:flex-start}body>.eb{flex:0 0 100%}
 <div class="work"><div class="k">What it means for work</div><p>Gas delivery systems mean pipeline and station work: welders, pipefitters, NDT, coating, civil crews. GAS Arabian Services does not list a careers page on its website that we could verify: if a recruiter offers you a job on this project, ask for the company domain and never pay a fee.</p>
 <p>We never ask for money for jobs.</p></div>
 <div class="src">Sources<ul>
-<li><a href="https://tradearabia.com/News/487735/GAS-Arabian-Services-lands-Ghazlan-1-gas-delivery-system-deal/OGN" rel="noopener">TradeArabia</a></li>
-<li><a href="https://www.saudigulfprojects.com/2026/10/gas-arabian-services-wins-ghazlan-1-gas-delivery-system-contract/" rel="noopener">SaudiGulf Projects, 8 Oct 2026</a></li>
-</ul></div><a class="top" href="#top">Back to the top &uarr;</a></article>
-<article id="barrel" style="--fam:#5AB0E8">
-<div class="meta">
-<span class="fmt">Plant Focus</span>
-<span class="tag EXPLAINER">EXPLAINER</span>
-<span class="where">Refining · How it works · 24 Oct 2026</span></div>
-<h2>One barrel, three fuels: why refiners cannot just make more diesel</h2>
-<img class="card" src="/news/2026-10-24-barrel-explainer.png" alt="One barrel, three fuels: why refiners cannot just make more diesel" loading="lazy" width="1080" height="1350">
-<p class="lead">A 42-gallon barrel of crude, run through an average US refinery, gives about <strong>19-20 gallons of gasoline, 11-13 gallons of distillate</strong> (mostly sold as diesel) and 3-5 gallons of jet fuel.</p>
+<li><a href="https://tradearabia.com/News/487735/GAS-Arabian-Services-lands-Ghazlan-1-gas-delivery-system-deal/OGN" rel="noopener" target="_blank">TradeArabia</a></li>
+<li><a href="https://www.saudigulfprojects.com/2026/10/gas-arabian-services-wins-ghazlan-1-gas-delivery-system-contract/" rel="noopener" target="_blank">SaudiGulf Projects, 8 Oct 2026</a></li>
+</ul></div></div></article><article class="art" id="barrel" data-fmt="Plant Focus"><div class="ah"><img src="img/2026-10-24-barrel-explainer.webp" alt="One barrel, three fuels: why refiners cannot just make more diesel" loading="lazy" width="720" height="900">
+<div><div class="m"><span class="sig exp" title="Explainer"><i><span></span></i>EXPLAINER</span><b>Plant Focus</b><span>Refining · How it works · 24 Oct 2026</span></div><h2 data-split>One barrel, three fuels: why refiners cannot just make more diesel</h2><p class="lead">A 42-gallon barrel of crude, run through an average US refinery, gives about <strong>19-20 gallons of gasoline, 11-13 gallons of distillate</strong> (mostly sold as diesel) and 3-5 gallons of jet fuel.</p></div></div>
+<div class="ab cx">
+
+
+
 <div class="fields">
 <div class="field"><div class="k">Gasoline</div><div class="v">19-20 gal</div><div class="d">Per 42-gallon barrel, US average. EIA.</div></div>
 <div class="field"><div class="k">Distillate (mostly diesel)</div><div class="v">11-13 gal</div><div class="d">EIA.</div></div>
 <div class="field"><div class="k">Jet fuel</div><div class="v">3-5 gal</div><div class="d">EIA.</div></div>
 </div>
-<h3>The trade-off</h3><p>Diesel and jet fuel come from the same middle part of the barrel. This year, when jet fuel was tight, refiners maximised kerosene and made less diesel (IEA). Changing the mix takes hardware: conversion units that crack heavier streams into lighter, more valuable products. HPCL's new integrated hydrocracker in Mumbai is one example of this kind of unit.</p>
-<div class="work"><div class="k">What it means for work</div><p>Conversion units run at high pressure and temperature. Building or revamping them is specialist work for experienced welders, pipefitters and inspectors, and it pays to have refinery tickets that the client recognises. See our <a href="/roles.html">roles page</a> for which certificates are real.</p>
+<details class="story"><summary><span class="op">Read the full story</span><span class="cl">Hide the full story</span></summary><h3>The trade-off</h3><p>Diesel and jet fuel come from the same middle part of the barrel. This year, when jet fuel was tight, refiners maximised kerosene and made less diesel (IEA). Changing the mix takes hardware: conversion units that crack heavier streams into lighter, more valuable products. HPCL's new integrated hydrocracker in Mumbai is one example of this kind of unit.</p></details>
+<div class="work"><div class="k">What it means for work</div><p>Conversion units run at high pressure and temperature. Building or revamping them is specialist work for experienced welders, pipefitters and inspectors, and it pays to have refinery tickets that the client recognises. See our <a href="roles.html">roles page</a> for which certificates are real.</p>
 <p>We never ask for money for jobs.</p></div>
 <div class="src">Sources<ul>
-<li><a href="https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil.php" rel="noopener">EIA, Oil and petroleum products explained: refining crude oil</a></li>
-<li><a href="https://www.iea.org/reports/oil-market-report-october-2026" rel="noopener">IEA, Oil Market Report, October 2026</a></li>
-</ul></div><a class="top" href="#top">Back to the top &uarr;</a></article>
-  <section style="border-bottom:none">
-    <div class="pledge">
-      <h2>We never ask for money for jobs</h2>
-      <p>Every vacancy we link points to the employer's own careers page. If anyone contacts you
-      using our name and asks for payment, it is not us. Tell us: epcradar@gmail.com</p>
-    </div>
-  </section>
-  <footer><p style="margin:0">EPC Radar is an independent publication. It is not affiliated with,
-    endorsed by, or speaking for any company it covers. Company names and trademarks belong to
-    their owners.</p></footer>
+<li><a href="https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil.php" rel="noopener" target="_blank">EIA, Oil and petroleum products explained: refining crude oil</a></li>
+<li><a href="https://www.iea.org/reports/oil-market-report-october-2026" rel="noopener" target="_blank">IEA, Oil Market Report, October 2026</a></li>
+</ul></div></div></article>
+<section class="sec tight"><div class="boxed amber cx"><h2>We never ask for money for jobs</h2>
+<p>Every vacancy we link points to the employer's own careers page. If anyone contacts you
+ using our name and asks for payment, it is not us. Tell us: epcradar@gmail.com</p></div></section></div></main><footer class="foot"><div class="wrap">
+<div class="big" aria-hidden="true">Every contract is somebody's next job</div>
+<div class="cols">
+<div><h4>EPC Radar</h4><p>EPC Radar is an independent publication. It is not affiliated with,
+endorsed by, or speaking for any company it covers. Company names and trademarks belong to their owners. We link to employers' own careers pages and receive nothing for doing so.</p>
+<p><b style="color:#fff">We never ask for money for jobs.</b> If anyone uses our name to ask you for payment, it is not us.</p></div>
+<div><h4>Sections</h4><ul><li><a href="jobs.html">Jobs</a></li><li><a href="projects.html">Top 10 projects</a></li><li><a href="tracker.html">All projects</a></li><li><a href="roles.html">Trades</a></li><li><a href="news.html">News</a></li><li><a href="epc-jobs.pdf?v=20261103" data-goatcounter-click="pdf-download" data-goatcounter-title="footer">All openings (PDF)</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>Press and general enquiries:<br><a href="mailto:epcradar@gmail.com">epcradar@gmail.com</a></li><li><a href="https://www.instagram.com/epcradar/">Instagram</a></li><li><a href="https://t.me/epcradar">Telegram</a></li></ul></div>
 </div>
-</body>
-</html>
+<div class="pagenote"><p>EPC Radar is an independent publication. It is not affiliated with,
+ endorsed by, or speaking for any company it covers. Company names and trademarks belong to
+ their owners.</p></div>
+<p class="credits">Checked 3 Nov 2026. Photos are illustrative, not the projects named on the page, colour-treated by EPC Radar: Tom Fisk, Jan-Rune Smenes Reite, Marcelo Gonzalez and Ihsan Adityawarman on Pexels (Pexels licence). Icons: Solar (CC BY 4.0) via Iconify.</p>
+</div></footer>
+<nav class="tabbar" aria-label="Quick"><a href="index.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z"/><path d="M12 15L12 18"/></g></svg><span>Home</span></a><a href="jobs.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M14 12.5H10C9.72386 12.5 9.5 12.7239 9.5 13V15.1615C9.5 15.3659 9.62448 15.5498 9.8143 15.6257L10.5144 15.9058C11.4681 16.2872 12.5319 16.2872 13.4856 15.9058L14.1857 15.6257C14.3755 15.5498 14.5 15.3659 14.5 15.1615V13C14.5 12.7239 14.2761 12.5 14 12.5Z"/><path d="M9.1709 4C9.58273 2.83481 10.694 2 12.0002 2C13.3064 2 14.4177 2.83481 14.8295 4"/><path d="M21 12.2986C20.9991 15.9743 20.9652 19.6877 19.682 20.8284C18.3639 22 16.2426 22 12 22C7.75734 22 5.63601 22 4.318 20.8284C3.03474 19.6877 3.00089 15.9743 3 12.2986"/><path d="M14.5 14.2501L20.8579 12.3426C21.2688 12.2194 21.4743 12.1577 21.6264 12.0355C21.7592 11.9288 21.8626 11.7898 21.9266 11.6319C22 11.4511 22 11.2366 22 10.8077C22 9.12027 22 8.27658 21.6703 7.63268C21.3834 7.07242 20.9276 6.61659 20.3673 6.32971C19.7234 6 18.8797 6 17.1923 6H6.80765C5.12027 6 4.27658 6 3.63268 6.32971C3.07242 6.61659 2.61659 7.07242 2.32971 7.63268C2 8.27658 2 9.12027 2 10.8077C2 11.2366 2 11.4511 2.07336 11.6319C2.13743 11.7898 2.24079 11.9288 2.37363 12.0355C2.52574 12.1577 2.73118 12.2194 3.14206 12.3426L9.49988 14.25"/></g></svg><span>Jobs</span></a><a href="projects.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M22 22L2 22"/><path d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22"/><path d="M21 22V11.5C21 10.0955 21 9.39331 20.6629 8.88886C20.517 8.67048 20.3295 8.48298 20.1111 8.33706C19.6067 8 18.9045 8 17.5 8"/><path d="M3 22V11.5C3 10.0955 3 9.39331 3.33706 8.88886C3.48298 8.67048 3.67048 8.48298 3.88886 8.33706C4.39331 8 5.09554 8 6.5 8"/><path d="M12 22V19"/><path d="M10 5H14"/><path d="M10 8H14"/><path d="M10 11H14"/><path d="M10 14H14"/></g></svg><span>Projects</span></a><a href="roles.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M18.6597 8.2861L19.028 7.91787C19.3704 7.57542 19.5416 7.4042 19.6445 7.22608C19.9236 6.74271 19.9236 6.14718 19.6445 5.66381C19.5416 5.48569 19.3704 5.31446 19.028 4.97202C18.6855 4.62957 18.5143 4.45835 18.3362 4.35551C17.8528 4.07644 17.2573 4.07644 16.7739 4.35551C16.5958 4.45835 16.4246 4.62957 16.0821 4.97202L15.7139 5.34025M11.2951 15.6507L5.77166 21.1742C5.42921 21.5166 5.25799 21.6879 5.07987 21.7907C4.5965 22.0698 4.00097 22.0698 3.5176 21.7907C3.33948 21.6879 3.16825 21.5166 2.82581 21.1742C2.48337 20.8317 2.31214 20.6605 2.2093 20.4824C1.93023 19.999 1.93023 19.4035 2.2093 18.9201C2.31214 18.742 2.48337 18.5708 2.82581 18.2283L8.34928 12.7049M7.61281 11.9684L12.0316 16.3872C13.7674 18.123 14.6354 18.991 15.7139 18.991C16.7924 18.991 17.6604 18.123 19.3962 16.3872C21.1321 14.6513 22 13.7834 22 12.7049C22 11.6263 21.1321 10.7584 19.3962 9.02256L14.9774 4.60379C13.2416 2.86793 12.3737 2 11.2951 2C10.2166 2 9.34867 2.86793 7.61281 4.60379C5.87696 6.33965 5.00903 7.20757 5.00903 8.2861C5.00903 9.36462 5.87696 10.2326 7.61281 11.9684Z"/></svg><span>Trades</span></a><button type="button" data-search><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path d="M18.2173 18.2178L21.9999 22.0004"/></g></svg><span>Search</span></button></nav>
+<dialog class="sdlg" id="sdlg" aria-label="Search">
+<div class="box"><div class="sh"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path d="M18.2173 18.2178L21.9999 22.0004"/></g></svg><label class="sr" for="sq">Search</label><input id="sq" type="search" autocomplete="off" placeholder="Trade, country, project or company" enterkeyhint="search"><button type="button" data-close>Close</button></div>
+<div class="res" id="sres" role="listbox" aria-label="Results"></div>
+<div class="sfoot">Searches 115 projects, 85 job adverts, 27 job locations, 10 trades and 7 stories.</div></div>
+</dialog>
+<script src="assets/search-index.js" defer></script>
+<script src="assets/site.js" defer></script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/motion.js" defer></script>
+<script data-goatcounter="https://epcradar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
