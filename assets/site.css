@@ -365,13 +365,13 @@ body{padding-bottom:70px}
 /* ---------- toolbar / filters ---------- */
 .toolbar{position:relative;z-index:30;background:var(--paper);border-bottom:1px solid var(--rule);padding:16px 0}
 @media (min-width:1020px){.toolbar{position:sticky;top:64px;background:rgba(233,237,238,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}}
-.toolbar .wrap{display:grid;gap:12px}
+.toolbar .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}.toolbar .wrap>*{min-width:0}
 .tsearch{display:flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--rule);padding:0 12px;min-height:54px;transition:border-color .15s ease}
 .tsearch:focus-within{border-color:var(--ink)}
 .tsearch .ic{width:22px;height:22px;color:var(--muted)}
 .tsearch input{flex:1;border:0;outline:0;font:500 17px/1 var(--text);background:transparent;min-width:0;color:var(--ink)}
 .tsearch button{border:0;background:none;color:var(--muted);font:500 13px/1 var(--board);cursor:pointer;min-height:40px;padding:0 6px}
-.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:2px 0}
 .chips::-webkit-scrollbar{display:none}
 .frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .sel{position:relative}
