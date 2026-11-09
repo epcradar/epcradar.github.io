@@ -80,7 +80,12 @@ if(jl){
   jl.addEventListener('click',function(e){if(e.target.closest('[data-unl]')){st.l='';apply(true)}}); $('#jp').addEventListener('change',function(){st.p=this.value;apply()});
   function scrollToList(){var t=jl.getBoundingClientRect().bottom; var g=$('.jgroup:not(.hide)'); if(g&&g.getBoundingClientRect().top<t)window.scrollTo({top:window.scrollY+g.getBoundingClientRect().top-t-8,behavior:reduce?'auto':'smooth'})}
   apply(); if(st.c||st.t||st.q||st.l){setTimeout(function(){var y=jl.offsetTop;window.scrollTo(0,y)},30)}
-  window.addEventListener('hashchange',function(){if(fromHash(location.hash.slice(1)))apply()});
+  window.addEventListener('hashchange',function(){var x=location.hash.slice(1);if(fromHash(x))apply();else hit(x)});
+  // link dal PDF (#j-xxxxxxxx): l'offerta si evidenzia e viene al centro dello schermo
+  function hit(x){if(!/^j-[0-9a-f]{8}$/.test(x))return; var c=document.getElementById(x); if(!c)return;
+    $$('.job.hit').forEach(function(o){o.classList.remove('hit')}); c.classList.add('hit');
+    setTimeout(function(){window.scrollTo(0,window.scrollY+c.getBoundingClientRect().top-innerHeight/3)},80)}
+  hit(h);
 }
 
 /* ---------- tracker filters ---------- */
