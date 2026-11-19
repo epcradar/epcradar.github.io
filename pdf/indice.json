@@ -1,9 +1,12 @@
 {
- "checked": "18 Nov 2026",
+ "checked": "19 Nov 2026",
+ "codice": "2b1f75",
+ "valido_dal": "2026-11-19",
+ "scade": "2026-12-02",
  "mestieri": {
   "welding": {
    "nome": "Welding, fabrication & NDT",
-   "url": "https://epcradar.com/pdf/welding.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/welding.pdf",
    "posti": 9,
    "annunci": 9,
    "nuove_14_giorni": 0,
@@ -11,7 +14,7 @@
   },
   "piping": {
    "nome": "Piping",
-   "url": "https://epcradar.com/pdf/piping.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/piping.pdf",
    "posti": 6,
    "annunci": 6,
    "nuove_14_giorni": 0,
@@ -19,7 +22,7 @@
   },
   "electrical": {
    "nome": "Electrical & instrument",
-   "url": "https://epcradar.com/pdf/electrical.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/electrical.pdf",
    "posti": 11,
    "annunci": 11,
    "nuove_14_giorni": 0,
@@ -27,7 +30,7 @@
   },
   "mechanical": {
    "nome": "Mechanical & HVAC",
-   "url": "https://epcradar.com/pdf/mechanical.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/mechanical.pdf",
    "posti": 12,
    "annunci": 12,
    "nuove_14_giorni": 0,
@@ -35,7 +38,7 @@
   },
   "qaqc": {
    "nome": "QA/QC & inspection",
-   "url": "https://epcradar.com/pdf/qaqc.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/qaqc.pdf",
    "posti": 194,
    "annunci": 9,
    "nuove_14_giorni": 0,
@@ -43,7 +46,7 @@
   },
   "hse": {
    "nome": "HSE & safety",
-   "url": "https://epcradar.com/pdf/hse.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/hse.pdf",
    "posti": 4,
    "annunci": 4,
    "nuove_14_giorni": 0,
@@ -51,7 +54,7 @@
   },
   "rigging": {
    "nome": "Rigging & lifting",
-   "url": "https://epcradar.com/pdf/rigging.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/rigging.pdf",
    "posti": 3,
    "annunci": 3,
    "nuove_14_giorni": 0,
@@ -59,7 +62,7 @@
   },
   "scaffolding": {
    "nome": "Scaffolding",
-   "url": "https://epcradar.com/pdf/scaffolding.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/scaffolding.pdf",
    "posti": 2,
    "annunci": 2,
    "nuove_14_giorni": 0,
@@ -67,7 +70,7 @@
   },
   "commissioning": {
    "nome": "Commissioning & operations",
-   "url": "https://epcradar.com/pdf/commissioning.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/commissioning.pdf",
    "posti": 17,
    "annunci": 17,
    "nuove_14_giorni": 0,
@@ -75,7 +78,7 @@
   },
   "supervision": {
    "nome": "Supervisors & foremen",
-   "url": "https://epcradar.com/pdf/supervision.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/supervision.pdf",
    "posti": 28,
    "annunci": 28,
    "nuove_14_giorni": 0,
@@ -83,7 +86,7 @@
   },
   "engineering": {
    "nome": "Engineers & design",
-   "url": "https://epcradar.com/pdf/engineering.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
    "posti": 20,
    "annunci": 20,
    "nuove_14_giorni": 0,
@@ -91,7 +94,7 @@
   },
   "office": {
    "nome": "Procurement, planning & admin",
-   "url": "https://epcradar.com/pdf/office.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/office.pdf",
    "posti": 16,
    "annunci": 16,
    "nuove_14_giorni": 0,
@@ -99,7 +102,7 @@
   },
   "marine": {
    "nome": "Marine",
-   "url": "https://epcradar.com/pdf/marine.pdf",
+   "url": "https://epcradar.com/pdf/2b1f75/marine.pdf",
    "posti": 4,
    "annunci": 4,
    "nuove_14_giorni": 0,
