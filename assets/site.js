@@ -14,6 +14,7 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp
 var act=-1;
 function render(qr){
   var q=norm(qr.trim()); var data=window.SEARCH||[];
+  if(q&&!window.SEARCH){sres.innerHTML='<div class="grp">Loading the search...</div>';act=-1;return}
   if(!q){sres.innerHTML='<div class="grp">Popular</div><div class="sugg">'+['Welder','Scaffolder','QA/QC','Saudi Arabia','UAE','Mozambique LNG','Saipem','Commissioning'].map(function(s){return '<button class="chip" type="button" data-sugg="'+s+'">'+s+'</button>'}).join('')+'</div>';act=-1;return}
   var words=q.split(/\s+/), out={}, n=0;
   data.forEach(function(it){var hay=norm(it[4]+' '+it[1]); if(words.every(function(w){return hay.indexOf(w)>-1})){(out[it[0]]=out[it[0]]||[]).push(it);n++}});
@@ -23,7 +24,10 @@ function render(qr){
     if(k==='j'&&l.length>8)h+='<a class="it" href="jobs.html" data-jq="'+esc(qr)+'"><span></span><span class="t">See all '+l.length+' matching adverts</span></a>';});
   sres.innerHTML=h;act=-1;
 }
-function openS(){if(!dlg)return; if(dlg.showModal){dlg.showModal()}else{dlg.setAttribute('open','')} sq.value='';render('');setTimeout(function(){sq.focus()},10)}
+// indice della ricerca globale (circa 95 KB): si scarica solo quando si apre la ricerca, non a ogni pagina (19/11, 3G)
+var SBASE=(document.currentScript&&document.currentScript.src||'').replace(/site\.js.*$/,'')||'assets/', sload=false;
+function needIndex(){if(window.SEARCH||sload)return; sload=true; var x=document.createElement('script'); x.src=SBASE+'search-index.js'; x.onload=function(){if(dlg&&dlg.open)render(sq.value)}; document.head.appendChild(x)}
+function openS(){if(!dlg)return; needIndex(); if(dlg.showModal){dlg.showModal()}else{dlg.setAttribute('open','')} sq.value='';render('');setTimeout(function(){sq.focus()},10)}
 function closeS(){dlg&&dlg.close?dlg.close():dlg.removeAttribute('open')}
 $$('[data-search]').forEach(function(b){b.addEventListener('click',openS)});
 if(dlg){
@@ -44,15 +48,17 @@ document.addEventListener('keydown',function(e){var t=e.target.tagName;
 var fd=$('[data-finder]');
 if(fd)fd.addEventListener('submit',function(e){var v=$('#fq').value.trim();store.set('jq',v)});
 
-/* ---------- jobs filters ---------- */
+/* ---------- jobs filters (19/11: mestiere prima del paese, conteggi vivi, filtri insieme nell'indirizzo, condividi) ---------- */
 var jl=$('#jobtools');
 if(jl){
-  var st={c:'',t:'',q:'',e:'',p:'',l:''}, cards=$$('.job'), LL=window.LOCLABEL||{}, groups=$$('.jgroup'), jq=$('#jq');
+  var st={c:'',t:'',q:'',e:'',p:'',l:''}, cards=$$('.job'), LL=window.LOCLABEL||{}, TN=window.TRADENAME||{}, CN=window.CNAME||{}, NT=window.NOTRACK||[], groups=$$('.jgroup'), jq=$('#jq');
+  var TA=window.TRADEALIAS||{}, W=[], sent={};
+  function gc(p,t){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:p,title:t||p,event:true})}catch(e){}}
+  function once(p,t){if(sent[p])return;sent[p]=1;gc(p,t)}
   var params=new URLSearchParams(location.search); var q0=params.get('q')||store.get('jq')||''; store.del('jq');
   var h=location.hash.slice(1);
-  // filtri nell'indirizzo, anche insieme (19/11): jobs.html#trade=welding&country=uae, #project=<id>, #place=ruwais, #q=rigger
-  // vecchie forme ancora valide: #trade-welding, #in-uae, #at-ruwais, #uae. trade accetta anche il mestiere a parole (welder, qc)
-  var TA=window.TRADEALIAS||{};
+  // filtri nell'indirizzo, anche insieme: jobs.html#trade=welding&country=uae, #project=<id>, #place=ruwais, #q=rigger.
+  // Vecchie forme ancora valide: #trade-welding, #in-uae, #at-ruwais, #uae. trade accetta anche il mestiere a parole (welder, qc).
   function fromHash(h){h=h||'';
     var n={c:'',t:'',q:'',e:'',p:'',l:''};
     if(h.indexOf('=')>0){var P=new URLSearchParams(h),ok=false;
@@ -62,36 +68,81 @@ if(jl){
     else if(h.indexOf('trade-')===0)n.t=h.slice(6); else if(h.indexOf('in-')===0)n.c=h.slice(3); else if(h.indexOf('at-')===0)n.l=h.slice(3); else if(/^[a-z-]+$/.test(h)&&$('[data-fc="'+h+'"]'))n.c=h; else return false;
     st=n; return true}
   fromHash(h);
-  // map a typed trade or country to a chip when the words match
-  if(q0){var nq=norm(q0);
+  // a typed country or trade (home finder, ?q=) becomes the chip
+  if(q0){var nq=norm(q0).trim();
     var cc=$$('[data-fc]').filter(function(b){return norm(b.firstChild.textContent)===nq})[0];
-    if(cc){st.c=cc.dataset.fc}else{st.q=q0}}
+    if(cc)st.c=cc.dataset.fc; else if(TA[nq]&&$('[data-ft="'+TA[nq]+'"]'))st.t=TA[nq]; else st.q=q0}
   jq.value=st.q;
+  function ok(c,skip){var d=c.dataset;
+    return (skip==='c'||!st.c||d.c===st.c)&&(skip==='t'||!st.t||(' '+d.t+' ').indexOf(' '+st.t+' ')>-1)&&(!st.e||d.e===st.e)&&(!st.p||d.p===st.p)
+      &&(!st.l||(' '+d.l+' ').indexOf(' '+st.l+' ')>-1)&&W.every(function(w){return norm(d.q).indexOf(w)>-1})}
+  function count(attr,key,skip){var n=0;cards.forEach(function(c){if(ok(c,skip)&&(attr==='t'?(' '+c.dataset.t+' ').indexOf(' '+key+' ')>-1:c.dataset.c===key))n++});return n}
+  function label(){var a=[];if(st.t)a.push(TN[st.t]||st.t);if(st.c)a.push(CN[st.c]||st.c);if(st.l)a.push(LL[st.l]||st.l);if(st.e)a.push(st.e);if(st.q)a.push('"'+st.q+'"');return a}
+  function emptyBox(){
+    var hd=$('#jempty-h'), bd=$('#jempty-b'), nt=W.filter(function(w){return NT.indexOf(w)>-1||NT.indexOf(w.replace(/s$/,''))>-1});
+    var tip='<p>New adverts are checked every morning. Comment your trade on any <a href="https://www.instagram.com/epcradar/">@epcradar</a> post on Instagram and we DM you the jobs for it.</p>';
+    if(nt.length){hd.textContent='We do not track '+nt[0]+' adverts yet';
+      bd.innerHTML='<p>We list site jobs that contractors advertise on their own careers pages: welders, fitters, electricians, QA/QC, riggers, scaffolders, supervisors and more. '+esc(nt[0])+' jobs are usually filled by agencies near the site. Never pay anyone for a job, a visa or a medical.</p>'+tip;
+      once('jobs-notrack-'+nt[0].replace(/s$/,''));return}
+    hd.textContent='No open '+(st.t?(TN[st.t]||'')+' ':'')+'advert'+(st.c?' in '+(CN[st.c]||st.c):'')+' today';
+    var b='';
+    if(st.t&&st.c){var a=count('t',st.t,'c'),m=count('c',st.c,'t');
+      if(a)b+='<button class="btn btn-dark" type="button" data-drop="c">'+esc(TN[st.t]||'')+': every country ('+a+')</button>';
+      if(m)b+='<button class="btn btn-b" type="button" data-drop="t">Every trade in '+esc(CN[st.c]||'')+' ('+m+')</button>'}
+    bd.innerHTML=(b?'<div class="acts">'+b+'</div>':'<p>Try another trade or country, or clear the filters.</p>')+tip;
+    once('jobs-none-'+(st.t||'any')+'-'+(st.c||'any'));
+  }
   function apply(push){
-    var words=norm(st.q).split(/\s+/).filter(Boolean), shown=0;
-    cards.forEach(function(c){var ok=(!st.c||c.dataset.c===st.c)&&(!st.t||(' '+c.dataset.t+' ').indexOf(' '+st.t+' ')>-1)&&(!st.e||c.dataset.e===st.e)&&(!st.p||c.dataset.p===st.p)&&(!st.l||(' '+c.dataset.l+' ').indexOf(' '+st.l+' ')>-1)&&words.every(function(w){return norm(c.dataset.q).indexOf(w)>-1});
-      c.classList.toggle('hide',!ok); if(ok)shown++});
+    W=norm(st.q).split(/\s+/).filter(Boolean); var shown=0;
+    cards.forEach(function(c){var y=ok(c); if(y&&c.classList.contains('hide')){c.classList.remove('enter');void c.offsetWidth;c.classList.add('enter')} c.classList.toggle('hide',!y); if(y)shown++});
     groups.forEach(function(g){g.classList.toggle('hide',!$$('.job:not(.hide)',g).length)});
-    $('#jn').textContent=shown; $('#jempty').classList.toggle('hide',shown>0);
-    $$('[data-fc]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.fc===st.c))});
-    $$('[data-ft]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.ft===st.t))});
-    var any=st.c||st.t||st.q||st.e||st.p||st.l; $('#jl').value=st.l;
-    var af=$('#jactive'); af.innerHTML=st.l?'<button type="button" data-unl>Place: '+esc(LL[st.l]||st.l)+' <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="m15 9-6 6m0-6 6 6"/></svg><span class="sr">remove</span></button>':''; $('#jreset').hidden=!any; $('[data-clear]',jl).hidden=!st.q;
-    if(st.t||st.e||st.p||st.l){var mf=$('.more-f',jl); if(mf)mf.open=true}
-    $('#je').value=st.e; $('#jp').value=st.p;
-    if(push){var a=[];if(st.t)a.push('trade='+st.t);if(st.c)a.push('country='+st.c);if(st.l)a.push('place='+st.l);if(st.p)a.push('project='+st.p);if(st.e)a.push('employer='+encodeURIComponent(st.e));
+    $$('[data-ft]').forEach(function(b){var n=count('t',b.dataset.ft,'t');b.querySelector('.n').textContent=n;b.classList.toggle('zero',!n);b.setAttribute('aria-pressed',String(b.dataset.ft===st.t))});
+    $$('[data-fc]').forEach(function(b){var n=count('c',b.dataset.fc,'c');b.querySelector('.n').textContent=n;b.classList.toggle('zero',!n);b.setAttribute('aria-pressed',String(b.dataset.fc===st.c))});
+    $('#jn').textContent=shown; var lb=label(); $('#jwhat').textContent=(shown===1?'advert':'adverts')+(lb.length?' · '+lb.join(' · '):'');
+    $('#jempty').classList.toggle('hide',shown>0); if(!shown)emptyBox();
+    var any=st.c||st.t||st.q||st.e||st.p||st.l; $('#jl').value=st.l; $('#je').value=st.e; $('#jp').value=st.p;
+    if(document.activeElement!==jq&&jq.value!==st.q)jq.value=st.q;
+    var af=$('#jactive'); af.innerHTML=st.l?'<button type="button" data-unl>Place: '+esc(LL[st.l]||st.l)+' <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="m15 9-6 6m0-6 6 6"/></svg><span class="sr">remove</span></button>':'';
+    $('#jreset').hidden=!any; $('#jshare').hidden=!any; $('[data-clear]',jl).hidden=!st.q;
+    if(st.e||st.p||st.l){var mf=$('.more-f',jl); if(mf)mf.open=true}
+    // chips: the chosen one comes into view on its scrolling row
+    $$('.chips.scroll [aria-pressed=true]').forEach(function(b){var r=b.parentNode;if(r.scrollWidth>r.clientWidth)r.scrollLeft=Math.max(0,b.offsetLeft-r.offsetLeft-24)});
+    if(push){var a=[];if(st.t)a.push('trade='+st.t);if(st.c)a.push('country='+st.c);if(st.l)a.push('place='+st.l);if(st.p)a.push('project='+st.p);if(st.e)a.push('employer='+encodeURIComponent(st.e));if(st.q)a.push('q='+encodeURIComponent(st.q));
       var nh=a.length?'#'+a.join('&'):''; if(nh!==location.hash){history.replaceState(null,'',nh||location.pathname+location.search)}}
+    pill();
   }
   jl.addEventListener('click',function(e){var b=e.target.closest('[data-fc]');if(b){st.c=st.c===b.dataset.fc?'':b.dataset.fc;apply(true);scrollToList()}
-    b=e.target.closest('[data-ft]');if(b){st.t=st.t===b.dataset.ft?'':b.dataset.ft;apply(true)}
-    if(e.target.closest('[data-clear]')){st.q='';jq.value='';apply();jq.focus()}});
-  function reset(){st={c:'',t:'',q:'',e:'',p:'',l:''};$('#jl').value='';jq.value='';$('#je').value='';$('#jp').value='';apply(true)}
+    b=e.target.closest('[data-ft]');if(b){st.t=st.t===b.dataset.ft?'':b.dataset.ft;apply(true);if(st.c)scrollToList()}
+    if(e.target.closest('[data-clear]')){st.q='';jq.value='';apply(true);jq.focus()}
+    if(e.target.closest('[data-unl]')){st.l='';apply(true)}});
+  function reset(){st={c:'',t:'',q:'',e:'',p:'',l:''};jq.value='';apply(true)}
   $('#jreset').addEventListener('click',reset); $$('[data-reset]').forEach(function(b){b.addEventListener('click',reset)});
-  var tm; jq.addEventListener('input',function(){clearTimeout(tm);tm=setTimeout(function(){st.q=jq.value;apply()},120)});
-  $('#je').addEventListener('change',function(){st.e=this.value;apply(true)}); $('#jl').addEventListener('change',function(){st.l=this.value;apply(true)});
-  jl.addEventListener('click',function(e){if(e.target.closest('[data-unl]')){st.l='';apply(true)}}); $('#jp').addEventListener('change',function(){st.p=this.value;apply(true)});
-  function scrollToList(){var t=jl.getBoundingClientRect().bottom; var g=$('.jgroup:not(.hide)'); if(g&&g.getBoundingClientRect().top<t)window.scrollTo({top:window.scrollY+g.getBoundingClientRect().top-t-8,behavior:reduce?'auto':'smooth'})}
-  apply(); if(st.c||st.t||st.q||st.l||st.p||st.e){setTimeout(function(){var y=jl.offsetTop;window.scrollTo(0,y)},30)}
+  $('#jempty').addEventListener('click',function(e){var d=e.target.closest('[data-drop]');if(d){st[d.dataset.drop]='';apply(true);scrollToList()}});
+  // search box: trade words work too (pipe fitter, QC, rigger...); GoatCounter gets only the trade or country it matches, never the text
+  var tm,tq; jq.addEventListener('input',function(){clearTimeout(tm);clearTimeout(tq);tm=setTimeout(function(){st.q=jq.value;apply(true)},150);
+    tq=setTimeout(function(){var ws=norm(jq.value).split(/\s+/).filter(Boolean);if(!ws.length)return;var k='other';
+      ws.some(function(w){if(TA[w]){k=TA[w];return true}var c=$$('[data-fc]').filter(function(b){return norm(b.firstChild.textContent)===w})[0];if(c){k=c.dataset.fc;return true}});
+      once('jobs-q-'+k,'Jobs search: '+k)},1500)});
+  jq.addEventListener('keydown',function(e){if(e.key==='Enter'){jq.blur();scrollToList()}});
+  $('#je').addEventListener('change',function(){st.e=this.value;apply(true)}); $('#jl').addEventListener('change',function(){st.l=this.value;apply(true)}); $('#jp').addEventListener('change',function(){st.p=this.value;apply(true)});
+  // share the search (WhatsApp first: that is where friends send each other jobs)
+  $('#jshare').addEventListener('click',function(){var lb=label(),url=location.origin+location.pathname+location.hash;
+    var tx=(lb.length?lb.join(', ')+': ':'')+$('#jn').textContent+' open oil and gas site jobs, each with the employer\'s own link. Apply only there.';
+    gc('jobs-share','Share: '+(st.t||'any')+'-'+(st.c||'any'));
+    if(navigator.share){navigator.share({title:'EPC Radar jobs',text:tx,url:url}).catch(function(){})}else{window.open('https://wa.me/?text='+encodeURIComponent(tx+' '+url),'_blank','noopener')}});
+  function scrollToList(){var t=0; var g=$('.jgroup:not(.hide)')||$('#jempty'); if(!g)return; var y=window.scrollY+g.getBoundingClientRect().top-80;
+    if(y>window.scrollY+40||g.getBoundingClientRect().top<0)window.scrollTo({top:y,behavior:reduce?'auto':'smooth'})}
+  // floating pill: when the filters are off screen it says what you are looking at and brings you back to change it
+  var pl=document.createElement('button'); pl.type='button'; pl.className='fpill'; pl.hidden=true; document.body.appendChild(pl); var off=false;
+  pl.addEventListener('click',function(){window.scrollTo({top:jl.getBoundingClientRect().top+window.scrollY-70,behavior:reduce?'auto':'smooth'})});
+  function pill(){var lb=label();pl.innerHTML='<span class="l"><b>'+$('#jn').textContent+'</b> '+esc(lb.length?lb.join(' · '):'adverts')+'</span><span class="c">Change</span>';pl.hidden=!off}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){off=!es[0].isIntersecting&&es[0].boundingClientRect.top<0;pill()}).observe(jl)}
+  // closing date: days left, from the date written in the advert
+  var today=new Date(); today.setHours(0,0,0,0);
+  cards.forEach(function(c){var d=c.dataset.close; if(!d)return; var n=Math.round((new Date(d+'T00:00:00')-today)/864e5); if(n>7)return;
+    var tg=$('.tags',c); if(!tg){tg=document.createElement('div');tg.className='tags';var h3=$('h3',c);h3.parentNode.insertBefore(tg,h3)}
+    var s=document.createElement('span'); s.className='tag '+(n<0?'gone':'soon'); s.textContent=n<0?'Closing date passed':n===0?'Closes today':n===1?'Closes tomorrow':n+' days left'; tg.appendChild(s)});
+  apply(); if(st.c||st.t||st.q||st.l||st.p||st.e){setTimeout(function(){scrollToList()},60)}
   window.addEventListener('hashchange',function(){var x=location.hash.slice(1);if(fromHash(x))apply();else hit(x)});
   // link dal PDF (#j-xxxxxxxx): l'offerta si evidenzia e viene al centro dello schermo
   function hit(x){if(!/^j-[0-9a-f]{8}$/.test(x))return; var c=document.getElementById(x); if(!c)return;

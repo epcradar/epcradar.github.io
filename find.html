@@ -85,7 +85,7 @@ d.getElementById('f3go').addEventListener('click',function(){
   top.forEach(function(x){var j=x.j;
     h+='<article class="job"><div><h3>'+esc(j.t)+'</h3><div class="who"><b>'+esc(j.c)+'</b> · '+esc(j.w)+'</div></div><div class="meta">'
       +(x.other?'<span>Other trade, in '+esc(x.j.n)+'</span>':x.why.length?'<span>Fits: '+esc(x.why.join(', '))+'</span>':'<span>Closest open advert</span>')
-      +(j.z?'<span>'+esc(j.z)+'</span>':'')+(j.u?'<span class="close">US work authorisation needed</span>':'')+'</div>'
+      +(j.z?'<span>'+esc(j.z)+'</span>':'')+(j.u?'<span class="close">US work authorization required</span>':'')+'</div>'
       +(j.x.length?'<p class="checked" style="margin:0">Tickets in the advert: '+esc(j.x.join('; '))+'</p>':'<p class="checked" style="margin:0">The advert summary lists no ticket: read the requirements on the employer page.</p>')
       +'<div class="go"><a class="btn btn-dark" href=\"'+esc(j.h)+'\" target="_blank" rel="noopener" data-g="'+esc(j.g)+'">Apply on employer site</a><span class="dest"><span>Opens <code>'+esc(j.o)+'</code></span></span></div></article>'});
   h+='</div>';
@@ -113,7 +113,6 @@ endorsed by, or speaking for any company it covers. Company names and trademarks
 <div class="res" id="sres" role="listbox" aria-label="Results"></div>
 <div class="sfoot">Searches 139 projects, 101 job adverts, 26 job locations, 10 trades and 11 stories.</div></div>
 </dialog>
-<script src="assets/search-index.js" defer></script>
 <script src="assets/site.js" defer></script>
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
