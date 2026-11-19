@@ -23,10 +23,17 @@
   "electrical": {
    "nome": "Electrical & instrument",
    "url": "https://epcradar.com/pdf/2b1f75/electrical.pdf",
-   "posti": 11,
-   "annunci": 11,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 12,
+   "annunci": 12,
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "Electrician (industrial, fleet maintenance workshop)",
+     "company": "NMDC Energy",
+     "where": "United Arab Emirates · Abu Dhabi",
+     "visto": "2026-11-19"
+    }
+   ]
   },
   "mechanical": {
    "nome": "Mechanical & HVAC",
@@ -41,16 +48,36 @@
    "url": "https://epcradar.com/pdf/2b1f75/qaqc.pdf",
    "posti": 194,
    "annunci": 9,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "Sr QC Engineer (closes 29 Nov)",
+     "company": "NMDC Energy",
+     "where": "United Arab Emirates · Abu Dhabi",
+     "visto": "2026-11-19"
+    }
+   ]
   },
   "hse": {
    "nome": "HSE & safety",
    "url": "https://epcradar.com/pdf/2b1f75/hse.pdf",
-   "posti": 4,
-   "annunci": 4,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 5,
+   "annunci": 5,
+   "nuove_14_giorni": 2,
+   "nuove": [
+    {
+     "title": "Senior HSE Engineer – Offshore Site",
+     "company": "KBR",
+     "where": "United Arab Emirates · Abu Dhabi",
+     "visto": "2026-11-19"
+    },
+    {
+     "title": "HSE Team Leader (closes 27 Nov)",
+     "company": "NMDC Energy",
+     "where": "United Arab Emirates · Abu Dhabi",
+     "visto": "2026-11-19"
+    }
+   ]
   },
   "rigging": {
    "nome": "Rigging & lifting",
@@ -87,10 +114,23 @@
   "engineering": {
    "nome": "Engineers & design",
    "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
-   "posti": 20,
-   "annunci": 20,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 22,
+   "annunci": 22,
+   "nuove_14_giorni": 2,
+   "nuove": [
+    {
+     "title": "Senior HSE Engineer – Offshore Site",
+     "company": "KBR",
+     "where": "United Arab Emirates · Abu Dhabi",
+     "visto": "2026-11-19"
+    },
+    {
+     "title": "Sr QC Engineer (closes 29 Nov)",
+     "company": "NMDC Energy",
+     "where": "United Arab Emirates · Abu Dhabi",
+     "visto": "2026-11-19"
+    }
+   ]
   },
   "office": {
    "nome": "Procurement, planning & admin",
