@@ -50,7 +50,17 @@ if(jl){
   var st={c:'',t:'',q:'',e:'',p:'',l:''}, cards=$$('.job'), LL=window.LOCLABEL||{}, groups=$$('.jgroup'), jq=$('#jq');
   var params=new URLSearchParams(location.search); var q0=params.get('q')||store.get('jq')||''; store.del('jq');
   var h=location.hash.slice(1);
-  function fromHash(h){if(h.indexOf('trade-')===0)st.t=h.slice(6); else if(h.indexOf('in-')===0)st.c=h.slice(3); else if(h.indexOf('at-')===0)st.l=h.slice(3); else if(/^[a-z-]+$/.test(h)&&$('[data-fc="'+h+'"]'))st.c=h; else return false; return true}
+  // filtri nell'indirizzo, anche insieme (19/11): jobs.html#trade=welding&country=uae, #project=<id>, #place=ruwais, #q=rigger
+  // vecchie forme ancora valide: #trade-welding, #in-uae, #at-ruwais, #uae. trade accetta anche il mestiere a parole (welder, qc)
+  var TA=window.TRADEALIAS||{};
+  function fromHash(h){h=h||'';
+    var n={c:'',t:'',q:'',e:'',p:'',l:''};
+    if(h.indexOf('=')>0){var P=new URLSearchParams(h),ok=false;
+      var tv=norm(P.get('trade')||'');if(tv){n.t=$('[data-ft="'+tv+'"]')?tv:(TA[tv]||'');ok=true}
+      ['country:c','place:l','project:p','employer:e','q:q'].forEach(function(x){x=x.split(':');var v=P.get(x[0]);if(v){n[x[1]]=v;ok=true}});
+      if(!ok)return false}
+    else if(h.indexOf('trade-')===0)n.t=h.slice(6); else if(h.indexOf('in-')===0)n.c=h.slice(3); else if(h.indexOf('at-')===0)n.l=h.slice(3); else if(/^[a-z-]+$/.test(h)&&$('[data-fc="'+h+'"]'))n.c=h; else return false;
+    st=n; return true}
   fromHash(h);
   // map a typed trade or country to a chip when the words match
   if(q0){var nq=norm(q0);
@@ -68,7 +78,9 @@ if(jl){
     var any=st.c||st.t||st.q||st.e||st.p||st.l; $('#jl').value=st.l;
     var af=$('#jactive'); af.innerHTML=st.l?'<button type="button" data-unl>Place: '+esc(LL[st.l]||st.l)+' <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="m15 9-6 6m0-6 6 6"/></svg><span class="sr">remove</span></button>':''; $('#jreset').hidden=!any; $('[data-clear]',jl).hidden=!st.q;
     if(st.t||st.e||st.p||st.l){var mf=$('.more-f',jl); if(mf)mf.open=true}
-    if(push){var nh=st.l?'#at-'+st.l:st.c?'#in-'+st.c:st.t?'#trade-'+st.t:''; if(nh!==location.hash){history.replaceState(null,'',nh||location.pathname)}}
+    $('#je').value=st.e; $('#jp').value=st.p;
+    if(push){var a=[];if(st.t)a.push('trade='+st.t);if(st.c)a.push('country='+st.c);if(st.l)a.push('place='+st.l);if(st.p)a.push('project='+st.p);if(st.e)a.push('employer='+encodeURIComponent(st.e));
+      var nh=a.length?'#'+a.join('&'):''; if(nh!==location.hash){history.replaceState(null,'',nh||location.pathname+location.search)}}
   }
   jl.addEventListener('click',function(e){var b=e.target.closest('[data-fc]');if(b){st.c=st.c===b.dataset.fc?'':b.dataset.fc;apply(true);scrollToList()}
     b=e.target.closest('[data-ft]');if(b){st.t=st.t===b.dataset.ft?'':b.dataset.ft;apply(true)}
@@ -76,10 +88,10 @@ if(jl){
   function reset(){st={c:'',t:'',q:'',e:'',p:'',l:''};$('#jl').value='';jq.value='';$('#je').value='';$('#jp').value='';apply(true)}
   $('#jreset').addEventListener('click',reset); $$('[data-reset]').forEach(function(b){b.addEventListener('click',reset)});
   var tm; jq.addEventListener('input',function(){clearTimeout(tm);tm=setTimeout(function(){st.q=jq.value;apply()},120)});
-  $('#je').addEventListener('change',function(){st.e=this.value;apply()}); $('#jl').addEventListener('change',function(){st.l=this.value;apply(true)});
-  jl.addEventListener('click',function(e){if(e.target.closest('[data-unl]')){st.l='';apply(true)}}); $('#jp').addEventListener('change',function(){st.p=this.value;apply()});
+  $('#je').addEventListener('change',function(){st.e=this.value;apply(true)}); $('#jl').addEventListener('change',function(){st.l=this.value;apply(true)});
+  jl.addEventListener('click',function(e){if(e.target.closest('[data-unl]')){st.l='';apply(true)}}); $('#jp').addEventListener('change',function(){st.p=this.value;apply(true)});
   function scrollToList(){var t=jl.getBoundingClientRect().bottom; var g=$('.jgroup:not(.hide)'); if(g&&g.getBoundingClientRect().top<t)window.scrollTo({top:window.scrollY+g.getBoundingClientRect().top-t-8,behavior:reduce?'auto':'smooth'})}
-  apply(); if(st.c||st.t||st.q||st.l){setTimeout(function(){var y=jl.offsetTop;window.scrollTo(0,y)},30)}
+  apply(); if(st.c||st.t||st.q||st.l||st.p||st.e){setTimeout(function(){var y=jl.offsetTop;window.scrollTo(0,y)},30)}
   window.addEventListener('hashchange',function(){var x=location.hash.slice(1);if(fromHash(x))apply();else hit(x)});
   // link dal PDF (#j-xxxxxxxx): l'offerta si evidenzia e viene al centro dello schermo
   function hit(x){if(!/^j-[0-9a-f]{8}$/.test(x))return; var c=document.getElementById(x); if(!c)return;
