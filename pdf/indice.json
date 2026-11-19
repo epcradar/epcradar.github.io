@@ -1,0 +1,109 @@
+{
+ "checked": "18 Nov 2026",
+ "mestieri": {
+  "welding": {
+   "nome": "Welding, fabrication & NDT",
+   "url": "https://epcradar.com/pdf/welding.pdf",
+   "posti": 11,
+   "annunci": 11,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "piping": {
+   "nome": "Piping",
+   "url": "https://epcradar.com/pdf/piping.pdf",
+   "posti": 6,
+   "annunci": 6,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "electrical": {
+   "nome": "Electrical & instrument",
+   "url": "https://epcradar.com/pdf/electrical.pdf",
+   "posti": 200,
+   "annunci": 15,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "mechanical": {
+   "nome": "Mechanical & HVAC",
+   "url": "https://epcradar.com/pdf/mechanical.pdf",
+   "posti": 197,
+   "annunci": 12,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "qaqc": {
+   "nome": "QA/QC & inspection",
+   "url": "https://epcradar.com/pdf/qaqc.pdf",
+   "posti": 194,
+   "annunci": 9,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "hse": {
+   "nome": "HSE & safety",
+   "url": "https://epcradar.com/pdf/hse.pdf",
+   "posti": 4,
+   "annunci": 4,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "rigging": {
+   "nome": "Rigging & lifting",
+   "url": "https://epcradar.com/pdf/rigging.pdf",
+   "posti": 2,
+   "annunci": 2,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "scaffolding": {
+   "nome": "Scaffolding",
+   "url": "https://epcradar.com/pdf/scaffolding.pdf",
+   "posti": 2,
+   "annunci": 2,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "commissioning": {
+   "nome": "Commissioning & operations",
+   "url": "https://epcradar.com/pdf/commissioning.pdf",
+   "posti": 19,
+   "annunci": 19,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "supervision": {
+   "nome": "Supervisors & foremen",
+   "url": "https://epcradar.com/pdf/supervision.pdf",
+   "posti": 30,
+   "annunci": 30,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "engineering": {
+   "nome": "Engineers & design",
+   "url": "https://epcradar.com/pdf/engineering.pdf",
+   "posti": 20,
+   "annunci": 20,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "office": {
+   "nome": "Procurement, planning & admin",
+   "url": "https://epcradar.com/pdf/office.pdf",
+   "posti": 15,
+   "annunci": 15,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  },
+  "marine": {
+   "nome": "Marine",
+   "url": "https://epcradar.com/pdf/marine.pdf",
+   "posti": 9,
+   "annunci": 9,
+   "nuove_14_giorni": 0,
+   "nuove": []
+  }
+ }
+}
