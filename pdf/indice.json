@@ -4,8 +4,8 @@
   "welding": {
    "nome": "Welding, fabrication & NDT",
    "url": "https://epcradar.com/pdf/welding.pdf",
-   "posti": 11,
-   "annunci": 11,
+   "posti": 9,
+   "annunci": 9,
    "nuove_14_giorni": 0,
    "nuove": []
   },
@@ -20,15 +20,15 @@
   "electrical": {
    "nome": "Electrical & instrument",
    "url": "https://epcradar.com/pdf/electrical.pdf",
-   "posti": 200,
-   "annunci": 15,
+   "posti": 11,
+   "annunci": 11,
    "nuove_14_giorni": 0,
    "nuove": []
   },
   "mechanical": {
    "nome": "Mechanical & HVAC",
    "url": "https://epcradar.com/pdf/mechanical.pdf",
-   "posti": 197,
+   "posti": 12,
    "annunci": 12,
    "nuove_14_giorni": 0,
    "nuove": []
@@ -52,8 +52,8 @@
   "rigging": {
    "nome": "Rigging & lifting",
    "url": "https://epcradar.com/pdf/rigging.pdf",
-   "posti": 2,
-   "annunci": 2,
+   "posti": 3,
+   "annunci": 3,
    "nuove_14_giorni": 0,
    "nuove": []
   },
@@ -68,16 +68,16 @@
   "commissioning": {
    "nome": "Commissioning & operations",
    "url": "https://epcradar.com/pdf/commissioning.pdf",
-   "posti": 19,
-   "annunci": 19,
+   "posti": 17,
+   "annunci": 17,
    "nuove_14_giorni": 0,
    "nuove": []
   },
   "supervision": {
    "nome": "Supervisors & foremen",
    "url": "https://epcradar.com/pdf/supervision.pdf",
-   "posti": 30,
-   "annunci": 30,
+   "posti": 28,
+   "annunci": 28,
    "nuove_14_giorni": 0,
    "nuove": []
   },
@@ -92,16 +92,16 @@
   "office": {
    "nome": "Procurement, planning & admin",
    "url": "https://epcradar.com/pdf/office.pdf",
-   "posti": 15,
-   "annunci": 15,
+   "posti": 16,
+   "annunci": 16,
    "nuove_14_giorni": 0,
    "nuove": []
   },
   "marine": {
    "nome": "Marine",
    "url": "https://epcradar.com/pdf/marine.pdf",
-   "posti": 9,
-   "annunci": 9,
+   "posti": 4,
+   "annunci": 4,
    "nuove_14_giorni": 0,
    "nuove": []
   }
