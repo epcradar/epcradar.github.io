@@ -46,10 +46,16 @@
   "qaqc": {
    "nome": "QA/QC & inspection",
    "url": "https://epcradar.com/pdf/2b1f75/qaqc.pdf",
-   "posti": 193,
-   "annunci": 8,
-   "nuove_14_giorni": 1,
+   "posti": 194,
+   "annunci": 9,
+   "nuove_14_giorni": 2,
    "nuove": [
+    {
+     "title": "Scaffolding Inspector",
+     "company": "KBR",
+     "where": "UAE · Abu Dhabi",
+     "visto": "2026-11-20"
+    },
     {
      "title": "Sr QC Engineer (closes 29 Nov)",
      "company": "NMDC Energy",
@@ -90,18 +96,32 @@
   "scaffolding": {
    "nome": "Scaffolding",
    "url": "https://epcradar.com/pdf/2b1f75/scaffolding.pdf",
-   "posti": 2,
-   "annunci": 2,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 3,
+   "annunci": 3,
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "Scaffolding Inspector",
+     "company": "KBR",
+     "where": "UAE · Abu Dhabi",
+     "visto": "2026-11-20"
+    }
+   ]
   },
   "commissioning": {
    "nome": "Commissioning & operations",
    "url": "https://epcradar.com/pdf/2b1f75/commissioning.pdf",
-   "posti": 17,
-   "annunci": 17,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 18,
+   "annunci": 18,
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "Pre-Commissioning Technician",
+     "company": "Saipem (GPS AG)",
+     "where": "United Arab Emirates",
+     "visto": "2026-11-20"
+    }
+   ]
   },
   "supervision": {
    "nome": "Supervisors & foremen",
