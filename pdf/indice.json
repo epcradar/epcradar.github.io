@@ -1,5 +1,5 @@
 {
- "checked": "19 Nov 2026",
+ "checked": "20 Nov 2026",
  "codice": "2b1f75",
  "valido_dal": "2026-11-19",
  "scade": "2026-12-02",
@@ -46,8 +46,8 @@
   "qaqc": {
    "nome": "QA/QC & inspection",
    "url": "https://epcradar.com/pdf/2b1f75/qaqc.pdf",
-   "posti": 194,
-   "annunci": 9,
+   "posti": 193,
+   "annunci": 8,
    "nuove_14_giorni": 1,
    "nuove": [
     {
@@ -114,10 +114,16 @@
   "engineering": {
    "nome": "Engineers & design",
    "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
-   "posti": 22,
-   "annunci": 22,
-   "nuove_14_giorni": 2,
+   "posti": 23,
+   "annunci": 23,
+   "nuove_14_giorni": 3,
    "nuove": [
+    {
+     "title": "Offshore Methods / Installation Engineer",
+     "company": "Saipem",
+     "where": "Abu Dhabi",
+     "visto": "2026-11-20"
+    },
     {
      "title": "Senior HSE Engineer – Offshore Site",
      "company": "KBR",
