@@ -159,9 +159,9 @@
   "engineering": {
    "nome": "Engineers & design",
    "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
-   "posti": 24,
-   "annunci": 24,
-   "nuove_14_giorni": 4,
+   "posti": 23,
+   "annunci": 23,
+   "nuove_14_giorni": 5,
    "nuove": [
     {
      "title": "HSE Engineer (closes 29 Nov)",
@@ -171,6 +171,12 @@
     },
     {
      "title": "Offshore Methods / Installation Engineer",
+     "company": "Saipem",
+     "where": "Abu Dhabi",
+     "visto": "2026-11-20"
+    },
+    {
+     "title": "Offshore Installation Naval Analysis Architect",
      "company": "Saipem",
      "where": "Abu Dhabi",
      "visto": "2026-11-20"
@@ -192,8 +198,8 @@
   "office": {
    "nome": "Procurement, planning & admin",
    "url": "https://epcradar.com/pdf/2b1f75/office.pdf",
-   "posti": 14,
-   "annunci": 14,
+   "posti": 6,
+   "annunci": 6,
    "nuove_14_giorni": 0,
    "nuove": []
   },
