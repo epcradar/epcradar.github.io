@@ -1,5 +1,5 @@
 {
- "checked": "20 Nov 2026",
+ "checked": "21 Nov 2026",
  "codice": "2b1f75",
  "valido_dal": "2026-11-19",
  "scade": "2026-12-02",
@@ -67,10 +67,28 @@
   "hse": {
    "nome": "HSE & safety",
    "url": "https://epcradar.com/pdf/2b1f75/hse.pdf",
-   "posti": 5,
-   "annunci": 5,
-   "nuove_14_giorni": 2,
+   "posti": 8,
+   "annunci": 8,
+   "nuove_14_giorni": 5,
    "nuove": [
+    {
+     "title": "HSE Officer",
+     "company": "Saipem (GPS AG)",
+     "where": "Saudi Arabia",
+     "visto": "2026-11-21"
+    },
+    {
+     "title": "HSE Supervisor",
+     "company": "Saipem (GPS AG)",
+     "where": "Saudi Arabia",
+     "visto": "2026-11-21"
+    },
+    {
+     "title": "HSE Engineer (closes 29 Nov)",
+     "company": "NMDC Energy",
+     "where": "United Arab Emirates",
+     "visto": "2026-11-21"
+    },
     {
      "title": "Senior HSE Engineer – Offshore Site",
      "company": "KBR",
@@ -126,18 +144,31 @@
   "supervision": {
    "nome": "Supervisors & foremen",
    "url": "https://epcradar.com/pdf/2b1f75/supervision.pdf",
-   "posti": 28,
-   "annunci": 28,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 29,
+   "annunci": 29,
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "HSE Supervisor",
+     "company": "Saipem (GPS AG)",
+     "where": "Saudi Arabia",
+     "visto": "2026-11-21"
+    }
+   ]
   },
   "engineering": {
    "nome": "Engineers & design",
    "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
-   "posti": 23,
-   "annunci": 23,
-   "nuove_14_giorni": 3,
+   "posti": 24,
+   "annunci": 24,
+   "nuove_14_giorni": 4,
    "nuove": [
+    {
+     "title": "HSE Engineer (closes 29 Nov)",
+     "company": "NMDC Energy",
+     "where": "United Arab Emirates",
+     "visto": "2026-11-21"
+    },
     {
      "title": "Offshore Methods / Installation Engineer",
      "company": "Saipem",
@@ -161,8 +192,8 @@
   "office": {
    "nome": "Procurement, planning & admin",
    "url": "https://epcradar.com/pdf/2b1f75/office.pdf",
-   "posti": 16,
-   "annunci": 16,
+   "posti": 14,
+   "annunci": 14,
    "nuove_14_giorni": 0,
    "nuove": []
   },
