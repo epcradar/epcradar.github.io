@@ -1,5 +1,5 @@
 {
- "checked": "23 Nov 2026",
+ "checked": "24 Nov 2026",
  "codice": "2b1f75",
  "valido_dal": "2026-11-19",
  "scade": "2026-12-02",
@@ -46,10 +46,16 @@
   "qaqc": {
    "nome": "QA/QC & inspection",
    "url": "https://epcradar.com/pdf/2b1f75/qaqc.pdf",
-   "posti": 194,
-   "annunci": 9,
-   "nuove_14_giorni": 2,
+   "posti": 195,
+   "annunci": 10,
+   "nuove_14_giorni": 3,
    "nuove": [
+    {
+     "title": "Procurement QC Supervisor",
+     "company": "Saipem",
+     "where": "Abu Dhabi",
+     "visto": "2026-11-24"
+    },
     {
      "title": "Scaffolding Inspector",
      "company": "KBR",
@@ -144,10 +150,16 @@
   "supervision": {
    "nome": "Supervisors & foremen",
    "url": "https://epcradar.com/pdf/2b1f75/supervision.pdf",
-   "posti": 29,
-   "annunci": 29,
-   "nuove_14_giorni": 1,
+   "posti": 30,
+   "annunci": 30,
+   "nuove_14_giorni": 2,
    "nuove": [
+    {
+     "title": "Procurement QC Supervisor",
+     "company": "Saipem",
+     "where": "Abu Dhabi",
+     "visto": "2026-11-24"
+    },
     {
      "title": "HSE Supervisor",
      "company": "Saipem (GPS AG)",
