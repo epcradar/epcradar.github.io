@@ -76,15 +76,18 @@ if(jl){
   function ok(c,skip){var d=c.dataset;
     return (skip==='c'||!st.c||d.c===st.c)&&(skip==='t'||!st.t||(' '+d.t+' ').indexOf(' '+st.t+' ')>-1)&&(!st.e||d.e===st.e)&&(!st.p||d.p===st.p)
       &&(!st.l||(' '+d.l+' ').indexOf(' '+st.l+' ')>-1)&&W.every(function(w){return norm(d.q).indexOf(w)>-1})}
-  function count(attr,key,skip){var n=0;cards.forEach(function(c){if(ok(c,skip)&&(attr==='t'?(' '+c.dataset.t+' ').indexOf(' '+key+' ')>-1:c.dataset.c===key))n++});return n}
+  // D5 (25/11): gli annunci USA hanno la loro sezione e non entrano nei conteggi dei mestieri e del totale (come in home),
+  // salvo quando si sceglie proprio il paese USA
+  function usOut(c){return c.dataset.us&&st.c!==c.dataset.c}
+  function count(attr,key,skip){var n=0;cards.forEach(function(c){if(attr==='t'&&usOut(c))return;if(ok(c,skip)&&(attr==='t'?(' '+c.dataset.t+' ').indexOf(' '+key+' ')>-1:c.dataset.c===key))n++});return n}
   function label(){var a=[];if(st.t)a.push(TN[st.t]||st.t);if(st.c)a.push(CN[st.c]||st.c);if(st.l)a.push(LL[st.l]||st.l);if(st.e)a.push(st.e);if(st.q)a.push('"'+st.q+'"');return a}
-  function emptyBox(){
+  function emptyBox(usn){
     var hd=$('#jempty-h'), bd=$('#jempty-b'), nt=W.filter(function(w){return NT.indexOf(w)>-1||NT.indexOf(w.replace(/s$/,''))>-1});
     var tip='<p>New adverts are checked every morning. Comment your trade on any <a href="https://www.instagram.com/epcradar/">@epcradar</a> post on Instagram and we DM you the jobs for it.</p>';
     if(nt.length){hd.textContent='We do not track '+nt[0]+' adverts yet';
       bd.innerHTML='<p>We list site jobs that contractors advertise on their own careers pages: welders, fitters, electricians, QA/QC, riggers, scaffolders, supervisors and more. '+esc(nt[0])+' jobs are usually filled by agencies near the site. Never pay anyone for a job, a visa or a medical.</p>'+tip;
       once('jobs-notrack-'+nt[0].replace(/s$/,''));return}
-    hd.textContent='No open '+(st.t?(TN[st.t]||'')+' ':'')+'advert'+(st.c?' in '+(CN[st.c]||st.c):'')+' today';
+    hd.textContent='No open '+(st.t?(TN[st.t]||'')+' ':'')+'advert'+(st.c?' in '+(CN[st.c]||st.c):'')+(usn?' outside the US':'')+' today';
     var b='';
     if(st.t&&st.c){var a=count('t',st.t,'c'),m=count('c',st.c,'t');
       if(a)b+='<button class="btn btn-dark" type="button" data-drop="c">'+esc(TN[st.t]||'')+': every country ('+a+')</button>';
@@ -93,13 +96,14 @@ if(jl){
     once('jobs-none-'+(st.t||'any')+'-'+(st.c||'any'));
   }
   function apply(push){
-    W=norm(st.q).split(/\s+/).filter(Boolean); var shown=0;
-    cards.forEach(function(c){var y=ok(c); if(y&&c.classList.contains('hide')){c.classList.remove('enter');void c.offsetWidth;c.classList.add('enter')} c.classList.toggle('hide',!y); if(y)shown++});
+    W=norm(st.q).split(/\s+/).filter(Boolean); var shown=0, usn=0;
+    cards.forEach(function(c){var y=ok(c); if(y&&c.classList.contains('hide')){c.classList.remove('enter');void c.offsetWidth;c.classList.add('enter')} c.classList.toggle('hide',!y); if(y){if(usOut(c))usn++;else shown++}});
     groups.forEach(function(g){g.classList.toggle('hide',!$$('.job:not(.hide)',g).length)});
     $$('[data-ft]').forEach(function(b){var n=count('t',b.dataset.ft,'t');b.querySelector('.n').textContent=n;b.classList.toggle('zero',!n);b.setAttribute('aria-pressed',String(b.dataset.ft===st.t))});
     $$('[data-fc]').forEach(function(b){var n=count('c',b.dataset.fc,'c');b.querySelector('.n').textContent=n;b.classList.toggle('zero',!n);b.setAttribute('aria-pressed',String(b.dataset.fc===st.c))});
     $('#jn').textContent=shown; var lb=label(); $('#jwhat').textContent=(shown===1?'advert':'adverts')+(lb.length?' · '+lb.join(' · '):'');
-    $('#jempty').classList.toggle('hide',shown>0); if(!shown)emptyBox();
+    var ju=$('#jus'); if(ju)ju.textContent=usn?' + '+usn+' in '+(CN['united-states']||'USA'):'';
+    $('#jempty').classList.toggle('hide',shown>0); if(!shown)emptyBox(usn);
     var any=st.c||st.t||st.q||st.e||st.p||st.l; $('#jl').value=st.l; $('#je').value=st.e; $('#jp').value=st.p;
     if(document.activeElement!==jq&&jq.value!==st.q)jq.value=st.q;
     var af=$('#jactive'); af.innerHTML=st.l?'<button type="button" data-unl>Place: '+esc(LL[st.l]||st.l)+' <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="m15 9-6 6m0-6 6 6"/></svg><span class="sr">remove</span></button>':'';

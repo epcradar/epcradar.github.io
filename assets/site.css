@@ -666,6 +666,8 @@ body{padding-bottom:70px}
 @media (min-width:900px){.job .go .btn{width:auto}}
 .job[data-us] .btn-a{background:var(--card);border-color:var(--ink);color:var(--ink)}
 .usgroup>header{border-bottom-color:var(--warn)}
+.usgroup{margin-top:56px;padding-top:22px;border-top:4px double var(--warn)}
+.resultline .jus{color:var(--muted);font-size:.9em}
 .jgroup .note.usnote{background:var(--warn-wash);color:var(--warn)}
 .newline{margin:26px 0 0;font:500 13px/1.3 var(--board);color:var(--muted);display:flex;gap:8px;align-items:center}
 #jempty .acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0 18px}
