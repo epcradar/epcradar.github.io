@@ -1,5 +1,5 @@
 {
- "checked": "25 Nov 2026",
+ "checked": "26 Nov 2026",
  "codice": "2b1f75",
  "valido_dal": "2026-11-19",
  "scade": "2026-12-02",
@@ -23,10 +23,16 @@
   "electrical": {
    "nome": "Electrical & instrument",
    "url": "https://epcradar.com/pdf/2b1f75/electrical.pdf",
-   "posti": 12,
-   "annunci": 12,
-   "nuove_14_giorni": 1,
+   "posti": 13,
+   "annunci": 13,
+   "nuove_14_giorni": 2,
    "nuove": [
+    {
+     "title": "Head of Department - Instrumentation, Automation & Telecommunications",
+     "company": "Saipem",
+     "where": "Abu Dhabi",
+     "visto": "2026-11-26"
+    },
     {
      "title": "Electrician (industrial, fleet maintenance workshop)",
      "company": "NMDC Energy",
@@ -112,8 +118,8 @@
   "rigging": {
    "nome": "Rigging & lifting",
    "url": "https://epcradar.com/pdf/2b1f75/rigging.pdf",
-   "posti": 3,
-   "annunci": 3,
+   "posti": 2,
+   "annunci": 2,
    "nuove_14_giorni": 0,
    "nuove": []
   },
@@ -135,23 +141,16 @@
   "commissioning": {
    "nome": "Commissioning & operations",
    "url": "https://epcradar.com/pdf/2b1f75/commissioning.pdf",
-   "posti": 18,
-   "annunci": 18,
-   "nuove_14_giorni": 1,
-   "nuove": [
-    {
-     "title": "Pre-Commissioning Technician",
-     "company": "Saipem (GPS AG)",
-     "where": "United Arab Emirates",
-     "visto": "2026-11-20"
-    }
-   ]
+   "posti": 17,
+   "annunci": 17,
+   "nuove_14_giorni": 0,
+   "nuove": []
   },
   "supervision": {
    "nome": "Supervisors & foremen",
    "url": "https://epcradar.com/pdf/2b1f75/supervision.pdf",
-   "posti": 29,
-   "annunci": 29,
+   "posti": 28,
+   "annunci": 28,
    "nuove_14_giorni": 2,
    "nuove": [
     {
