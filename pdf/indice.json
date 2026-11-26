@@ -7,25 +7,57 @@
   "welding": {
    "nome": "Welding, fabrication & NDT",
    "url": "https://epcradar.com/pdf/2b1f75/welding.pdf",
-   "posti": 9,
-   "annunci": 9,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 13,
+   "annunci": 13,
+   "nuove_14_giorni": 4,
+   "nuove": [
+    {
+     "title": "NDT Engineer [Various Onshore projects]",
+     "company": "Saipem (GPS AG)",
+     "where": "Italy",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Advance NDT Level III",
+     "company": "L&T",
+     "where": "Sohar",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Associate NDT Tech",
+     "company": "McDermott",
+     "where": "Batam",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "NDT Co-Ordinator",
+     "company": "L&T",
+     "where": "Sohar",
+     "visto": "2026-11-26"
+    }
+   ]
   },
   "piping": {
    "nome": "Piping",
    "url": "https://epcradar.com/pdf/2b1f75/piping.pdf",
-   "posti": 6,
-   "annunci": 6,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 7,
+   "annunci": 7,
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "Construction Quality Inspector (Piping)",
+     "company": "Wood",
+     "where": "Si Racha",
+     "visto": "2026-11-26"
+    }
+   ]
   },
   "electrical": {
    "nome": "Electrical & instrument",
    "url": "https://epcradar.com/pdf/2b1f75/electrical.pdf",
-   "posti": 13,
-   "annunci": 13,
-   "nuove_14_giorni": 2,
+   "posti": 22,
+   "annunci": 22,
+   "nuove_14_giorni": 11,
    "nuove": [
     {
      "title": "Head of Department - Instrumentation, Automation & Telecommunications",
@@ -34,94 +66,162 @@
      "visto": "2026-11-26"
     },
     {
-     "title": "Electrician (industrial, fleet maintenance workshop)",
-     "company": "NMDC Energy",
-     "where": "United Arab Emirates · Abu Dhabi",
-     "visto": "2026-11-19"
+     "title": "Electrical Supervisor",
+     "company": "KBR",
+     "where": "Ad Dawhah",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Electrician/Telecom Technician",
+     "company": "Kent",
+     "where": "Canada",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Lead Instrument Technician",
+     "company": "Wood",
+     "where": "Equatorial Guinea",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Electrical & Instrumentation Supervisor",
+     "company": "Wood",
+     "where": "Hides",
+     "visto": "2026-11-26"
     }
    ]
   },
   "mechanical": {
    "nome": "Mechanical & HVAC",
    "url": "https://epcradar.com/pdf/2b1f75/mechanical.pdf",
-   "posti": 11,
-   "annunci": 11,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 19,
+   "annunci": 19,
+   "nuove_14_giorni": 8,
+   "nuove": [
+    {
+     "title": "PCC Mechanical Static & Rotating Superintendent",
+     "company": "Technip Energies",
+     "where": "Middlesbrough",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Painting/Insulation Quantity Surveyor",
+     "company": "McDermott",
+     "where": "Maputo",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Painting & Insulation Supervisor",
+     "company": "Wood",
+     "where": "Ploiesti",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Coating Supervisor",
+     "company": "L&T",
+     "where": "Sohar",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Construction Quality Inspector (Mechanical)",
+     "company": "Wood",
+     "where": "Si Racha",
+     "visto": "2026-11-26"
+    }
+   ]
   },
   "qaqc": {
    "nome": "QA/QC & inspection",
    "url": "https://epcradar.com/pdf/2b1f75/qaqc.pdf",
-   "posti": 195,
-   "annunci": 10,
-   "nuove_14_giorni": 3,
+   "posti": 200,
+   "annunci": 15,
+   "nuove_14_giorni": 8,
    "nuove": [
     {
-     "title": "Procurement QC Supervisor",
-     "company": "Saipem",
-     "where": "Abu Dhabi",
-     "visto": "2026-11-24"
+     "title": "Quality Inspector",
+     "company": "McDermott",
+     "where": "Buliisa",
+     "visto": "2026-11-26"
     },
     {
-     "title": "Scaffolding Inspector",
-     "company": "KBR",
-     "where": "UAE · Abu Dhabi",
-     "visto": "2026-11-20"
+     "title": "Construction Quality Inspector (Electrical)",
+     "company": "Wood",
+     "where": "Si Racha",
+     "visto": "2026-11-26"
     },
     {
-     "title": "Sr QC Engineer (closes 29 Nov)",
-     "company": "NMDC Energy",
-     "where": "United Arab Emirates · Abu Dhabi",
-     "visto": "2026-11-19"
+     "title": "Construction Quality Inspector (Mechanical)",
+     "company": "Wood",
+     "where": "Si Racha",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Construction Quality Inspector (Piping)",
+     "company": "Wood",
+     "where": "Si Racha",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "PAUT - TOFD Inspector",
+     "company": "L&T",
+     "where": "Sohar",
+     "visto": "2026-11-26"
     }
    ]
   },
   "hse": {
    "nome": "HSE & safety",
    "url": "https://epcradar.com/pdf/2b1f75/hse.pdf",
-   "posti": 8,
-   "annunci": 8,
-   "nuove_14_giorni": 5,
+   "posti": 12,
+   "annunci": 12,
+   "nuove_14_giorni": 9,
    "nuove": [
+    {
+     "title": "HSE Trainer",
+     "company": "L&T",
+     "where": "Tashkent",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Líder HSE – Chile (HSE Lead)",
+     "company": "Wood",
+     "where": "Santiago",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "HSE Engineer",
+     "company": "KBR",
+     "where": "Kuwait City",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Senior HSE Engineer",
+     "company": "McDermott",
+     "where": "The Hague",
+     "visto": "2026-11-26"
+    },
     {
      "title": "HSE Officer",
      "company": "Saipem (GPS AG)",
      "where": "Saudi Arabia",
      "visto": "2026-11-21"
-    },
-    {
-     "title": "HSE Supervisor",
-     "company": "Saipem (GPS AG)",
-     "where": "Saudi Arabia",
-     "visto": "2026-11-21"
-    },
-    {
-     "title": "HSE Engineer (closes 29 Nov)",
-     "company": "NMDC Energy",
-     "where": "United Arab Emirates",
-     "visto": "2026-11-21"
-    },
-    {
-     "title": "Senior HSE Engineer – Offshore Site",
-     "company": "KBR",
-     "where": "United Arab Emirates · Abu Dhabi",
-     "visto": "2026-11-19"
-    },
-    {
-     "title": "HSE Team Leader (closes 27 Nov)",
-     "company": "NMDC Energy",
-     "where": "United Arab Emirates · Abu Dhabi",
-     "visto": "2026-11-19"
     }
    ]
   },
   "rigging": {
    "nome": "Rigging & lifting",
    "url": "https://epcradar.com/pdf/2b1f75/rigging.pdf",
-   "posti": 2,
-   "annunci": 2,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 3,
+   "annunci": 3,
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "Rigger",
+     "company": "KBR",
+     "where": "Doha",
+     "visto": "2026-11-26"
+    }
+   ]
   },
   "scaffolding": {
    "nome": "Scaffolding",
@@ -141,68 +241,117 @@
   "commissioning": {
    "nome": "Commissioning & operations",
    "url": "https://epcradar.com/pdf/2b1f75/commissioning.pdf",
-   "posti": 17,
-   "annunci": 17,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 23,
+   "annunci": 23,
+   "nuove_14_giorni": 6,
+   "nuove": [
+    {
+     "title": "Commissioning Supervisor - Process",
+     "company": "Wood",
+     "where": "Si Racha",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Control Room Operator",
+     "company": "MODEC",
+     "where": "Guyana",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "OPERADOR DE CALDEIRA E UTILIDADES / Boiler & Utility Operator",
+     "company": "MODEC",
+     "where": "Rio de Janeiro",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "DCS Operator",
+     "company": "KBR",
+     "where": "Basra",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Oil and Gas Commissioning",
+     "company": "Afcons",
+     "where": "India",
+     "visto": "2026-11-26"
+    }
+   ]
   },
   "supervision": {
    "nome": "Supervisors & foremen",
    "url": "https://epcradar.com/pdf/2b1f75/supervision.pdf",
-   "posti": 28,
-   "annunci": 28,
-   "nuove_14_giorni": 2,
+   "posti": 41,
+   "annunci": 41,
+   "nuove_14_giorni": 15,
    "nuove": [
     {
-     "title": "Procurement QC Supervisor",
-     "company": "Saipem",
-     "where": "Abu Dhabi",
-     "visto": "2026-11-24"
+     "title": "Commissioning Supervisor - Process",
+     "company": "Wood",
+     "where": "Si Racha",
+     "visto": "2026-11-26"
     },
     {
-     "title": "HSE Supervisor",
-     "company": "Saipem (GPS AG)",
-     "where": "Saudi Arabia",
-     "visto": "2026-11-21"
+     "title": "PCC Mechanical Static & Rotating Superintendent",
+     "company": "Technip Energies",
+     "where": "Middlesbrough",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Electrical Supervisor",
+     "company": "KBR",
+     "where": "Ad Dawhah",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "General Superintendent",
+     "company": "KBR",
+     "where": "Luanda",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Líder HSE – Chile (HSE Lead)",
+     "company": "Wood",
+     "where": "Santiago",
+     "visto": "2026-11-26"
     }
    ]
   },
   "engineering": {
    "nome": "Engineers & design",
    "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
-   "posti": 23,
-   "annunci": 23,
-   "nuove_14_giorni": 5,
+   "posti": 31,
+   "annunci": 31,
+   "nuove_14_giorni": 13,
    "nuove": [
     {
-     "title": "HSE Engineer (closes 29 Nov)",
-     "company": "NMDC Energy",
-     "where": "United Arab Emirates",
-     "visto": "2026-11-21"
+     "title": "Area Field Engineer",
+     "company": "Bechtel",
+     "where": "Karratha",
+     "visto": "2026-11-26"
     },
     {
-     "title": "Offshore Methods / Installation Engineer",
-     "company": "Saipem",
-     "where": "Abu Dhabi",
-     "visto": "2026-11-20"
+     "title": "Field Engineer",
+     "company": "McDermott",
+     "where": "Boden",
+     "visto": "2026-11-26"
     },
     {
-     "title": "Offshore Installation Naval Analysis Architect",
-     "company": "Saipem",
-     "where": "Abu Dhabi",
-     "visto": "2026-11-20"
+     "title": "NDT Engineer [Various Onshore projects]",
+     "company": "Saipem (GPS AG)",
+     "where": "Italy",
+     "visto": "2026-11-26"
     },
     {
-     "title": "Senior HSE Engineer – Offshore Site",
+     "title": "HSE Engineer",
      "company": "KBR",
-     "where": "United Arab Emirates · Abu Dhabi",
-     "visto": "2026-11-19"
+     "where": "Kuwait City",
+     "visto": "2026-11-26"
     },
     {
-     "title": "Sr QC Engineer (closes 29 Nov)",
-     "company": "NMDC Energy",
-     "where": "United Arab Emirates · Abu Dhabi",
-     "visto": "2026-11-19"
+     "title": "Construction engineer F/M",
+     "company": "Technip Energies",
+     "where": "Nanterre",
+     "visto": "2026-11-26"
     }
    ]
   },
