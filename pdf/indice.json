@@ -1,5 +1,5 @@
 {
- "checked": "26 Nov 2026",
+ "checked": "27 Nov 2026",
  "codice": "2b1f75",
  "valido_dal": "2026-11-19",
  "scade": "2026-12-02",
@@ -99,7 +99,7 @@
    "nuove_14_giorni": 8,
    "nuove": [
     {
-     "title": "PCC Mechanical Static & Rotating Superintendent",
+     "title": "PCC Mechanical Static & Rotating Superintendent (closes 17 Dec)",
      "company": "Technip Energies",
      "where": "United Kingdom · Middlesbrough",
      "visto": "2026-11-26"
@@ -138,7 +138,7 @@
    "nuove_14_giorni": 8,
    "nuove": [
     {
-     "title": "Quality Inspector",
+     "title": "Quality Inspector (closes 29 Nov)",
      "company": "McDermott",
      "where": "Uganda · Buliisa",
      "visto": "2026-11-26"
@@ -291,7 +291,7 @@
      "visto": "2026-11-26"
     },
     {
-     "title": "PCC Mechanical Static & Rotating Superintendent",
+     "title": "PCC Mechanical Static & Rotating Superintendent (closes 17 Dec)",
      "company": "Technip Energies",
      "where": "United Kingdom · Middlesbrough",
      "visto": "2026-11-26"
@@ -319,9 +319,9 @@
   "engineering": {
    "nome": "Engineers & design",
    "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
-   "posti": 31,
-   "annunci": 31,
-   "nuove_14_giorni": 13,
+   "posti": 30,
+   "annunci": 30,
+   "nuove_14_giorni": 12,
    "nuove": [
     {
      "title": "Area Field Engineer",
@@ -348,9 +348,9 @@
      "visto": "2026-11-26"
     },
     {
-     "title": "Construction engineer F/M",
-     "company": "Technip Energies",
-     "where": "France · Nanterre",
+     "title": "Senior Field Engineer - (Pre-Comm)",
+     "company": "McDermott",
+     "where": "Malaysia · Kuala Lumpur",
      "visto": "2026-11-26"
     }
    ]
