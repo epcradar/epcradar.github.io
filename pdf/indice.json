@@ -7,10 +7,28 @@
   "welding": {
    "nome": "Welding, fabrication & NDT",
    "url": "https://epcradar.com/pdf/2b1f75/welding.pdf",
-   "posti": 13,
-   "annunci": 13,
-   "nuove_14_giorni": 4,
+   "posti": 16,
+   "annunci": 16,
+   "nuove_14_giorni": 7,
    "nuove": [
+    {
+     "title": "Field Welding Engineer",
+     "company": "Bechtel",
+     "where": "Australia · Karratha",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Prefabrication Supervisor [MMO]",
+     "company": "Saipem (GPS AG)",
+     "where": "Angola",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Welder [GPAJ & West Hub Tail]",
+     "company": "Saipem (GPS AG)",
+     "where": "Angola",
+     "visto": "2026-11-27"
+    },
     {
      "title": "NDT Engineer [Various Onshore projects]",
      "company": "Saipem (GPS AG)",
@@ -22,28 +40,28 @@
      "company": "L&T",
      "where": "Oman · Sohar",
      "visto": "2026-11-26"
-    },
-    {
-     "title": "Associate NDT Tech",
-     "company": "McDermott",
-     "where": "Indonesia · Batam",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "NDT Co-Ordinator",
-     "company": "L&T",
-     "where": "Oman · Sohar",
-     "visto": "2026-11-26"
     }
    ]
   },
   "piping": {
    "nome": "Piping",
    "url": "https://epcradar.com/pdf/2b1f75/piping.pdf",
-   "posti": 7,
-   "annunci": 7,
-   "nuove_14_giorni": 1,
+   "posti": 9,
+   "annunci": 9,
+   "nuove_14_giorni": 3,
    "nuove": [
+    {
+     "title": "Piping Engineer OSBL [Mozambique LNG]",
+     "company": "Saipem (GPS AG)",
+     "where": "Mozambique",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Superintendente de Construccion (CSA) Mechanico Piping",
+     "company": "Wood",
+     "where": "Chile · Santiago",
+     "visto": "2026-11-27"
+    },
     {
      "title": "Construction Quality Inspector (Piping)",
      "company": "Wood",
@@ -55,49 +73,55 @@
   "electrical": {
    "nome": "Electrical & instrument",
    "url": "https://epcradar.com/pdf/2b1f75/electrical.pdf",
-   "posti": 22,
-   "annunci": 22,
-   "nuove_14_giorni": 11,
+   "posti": 28,
+   "annunci": 28,
+   "nuove_14_giorni": 17,
    "nuove": [
     {
-     "title": "Head of Department - Instrumentation, Automation & Telecommunications",
-     "company": "Saipem",
-     "where": "Abu Dhabi",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "Electrical Supervisor",
-     "company": "KBR",
-     "where": "Qatar · Ad Dawhah",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "Electrician/Telecom Technician",
+     "title": "Commissioning Technician - Instrumentation",
      "company": "Kent",
-     "where": "Canada",
-     "visto": "2026-11-26"
+     "where": "Australia",
+     "visto": "2026-11-27"
     },
     {
-     "title": "Lead Instrument Technician",
-     "company": "Wood",
-     "where": "Equatorial Guinea",
-     "visto": "2026-11-26"
+     "title": "TÉCNICO DE ELÉTRICA / Electrical Technician",
+     "company": "MODEC",
+     "where": "Brazil · Rio de Janeiro",
+     "visto": "2026-11-27"
     },
     {
-     "title": "Electrical & Instrumentation Supervisor",
+     "title": "Superintendente(a) de Construcción (Eléctrico e Instrumentación)",
      "company": "Wood",
-     "where": "Papua New Guinea · Hides",
-     "visto": "2026-11-26"
+     "where": "Chile · Santiago",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Electrical Technician",
+     "company": "MODEC",
+     "where": "Guyana",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Instrument Technician",
+     "company": "MODEC",
+     "where": "Guyana",
+     "visto": "2026-11-27"
     }
    ]
   },
   "mechanical": {
    "nome": "Mechanical & HVAC",
    "url": "https://epcradar.com/pdf/2b1f75/mechanical.pdf",
-   "posti": 19,
-   "annunci": 19,
-   "nuove_14_giorni": 8,
+   "posti": 20,
+   "annunci": 20,
+   "nuove_14_giorni": 9,
    "nuove": [
+    {
+     "title": "Superintendente de Construccion (CSA) Mechanico Piping",
+     "company": "Wood",
+     "where": "Chile · Santiago",
+     "visto": "2026-11-27"
+    },
     {
      "title": "PCC Mechanical Static & Rotating Superintendent (closes 17 Dec)",
      "company": "Technip Energies",
@@ -121,61 +145,67 @@
      "company": "L&T",
      "where": "Oman · Sohar",
      "visto": "2026-11-26"
-    },
-    {
-     "title": "Construction Quality Inspector (Mechanical)",
-     "company": "Wood",
-     "where": "Thailand · Si Racha",
-     "visto": "2026-11-26"
     }
    ]
   },
   "qaqc": {
    "nome": "QA/QC & inspection",
    "url": "https://epcradar.com/pdf/2b1f75/qaqc.pdf",
-   "posti": 200,
-   "annunci": 15,
-   "nuove_14_giorni": 8,
+   "posti": 205,
+   "annunci": 20,
+   "nuove_14_giorni": 13,
    "nuove": [
     {
-     "title": "Quality Inspector (closes 29 Nov)",
+     "title": "Project Environmental Inspector",
+     "company": "KBR",
+     "where": "Angola · Luanda",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Dimensional QC Inspector [GPAJ & West Hub Tail]",
+     "company": "Saipem (GPS AG)",
+     "where": "Angola",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Principal Quality Inspector - Instrumentation",
      "company": "McDermott",
-     "where": "Uganda · Buliisa",
-     "visto": "2026-11-26"
+     "where": "Sweden · Boden",
+     "visto": "2026-11-27"
     },
     {
-     "title": "Construction Quality Inspector (Electrical)",
-     "company": "Wood",
-     "where": "Thailand · Si Racha",
-     "visto": "2026-11-26"
+     "title": "Senior Quality Inspector (Auditing & Completion)",
+     "company": "McDermott",
+     "where": "Sweden · Boden",
+     "visto": "2026-11-27"
     },
     {
-     "title": "Construction Quality Inspector (Mechanical)",
-     "company": "Wood",
-     "where": "Thailand · Si Racha",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "Construction Quality Inspector (Piping)",
-     "company": "Wood",
-     "where": "Thailand · Si Racha",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "PAUT - TOFD Inspector",
-     "company": "L&T",
-     "where": "Oman · Sohar",
-     "visto": "2026-11-26"
+     "title": "Senior Quality Inspector (Civil)",
+     "company": "McDermott",
+     "where": "Sweden · Boden",
+     "visto": "2026-11-27"
     }
    ]
   },
   "hse": {
    "nome": "HSE & safety",
    "url": "https://epcradar.com/pdf/2b1f75/hse.pdf",
-   "posti": 12,
-   "annunci": 12,
-   "nuove_14_giorni": 9,
+   "posti": 14,
+   "annunci": 14,
+   "nuove_14_giorni": 11,
    "nuove": [
+    {
+     "title": "Coordinador HSE Proyectos",
+     "company": "Wood",
+     "where": "Colombia · Cartagena",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Lead HSE Engineer",
+     "company": "KBR",
+     "where": "Kuwait · Kuwait City",
+     "visto": "2026-11-27"
+    },
     {
      "title": "HSE Trainer",
      "company": "L&T",
@@ -193,28 +223,22 @@
      "company": "KBR",
      "where": "Kuwait · Kuwait City",
      "visto": "2026-11-26"
-    },
-    {
-     "title": "Senior HSE Engineer",
-     "company": "McDermott",
-     "where": "Netherlands · The Hague",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "HSE Officer",
-     "company": "Saipem (GPS AG)",
-     "where": "Saudi Arabia",
-     "visto": "2026-11-21"
     }
    ]
   },
   "rigging": {
    "nome": "Rigging & lifting",
    "url": "https://epcradar.com/pdf/2b1f75/rigging.pdf",
-   "posti": 3,
-   "annunci": 3,
-   "nuove_14_giorni": 1,
+   "posti": 4,
+   "annunci": 4,
+   "nuove_14_giorni": 2,
    "nuove": [
+    {
+     "title": "Crane Operator [Whiptail]",
+     "company": "Saipem (GPS AG)",
+     "where": "Guyana",
+     "visto": "2026-11-27"
+    },
     {
      "title": "Rigger",
      "company": "KBR",
@@ -226,10 +250,16 @@
   "scaffolding": {
    "nome": "Scaffolding",
    "url": "https://epcradar.com/pdf/2b1f75/scaffolding.pdf",
-   "posti": 3,
-   "annunci": 3,
-   "nuove_14_giorni": 1,
+   "posti": 4,
+   "annunci": 4,
+   "nuove_14_giorni": 2,
    "nuove": [
+    {
+     "title": "Scaffolding Supervisor",
+     "company": "McDermott",
+     "where": "Mozambique · Maputo",
+     "visto": "2026-11-27"
+    },
     {
      "title": "Scaffolding Inspector",
      "company": "KBR",
@@ -241,117 +271,117 @@
   "commissioning": {
    "nome": "Commissioning & operations",
    "url": "https://epcradar.com/pdf/2b1f75/commissioning.pdf",
-   "posti": 23,
-   "annunci": 23,
-   "nuove_14_giorni": 6,
+   "posti": 28,
+   "annunci": 28,
+   "nuove_14_giorni": 11,
    "nuove": [
     {
-     "title": "Commissioning Supervisor - Process",
-     "company": "Wood",
-     "where": "Thailand · Si Racha",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "Control Room Operator",
+     "title": "Utility Operator",
      "company": "MODEC",
      "where": "Guyana",
-     "visto": "2026-11-26"
+     "visto": "2026-11-27"
     },
     {
-     "title": "OPERADOR DE CALDEIRA E UTILIDADES / Boiler & Utility Operator",
+     "title": "Commissioning Technician - Instrumentation",
+     "company": "Kent",
+     "where": "Australia",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "GP Operator (Pumpman)",
      "company": "MODEC",
-     "where": "Brazil · Rio de Janeiro",
-     "visto": "2026-11-26"
+     "where": "Guyana",
+     "visto": "2026-11-27"
     },
     {
-     "title": "DCS Operator",
-     "company": "KBR",
+     "title": "Commissioning Start-up PACO Lead",
+     "company": "Wood",
      "where": "Iraq · Basra",
-     "visto": "2026-11-26"
+     "visto": "2026-11-27"
     },
     {
-     "title": "Oil and Gas Commissioning",
-     "company": "Afcons",
-     "where": "India",
-     "visto": "2026-11-26"
+     "title": "Senior Quality Inspector (Auditing & Completion)",
+     "company": "McDermott",
+     "where": "Sweden · Boden",
+     "visto": "2026-11-27"
     }
    ]
   },
   "supervision": {
    "nome": "Supervisors & foremen",
    "url": "https://epcradar.com/pdf/2b1f75/supervision.pdf",
-   "posti": 41,
-   "annunci": 41,
-   "nuove_14_giorni": 15,
+   "posti": 52,
+   "annunci": 52,
+   "nuove_14_giorni": 26,
    "nuove": [
     {
-     "title": "Commissioning Supervisor - Process",
-     "company": "Wood",
-     "where": "Thailand · Si Racha",
-     "visto": "2026-11-26"
+     "title": "Engine Room Supervisor [FPSO Kaminho]",
+     "company": "Saipem (GPS AG)",
+     "where": "Angola",
+     "visto": "2026-11-27"
     },
     {
-     "title": "PCC Mechanical Static & Rotating Superintendent (closes 17 Dec)",
-     "company": "Technip Energies",
-     "where": "United Kingdom · Middlesbrough",
-     "visto": "2026-11-26"
+     "title": "Prefabrication Supervisor [MMO]",
+     "company": "Saipem (GPS AG)",
+     "where": "Angola",
+     "visto": "2026-11-27"
     },
     {
-     "title": "Electrical Supervisor",
-     "company": "KBR",
-     "where": "Qatar · Ad Dawhah",
-     "visto": "2026-11-26"
+     "title": "Balanced Machine Superintendent",
+     "company": "Bechtel",
+     "where": "Australia · Karratha",
+     "visto": "2026-11-27"
     },
     {
-     "title": "General Superintendent",
-     "company": "KBR",
-     "where": "Angola · Luanda",
-     "visto": "2026-11-26"
+     "title": "Civil Supervisor",
+     "company": "Bechtel",
+     "where": "Australia · Karratha",
+     "visto": "2026-11-27"
     },
     {
-     "title": "Líder HSE – Chile (HSE Lead)",
-     "company": "Wood",
-     "where": "Chile · Santiago",
-     "visto": "2026-11-26"
+     "title": "SMP Supervisor",
+     "company": "Bechtel",
+     "where": "Australia · Karratha",
+     "visto": "2026-11-27"
     }
    ]
   },
   "engineering": {
    "nome": "Engineers & design",
    "url": "https://epcradar.com/pdf/2b1f75/engineering.pdf",
-   "posti": 30,
-   "annunci": 30,
-   "nuove_14_giorni": 12,
+   "posti": 35,
+   "annunci": 35,
+   "nuove_14_giorni": 17,
    "nuove": [
     {
-     "title": "Area Field Engineer",
+     "title": "Piping Engineer OSBL [Mozambique LNG]",
+     "company": "Saipem (GPS AG)",
+     "where": "Mozambique",
+     "visto": "2026-11-27"
+    },
+    {
+     "title": "Field Welding Engineer",
      "company": "Bechtel",
      "where": "Australia · Karratha",
-     "visto": "2026-11-26"
+     "visto": "2026-11-27"
     },
     {
-     "title": "Field Engineer",
-     "company": "McDermott",
-     "where": "Sweden · Boden",
-     "visto": "2026-11-26"
+     "title": "Civil Field Engineer",
+     "company": "Bechtel",
+     "where": "Australia · Karratha",
+     "visto": "2026-11-27"
     },
     {
-     "title": "NDT Engineer [Various Onshore projects]",
-     "company": "Saipem (GPS AG)",
-     "where": "Italy",
-     "visto": "2026-11-26"
-    },
-    {
-     "title": "HSE Engineer",
+     "title": "Lead Construction Engineer – Civil/Structural (Marine)",
      "company": "KBR",
      "where": "Kuwait · Kuwait City",
-     "visto": "2026-11-26"
+     "visto": "2026-11-27"
     },
     {
-     "title": "Senior Field Engineer - (Pre-Comm)",
-     "company": "McDermott",
-     "where": "Malaysia · Kuala Lumpur",
-     "visto": "2026-11-26"
+     "title": "Lead HSE Engineer",
+     "company": "KBR",
+     "where": "Kuwait · Kuwait City",
+     "visto": "2026-11-27"
     }
    ]
   },
@@ -366,10 +396,17 @@
   "marine": {
    "nome": "Marine",
    "url": "https://epcradar.com/pdf/2b1f75/marine.pdf",
-   "posti": 4,
-   "annunci": 4,
-   "nuove_14_giorni": 0,
-   "nuove": []
+   "posti": 5,
+   "annunci": 5,
+   "nuove_14_giorni": 1,
+   "nuove": [
+    {
+     "title": "Lead Construction Engineer – Civil/Structural (Marine)",
+     "company": "KBR",
+     "where": "Kuwait · Kuwait City",
+     "visto": "2026-11-27"
+    }
+   ]
   }
  }
 }
