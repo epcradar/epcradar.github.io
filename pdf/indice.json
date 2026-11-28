@@ -1,5 +1,5 @@
 {
- "checked": "27 Nov 2026",
+ "checked": "28 Nov 2026",
  "codice": "2b1f75",
  "valido_dal": "2026-11-19",
  "scade": "2026-12-02",
@@ -190,16 +190,10 @@
   "hse": {
    "nome": "HSE & safety",
    "url": "https://epcradar.com/pdf/2b1f75/hse.pdf",
-   "posti": 14,
-   "annunci": 14,
-   "nuove_14_giorni": 11,
+   "posti": 12,
+   "annunci": 12,
+   "nuove_14_giorni": 9,
    "nuove": [
-    {
-     "title": "Coordinador HSE Proyectos",
-     "company": "Wood",
-     "where": "Colombia · Cartagena",
-     "visto": "2026-11-27"
-    },
     {
      "title": "Lead HSE Engineer",
      "company": "KBR",
@@ -222,6 +216,12 @@
      "title": "HSE Engineer",
      "company": "KBR",
      "where": "Kuwait · Kuwait City",
+     "visto": "2026-11-26"
+    },
+    {
+     "title": "Senior HSE Engineer",
+     "company": "McDermott",
+     "where": "Netherlands · The Hague",
      "visto": "2026-11-26"
     }
    ]
@@ -294,7 +294,7 @@
      "visto": "2026-11-27"
     },
     {
-     "title": "Commissioning Start-up PACO Lead",
+     "title": "Commissioning Start-up PACO Lead (closes 5 Dec)",
      "company": "Wood",
      "where": "Iraq · Basra",
      "visto": "2026-11-27"
